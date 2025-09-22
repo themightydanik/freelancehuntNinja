@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
 FREELANCEHUNT_TOKEN = os.getenv("FREELANCEHUNT_TOKEN", "dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
-CHAT_ID = os.getenv("CHAT_ID", "@freelancehuntninja")
+CHAT_ID = os.getenv("CHAT_ID", "-1003016177605")
 
 bot = telebot.TeleBot(API_TOKEN)
 
