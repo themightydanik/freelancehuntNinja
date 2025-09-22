@@ -21,6 +21,7 @@ def init_seen_projects():
     """Фиксируем существующие проекты при старте, чтобы их не шлать."""
     headers = {"Authorization": f"Bearer {FREELANCEHUNT_TOKEN}"}
     url = "https://api.freelancehunt.com/v2/projects"
+    total = 0
     for cat in CATEGORIES:
         params = {"filter[skill_id]": cat}
         try:
@@ -29,8 +30,10 @@ def init_seen_projects():
             data = resp.json()
             for item in data.get("data", []):
                 seen_projects.add(item["id"])
+                total += 1
         except Exception as e:
             print(f"Ошибка инициализации категории {cat}: {e}")
+    print(f"✅ Инициализация завершена. Всего сохранено проектов: {total}")
 
 def check_new_projects():
     """Проверяем новые проекты и отправляем только появившиеся после запуска."""
@@ -50,13 +53,25 @@ def check_new_projects():
                     desc = item["attributes"]["description"][:200] + "..."
                     link = item["links"]["web"]
                     text = f"💼 <b>{title}</b>\n\n{desc}\n\n🔗 {link}"
-                    bot.send_message(CHAT_ID, text, parse_mode="HTML")
+                    print(f"📤 Отправка проекта {project_id} ({title}) в чат {CHAT_ID}")
+                    try:
+                        bot.send_message(CHAT_ID, text, parse_mode="HTML")
+                        print(f"✅ Успешно отправлено: {title}")
+                    except Exception as e:
+                        print(f"❌ Ошибка отправки проекта {project_id}: {e}")
         except Exception as e:
             print(f"Ошибка проверки категории {cat}: {e}")
 
 def scheduler():
     init_seen_projects()
-    print("Инициализация завершена. Проверяем новые проекты каждые 5 минут.")
+    # тестовое сообщение при запуске
+    try:
+        bot.send_message(CHAT_ID, "🚀 Bot запущен и готов мониторить проекты!")
+        print("✅ Тестовое сообщение отправлено в чат.")
+    except Exception as e:
+        print(f"❌ Ошибка отправки тестового сообщения: {e}")
+
+    print("🔄 Проверяем новые проекты каждые 5 минут.")
     while True:
         try:
             check_new_projects()
