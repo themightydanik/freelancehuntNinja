@@ -51,7 +51,7 @@ def check_new_projects():
 
                     title = item["attributes"]["name"]
                     desc = item["attributes"]["description"][:200] + "..."
-                    link = item["links"]["self"]
+                    link = item["links"]["web"]
 
                     text = f"💼 <b>{title}</b>\n\n{desc}\n\n🔗 {link}"
                     bot.send_message(CHAT_ID, text, parse_mode="HTML")
