@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "freelancehunt-ninja"
+version = "0.1.0"
+description = ""
+authors = ["Danylo K. <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+aiogram = "3.0.0b7"
+aiohttp = "3.8.5"
+requests = "2.31.0"
+python-dotenv = "1.0.0"
