@@ -49,9 +49,13 @@ def check_new_projects():
                 project_id = item["id"]
                 if project_id not in seen_projects:
                     seen_projects.add(project_id)
-                    title = item["attributes"]["name"]
-                    desc = item["attributes"]["description"][:200] + "..."
-                    link = item["links"]["web"]
+                    title = item["attributes"].get("name", "Без названия")
+                    desc = item["attributes"].get("description", "")[:200] + "..."
+                    
+                    # Ссылка: сначала web, если нет - api
+                    links = item.get("links", {})
+                    link = links.get("web") or links.get("api") or "Ссылка недоступна"
+                    
                     text = f"💼 <b>{title}</b>\n\n{desc}\n\n🔗 {link}"
                     try:
                         bot.send_message(CHAT_ID, text, parse_mode="HTML")
