@@ -2,7 +2,9 @@ import os
 import time
 import requests
 import telebot
+from threading import Thread
 from dotenv import load_dotenv
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # Загружаем токены из .env или используем дефолтные
 load_dotenv()
@@ -29,10 +31,10 @@ def init_seen_projects():
             resp = requests.get(url, headers=headers, params=params, timeout=10)
             resp.raise_for_status()
             data = resp.json()
-            print(f"✅ Получено {len(data.get('data', []))} проектов для категории {cat}")
             for item in data.get("data", []):
                 seen_projects.add(item["id"])
                 total += 1
+            print(f"✅ Получено {len(data.get('data', []))} проектов")
         except Exception as e:
             print(f"❌ Ошибка инициализации категории {cat}: {e}")
     print(f"✅ Инициализация завершена. Всего сохранено проектов: {total}")
@@ -69,8 +71,8 @@ def check_new_projects():
             print(f"❌ Ошибка запроса категории {cat}: {e}")
     print("✅ Проверка всех категорий завершена.")
 
-def main():
-    print("🚀 Запуск бота...")
+def scheduler():
+    print("🚀 Запуск scheduler()...")
     try:
         init_seen_projects()
         print("✅ init_seen_projects завершена")
@@ -78,7 +80,7 @@ def main():
         print(f"❌ Ошибка в init_seen_projects: {e}")
 
     try:
-        bot.send_message(CHAT_ID, "🚀 Bot запущен и готов мониторить проекты!")
+        bot.send_message(CHAT_ID, "🚀 Ninja запущен и готов хоботить проекты!")
         print("✅ Тестовое сообщение отправлено в чат.")
     except Exception as e:
         print(f"❌ Ошибка отправки тестового сообщения: {e}")
@@ -91,5 +93,21 @@ def main():
             print(f"❌ Ошибка в цикле проверки проектов: {e}")
         time.sleep(300)
 
+# Минимальный HTTP-сервер для Render
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/plain")
+        self.end_headers()
+        self.wfile.write(b"Bot is running!")
+
 if __name__ == "__main__":
-    main()
+    # Запуск scheduler в отдельном потоке
+    t = Thread(target=scheduler, daemon=True)
+    t.start()
+
+    # HTTP-заглушка для Render
+    port = int(os.environ.get("PORT", 5000))
+    print(f"🌍 HTTP-сервер запускается на порту {port}...")
+    server = HTTPServer(("0.0.0.0", port), Handler)
+    server.serve_forever()
