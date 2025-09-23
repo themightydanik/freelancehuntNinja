@@ -14,6 +14,7 @@ CHAT_ID = os.getenv("CHAT_ID", "-1003016177605")
 
 bot = telebot.TeleBot(API_TOKEN)
 
+# Категории, которые отслеживаем
 CATEGORIES = [99, 78, 175, 124, 43, 129, 68, 96, 134, 14, 183, 120]
 seen_projects = set()
 
@@ -22,8 +23,10 @@ def init_seen_projects():
     headers = {"Authorization": f"Bearer {FREELANCEHUNT_TOKEN}"}
     url = "https://api.freelancehunt.com/v2/projects"
     total = 0
+    print("🚀 Старт инициализации проектов...")
     for cat in CATEGORIES:
         params = {"filter[skill_id]": cat}
+        print(f"🔍 Загружаем проекты для категории {cat}...")
         try:
             resp = requests.get(url, headers=headers, params=params)
             resp.raise_for_status()
@@ -32,13 +35,14 @@ def init_seen_projects():
                 seen_projects.add(item["id"])
                 total += 1
         except Exception as e:
-            print(f"Ошибка инициализации категории {cat}: {e}")
+            print(f"❌ Ошибка инициализации категории {cat}: {e}")
     print(f"✅ Инициализация завершена. Всего сохранено проектов: {total}")
 
 def check_new_projects():
     """Проверяем новые проекты и отправляем только появившиеся после запуска."""
     headers = {"Authorization": f"Bearer {FREELANCEHUNT_TOKEN}"}
     url = "https://api.freelancehunt.com/v2/projects"
+    print("⏳ Проверка новых проектов...")
     for cat in CATEGORIES:
         params = {"filter[skill_id]": cat}
         try:
@@ -60,24 +64,30 @@ def check_new_projects():
                     except Exception as e:
                         print(f"❌ Ошибка отправки проекта {project_id}: {e}")
         except Exception as e:
-            print(f"Ошибка проверки категории {cat}: {e}")
+            print(f"❌ Ошибка проверки категории {cat}: {e}")
+    print("✅ Проверка завершена.")
 
 def scheduler():
-    init_seen_projects()
-    # тестовое сообщение при запуске
+    print("🚀 Запуск scheduler()...")
+    try:
+        init_seen_projects()
+        print("✅ init_seen_projects завершена")
+    except Exception as e:
+        print(f"❌ Ошибка в init_seen_projects: {e}")
+
     try:
         bot.send_message(CHAT_ID, "🚀 Bot запущен и готов мониторить проекты!")
         print("✅ Тестовое сообщение отправлено в чат.")
     except Exception as e:
         print(f"❌ Ошибка отправки тестового сообщения: {e}")
 
-    print("🔄 Проверяем новые проекты каждые 5 минут.")
+    print("🔄 Входим в цикл проверки каждые 5 минут...")
     while True:
         try:
             check_new_projects()
         except Exception as e:
-            print(f"Ошибка в цикле проверки проектов: {e}")
-        time.sleep(300)  # каждые 5 минут
+            print(f"❌ Ошибка в цикле проверки проектов: {e}")
+        time.sleep(300)
 
 # Flask-сервер для Render
 app = Flask(__name__)
@@ -88,9 +98,10 @@ def index():
 
 if __name__ == "__main__":
     # Запуск scheduler в отдельном потоке
-    t = Thread(target=scheduler)
+    t = Thread(target=scheduler, daemon=True)
     t.start()
 
-    # Flask для порта
+    # Flask для Render
     port = int(os.environ.get("PORT", 5000))
+    print(f"🌍 Flask-сервер запускается на порту {port}...")
     app.run(host="0.0.0.0", port=port)
