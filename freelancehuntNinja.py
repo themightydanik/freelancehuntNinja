@@ -106,6 +106,9 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-type", "text/plain")
         self.end_headers()
 
+    def log_message(self, format, *args):
+        return  # отключаем стандартные логи
+
 if __name__ == "__main__":
     # Запуск scheduler в отдельном потоке
     t = Thread(target=scheduler, daemon=True)
