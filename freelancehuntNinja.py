@@ -2,8 +2,6 @@ import os
 import time
 import requests
 import telebot
-from flask import Flask
-from threading import Thread
 from dotenv import load_dotenv
 
 # Загружаем токены из .env или используем дефолтные
@@ -71,8 +69,8 @@ def check_new_projects():
             print(f"❌ Ошибка запроса категории {cat}: {e}")
     print("✅ Проверка всех категорий завершена.")
 
-def scheduler():
-    print("🚀 Запуск scheduler()...")
+def main():
+    print("🚀 Запуск бота...")
     try:
         init_seen_projects()
         print("✅ init_seen_projects завершена")
@@ -93,19 +91,5 @@ def scheduler():
             print(f"❌ Ошибка в цикле проверки проектов: {e}")
         time.sleep(300)
 
-# Flask-сервер для Render
-app = Flask(__name__)
-
-@app.route("/")
-def index():
-    return "Bot is running!"
-
 if __name__ == "__main__":
-    # Запуск scheduler в отдельном потоке
-    t = Thread(target=scheduler, daemon=True)
-    t.start()
-
-    # Flask для Render
-    port = int(os.environ.get("PORT", 5000))
-    print(f"🌍 Flask-сервер запускается на порту {port}...")
-    app.run(host="0.0.0.0", port=port)
+    main()
