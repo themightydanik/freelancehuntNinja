@@ -101,6 +101,11 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"Bot is running!")
 
+    def do_HEAD(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/plain")
+        self.end_headers()
+
 if __name__ == "__main__":
     # Запуск scheduler в отдельном потоке
     t = Thread(target=scheduler, daemon=True)
