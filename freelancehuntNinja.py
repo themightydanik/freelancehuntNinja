@@ -6,7 +6,7 @@ from flask import Flask
 from threading import Thread
 from dotenv import load_dotenv
 
-# Загружаем токены из .env
+# Загружаем токены из .env или используем дефолтные
 load_dotenv()
 API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
 FREELANCEHUNT_TOKEN = os.getenv("FREELANCEHUNT_TOKEN", "dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
