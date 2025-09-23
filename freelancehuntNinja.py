@@ -26,11 +26,12 @@ def init_seen_projects():
     print("🚀 Старт инициализации проектов...")
     for cat in CATEGORIES:
         params = {"filter[skill_id]": cat}
-        print(f"🔍 Загружаем проекты для категории {cat}...")
         try:
-            resp = requests.get(url, headers=headers, params=params)
+            print(f"🔍 Загружаем проекты для категории {cat}...")
+            resp = requests.get(url, headers=headers, params=params, timeout=10)
             resp.raise_for_status()
             data = resp.json()
+            print(f"✅ Получено {len(data.get('data', []))} проектов для категории {cat}")
             for item in data.get("data", []):
                 seen_projects.add(item["id"])
                 total += 1
@@ -46,10 +47,13 @@ def check_new_projects():
     for cat in CATEGORIES:
         params = {"filter[skill_id]": cat}
         try:
-            resp = requests.get(url, headers=headers, params=params)
+            print(f"🔍 Запрос к категории {cat}...")
+            resp = requests.get(url, headers=headers, params=params, timeout=10)
             resp.raise_for_status()
             data = resp.json()
-            for item in data.get("data", []):
+            projects = data.get("data", [])
+            print(f"✅ Получено {len(projects)} проектов для категории {cat}")
+            for item in projects:
                 project_id = item["id"]
                 if project_id not in seen_projects:
                     seen_projects.add(project_id)
@@ -64,8 +68,8 @@ def check_new_projects():
                     except Exception as e:
                         print(f"❌ Ошибка отправки проекта {project_id}: {e}")
         except Exception as e:
-            print(f"❌ Ошибка проверки категории {cat}: {e}")
-    print("✅ Проверка завершена.")
+            print(f"❌ Ошибка запроса категории {cat}: {e}")
+    print("✅ Проверка всех категорий завершена.")
 
 def scheduler():
     print("🚀 Запуск scheduler()...")
