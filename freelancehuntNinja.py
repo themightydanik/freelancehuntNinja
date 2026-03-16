@@ -355,7 +355,10 @@ def check_new_projects():
                         budget_str = f"\n💰 Бюджет: {budget_info['amount']} {budget_info.get('currency', '')}"
 
                     links = item.get("links", {})
-                    link = links.get("web") or f"https://freelancehunt.com/project/{project_id}.html"
+                    link = links.get("web")
+                    if not link:
+                        full = get_full_project(project_id)
+                        link = full.get("link", f"https://freelancehunt.com/project/{project_id}.html")
 
                     projects_cache[project_id] = {
                         "title": title,
