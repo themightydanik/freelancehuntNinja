@@ -8,18 +8,18 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from dotenv import load_dotenv
 from datetime import datetime
 import pytz
-import google.generativeai as genai
+from groq import Groq
 
 load_dotenv()
 
 API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
 FREELANCEHUNT_TOKEN = os.getenv("FREELANCEHUNT_TOKEN", "dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
 CHAT_ID = os.getenv("CHAT_ID", "-1003016177605")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
 bot = telebot.TeleBot(API_TOKEN)
-genai.configure(api_key=GEMINI_API_KEY)
-gemini = genai.GenerativeModel("gemini-2.0-flash")
+groq_client = Groq(api_key=GROQ_API_KEY)
+
 
 KYIV_TZ = pytz.timezone("Europe/Kiev")
 CATEGORIES = [99, 78, 175, 124, 43, 129, 68, 96, 134, 14, 183, 120]
@@ -193,14 +193,21 @@ def get_full_project(project_id: int) -> dict:
         return {}
 
 
-# ─── Генерация отклика через Gemini ──────────────────────────────────────────
+# ─── Генерация отклика через Groq ────────────────────────────────────────────
 
 def generate_response(title: str, description: str, lang: str = "UA") -> str:
     system_prompt = SYSTEM_PROMPT_UA if lang == "UA" else SYSTEM_PROMPT_RU
-    prompt = f"{system_prompt}\n\nНазва проекту: {title}\n\nОпис: {description}"
     try:
-        response = gemini.generate_content(prompt)
-        return response.text
+        response = groq_client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Назва проекту: {title}\n\nОпис: {description}"}
+            ],
+            max_tokens=400,
+            temperature=0.7
+        )
+        return response.choices[0].message.content
     except Exception as e:
         return f"❌ Помилка генерації: {e}"
 
