@@ -1,9 +1,13 @@
 import os
 import time
+import random
+import threading
 import requests
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from dotenv import load_dotenv
+from datetime import datetime
+import pytz
 import google.generativeai as genai
 
 load_dotenv()
@@ -17,11 +21,20 @@ bot = telebot.TeleBot(API_TOKEN)
 genai.configure(api_key=GEMINI_API_KEY)
 gemini = genai.GenerativeModel("gemini-2.0-flash")
 
+KYIV_TZ = pytz.timezone("Europe/Kiev")
 CATEGORIES = [99, 78, 175, 124, 43, 129, 68, 96, 134, 14, 183, 120]
+
 seen_projects = set()
 projects_cache = {}
 
-# ─── Промпты ─────────────────────────────────────────────────────────────────
+# Счётчики откликов
+daily_bids = 0       # сбрасывается каждый день в 23:00
+weekly_bids = 0      # сбрасывается каждый понедельник в 09:00
+last_daily_report = None
+last_weekly_report = None
+
+
+# ─── Промпты для генерации откликов ──────────────────────────────────────────
 
 SYSTEM_PROMPT_UA = """Ти — досвідчений веб-дизайнер, WordPress розробник і SEO спеціаліст з 10 роками досвіду.
 Твоє агентство — Kolos Agency. Пишеш відгук УКРАЇНСЬКОЮ мовою.
@@ -48,6 +61,115 @@ SYSTEM_PROMPT_RU = """Ты — опытный веб-дизайнер, WordPress
 - Никаких шаблонных фраз типа "Здравствуйте! Готов взяться за ваш проект"
 - Без лишних emoji
 - Тон — уверенный, дружелюбный, профессиональный"""
+
+
+# ─── Цитаты по уровню результата ─────────────────────────────────────────────
+
+QUOTES_LOW = [
+    "«Успех — это движение от неудачи к неудаче без потери энтузиазма.» — Уинстон Черчилль",
+    "«Неважно, как медленно ты идёшь, главное — не останавливаться.» — Конфуций",
+    "«Каждое утро — это новый шанс стать лучше, чем вчера.»",
+    "«Даже самый длинный путь начинается с одного шага.» — Лао-цзы",
+    "«Трудности — это не причина сдаться, а повод собраться.»",
+    "«Человек, который двигается вперёд хотя бы на сантиметр — уже обгоняет тех, кто стоит.»",
+]
+
+QUOTES_OK = [
+    "«Дисциплина — это мост между целями и достижениями.» — Джим Рон",
+    "«Стабильность — это не скучно. Это фундамент.»",
+    "«Делай сегодня то, что другие не хотят — завтра будешь жить так, как другие не могут.»",
+    "«Последовательность важнее интенсивности. Каждый день понемногу — это и есть система.»",
+    "«Богатство — это не удача. Это привычка работать тогда, когда не хочется.»",
+    "«Результат — это просто сумма правильных действий, повторённых достаточно много раз.»",
+]
+
+QUOTES_HIGH = [
+    "«Успех — это не финальная точка. Это стиль жизни.»",
+    "«Те, кто говорят, что это невозможно, не должны мешать тем, кто это делает.» — Конфуций",
+    "«Если тебе нравится то, что ты делаешь — ты никогда не будешь работать ни дня.» — Конфуций",
+    "«Большие дела делаются не силой, а настойчивостью.» — Сэмюэл Джонсон",
+    "«Победители делают то, что проигравшие не хотят делать.»",
+    "«Деньги — это просто благодарность мира за твою ценность.»",
+]
+
+
+# ─── Формирование дневного отчёта ────────────────────────────────────────────
+
+def get_daily_report(count: int) -> str:
+    if count < 5:
+        grade = "😐 Маловато, треба піднажати"
+        mood = "low"
+    elif count == 5:
+        grade = "✅ Хороший результат, ми в порядку"
+        mood = "ok"
+    else:
+        grade = "🔥 Бро, ти відриваєшся! Сьогодні прям у вударі!"
+        mood = "high"
+
+    if mood == "low":
+        quote = random.choice(QUOTES_LOW)
+    elif mood == "ok":
+        quote = random.choice(QUOTES_OK)
+    else:
+        quote = random.choice(QUOTES_HIGH)
+
+    return (
+        f"📊 <b>Підсумок дня</b>\n\n"
+        f"Відгуків відправлено: <b>{count}</b>\n"
+        f"Оцінка: {grade}\n\n"
+        f"💬 <i>{quote}</i>"
+    )
+
+
+# ─── Формирование недельного отчёта ──────────────────────────────────────────
+
+def get_weekly_report(count: int) -> str:
+    if count < 35:
+        grade = "😬 Нижче норми. Кріпимо булки і беремося за справу!"
+    elif count == 35:
+        grade = "💪 Супер, ми в порядку! Рівно по плану."
+    else:
+        grade = "🚀 Це був вогненний тиждень! Продовжуй — і будемо натирати на бутерброди золоті злитки 🥇"
+
+    return (
+        f"📅 <b>Підсумок тижня</b>\n\n"
+        f"Відгуків за тиждень: <b>{count}</b>\n"
+        f"Ціль: 35 відгуків\n\n"
+        f"{grade}"
+    )
+
+
+# ─── Планировщик отчётов ─────────────────────────────────────────────────────
+
+def reports_scheduler():
+    global daily_bids, weekly_bids, last_daily_report, last_weekly_report
+
+    while True:
+        now = datetime.now(KYIV_TZ)
+        today_str = now.strftime("%Y-%m-%d")
+        week_str = now.strftime("%Y-W%W")
+
+        # Дневной отчёт — каждый день в 23:00
+        if now.hour == 23 and now.minute == 0 and last_daily_report != today_str:
+            last_daily_report = today_str
+            report = get_daily_report(daily_bids)
+            try:
+                bot.send_message(CHAT_ID, report, parse_mode="HTML")
+            except Exception as e:
+                print(f"❌ Помилка дневного отчёта: {e}")
+            daily_bids = 0  # сбрасываем счётчик
+
+        # Недельный отчёт — каждый понедельник в 09:00
+        if now.weekday() == 0 and now.hour == 9 and now.minute == 0 and last_weekly_report != week_str:
+            last_weekly_report = week_str
+            report = get_weekly_report(weekly_bids)
+            try:
+                bot.send_message(CHAT_ID, report, parse_mode="HTML")
+            except Exception as e:
+                print(f"❌ Помилка недельного отчёта: {e}")
+            weekly_bids = 0  # сбрасываем счётчик
+
+        time.sleep(60)  # проверяем каждую минуту
 
 
 # ─── Получение полного описания проекта ──────────────────────────────────────
@@ -87,6 +209,8 @@ def generate_response(title: str, description: str, lang: str = "UA") -> str:
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("respond_ua_") or call.data.startswith("respond_ru_"))
 def handle_respond(call):
+    global daily_bids, weekly_bids
+
     parts = call.data.split("_")
     lang = parts[1].upper()
     project_id = int(parts[2])
@@ -114,6 +238,10 @@ def handle_respond(call):
     response_text = generate_response(title, description, lang)
     projects_cache[project_id]["generated_response"] = response_text
 
+    # Считаем отклик
+    daily_bids += 1
+    weekly_bids += 1
+
     markup = InlineKeyboardMarkup()
     markup.row(
         InlineKeyboardButton(f"🔄 Ще раз ({lang})", callback_data=f"regen_{lang.lower()}_{project_id}"),
@@ -122,7 +250,7 @@ def handle_respond(call):
 
     bot.send_message(
         CHAT_ID,
-        f"📋 <b>Скопіюй і встав відгук:</b>\n\n{response_text}\n\n🔗 <a href='{link}'>Відкрити проект</a>",
+        f"📋 <b>Скопіюй і встав відгук:</b>\n\n{response_text}\n\n🔗 <a href='{link}'>Відкрити проект</a>\n\n📈 Відгуків сьогодні: <b>{daily_bids}</b> | За тиждень: <b>{weekly_bids}</b>",
         parse_mode="HTML",
         reply_markup=markup,
         disable_web_page_preview=True
@@ -151,8 +279,9 @@ def handle_regen(call):
         InlineKeyboardButton("❌ Скасувати", callback_data=f"cancel_{project_id}")
     )
 
+    link = project["link"]
     bot.edit_message_text(
-        f"📋 <b>Новий відгук — скопіюй і встав:</b>\n\n{response_text}\n\n🔗 <a href='{project['link']}'>Відкрити проект</a>",
+        f"📋 <b>Новий відгук — скопіюй і встав:</b>\n\n{response_text}\n\n🔗 <a href='{link}'>Відкрити проект</a>\n\n📈 Відгуків сьогодні: <b>{daily_bids}</b> | За тиждень: <b>{weekly_bids}</b>",
         call.message.chat.id,
         call.message.message_id,
         parse_mode="HTML",
@@ -262,21 +391,28 @@ def check_new_projects():
             print(f"❌ Помилка категорії {cat}: {e}")
 
 
-def scheduler():
-    import threading
+# ─── Запуск ───────────────────────────────────────────────────────────────────
 
+def scheduler():
     print("🚀 Ninja запускається...")
     init_seen_projects()
 
     try:
-        bot.send_message(CHAT_ID, "🚀 Ninja запущений! Gemini AI готовий 🤖\nОбирай мову і копіюй текст 📋")
+        bot.send_message(CHAT_ID, "🚀 Ninja запущений! Gemini AI готовий 🤖\nОбирай мову і копіюй текст 📋\nЩодня о 23:00 — підсумок дня. Понеділок 09:00 — підсумок тижня.")
     except Exception as e:
         print(f"❌ Помилка старту: {e}")
 
+    # Поток для отчётов
+    report_thread = threading.Thread(target=reports_scheduler)
+    report_thread.daemon = True
+    report_thread.start()
+
+    # Поток для polling
     polling_thread = threading.Thread(target=bot.polling, kwargs={"none_stop": True})
     polling_thread.daemon = True
     polling_thread.start()
 
+    # Основной цикл мониторинга проектов
     while True:
         try:
             check_new_projects()
