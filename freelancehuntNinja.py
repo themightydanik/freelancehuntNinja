@@ -1,6 +1,6 @@
 """
 Облачный Telegram Bot для FreelanceHunt Ninja v3
-Хостится на Railway и отправляет команды на локальный Mac сервер.
+Хостим на Railway и отправляем команды на локальный Mac сервер.
 """
 
 import os
