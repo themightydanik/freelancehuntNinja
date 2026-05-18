@@ -20,7 +20,7 @@ load_dotenv()
 API_TOKEN = os.getenv("7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
 FREELANCEHUNT_TOKEN = os.getenv("dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
 CHAT_ID = os.getenv("-1003016177605")
-MAC_SERVER_URL = os.getenv("https://decidable-ocean-stained.ngrok-free.dev")  # URL твоего Mac (через ngrok или постоянный)
+MAC_SERVER_URL = os.getenv("MAC_SERVER_URL")  # URL твоего Mac (через ngrok или постоянный)
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -109,7 +109,7 @@ def handle_generate(call):
                 "title": project["title"],
                 "description": project["description"],
                 "lang": lang,
-                "callback_url": f"https://decidable-ocean-stained.ngrok-free.dev/callback"  # замени на свой URL
+                "callback_url": f"https://ingenious-cooperation-production-5f53.up.railway.app/callback"  # замени на свой URL
             },
             timeout=90
         )
@@ -205,7 +205,7 @@ def handle_send(call):
                 "message": result["message"],
                 "days": result["days"],
                 "price": result["price_max"],
-                "callback_url": f"https://decidable-ocean-stained.ngrok-free.dev/callback"
+                "callback_url": f"https://ingenious-cooperation-production-5f53.up.railway.app/callback"
             },
             timeout=10
         )
