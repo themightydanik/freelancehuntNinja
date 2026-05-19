@@ -1,6 +1,7 @@
 """
 Облачный Telegram Bot для FreelanceHunt Ninja v3
-Хостим на Railway и отправляем команды на локальный Mac сервер.
+Работает независимо от доступности Mac сервера.
+Продолжает мониторить проекты даже если генерация/отправка недоступна.
 """
 
 import os
@@ -17,10 +18,12 @@ import re
 
 load_dotenv()
 
-API_TOKEN = os.getenv("7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
-FREELANCEHUNT_TOKEN = os.getenv("dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
-CHAT_ID = os.getenv("-1003016177605")
-MAC_SERVER_URL = os.getenv("MAC_SERVER_URL")  # URL твоего Mac (через ngrok или постоянный)
+# Конфигурация
+API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
+FREELANCEHUNT_TOKEN = os.getenv("FREELANCEHUNT_TOKEN", "dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
+CHAT_ID = os.getenv("CHAT_ID", "-1003016177605")
+MAC_SERVER_URL = os.getenv("MAC_SERVER_URL", "http://localhost:3000")  # Fallback на localhost
+CALLBACK_URL = os.getenv("CALLBACK_URL", "https://ingenious-cooperation-production-5f53.up.railway.app/callback")
 
 bot = telebot.TeleBot(API_TOKEN)
 
@@ -37,6 +40,33 @@ daily_bids = 0
 weekly_bids = 0
 last_daily_report = None
 last_weekly_report = None
+
+# Статус Mac сервера
+mac_server_available = False
+last_mac_check = 0
+
+
+def check_mac_server():
+    """
+    Проверяет доступность Mac сервера.
+    Не падает если сервер недоступен.
+    """
+    global mac_server_available, last_mac_check
+    
+    # Проверяем не чаще раза в минуту
+    now = time.time()
+    if now - last_mac_check < 60:
+        return mac_server_available
+    
+    last_mac_check = now
+    
+    try:
+        response = requests.get(f"{MAC_SERVER_URL}/health", timeout=3)
+        mac_server_available = response.status_code == 200
+        return mac_server_available
+    except:
+        mac_server_available = False
+        return False
 
 
 def title_to_slug(title: str) -> str:
@@ -90,6 +120,28 @@ def handle_generate(call):
     lang = parts[1].upper()
     project_id = int(parts[2])
     
+    # Проверяем доступность Mac сервера
+    if not check_mac_server():
+        bot.answer_callback_query(
+            call.id,
+            "⚠️ Mac сервер недоступний. Перевір підключення.",
+            show_alert=True
+        )
+        bot.send_message(
+            CHAT_ID,
+            "⚠️ <b>Mac сервер недоступний</b>\n\n"
+            "Переконайся що:\n"
+            "1. Mac увімкнений\n"
+            "2. <code>python3 mac_server_v3.py</code> запущений\n"
+            "3. ngrok працює\n"
+            "4. MAC_SERVER_URL правильний\n\n"
+            f"Поточний URL: <code>{MAC_SERVER_URL}</code>\n\n"
+            "Проекти продовжують надходити в Telegram.\n"
+            "Генерація запрацює коли Mac підключиться.",
+            parse_mode="HTML"
+        )
+        return
+    
     bot.answer_callback_query(call.id, f"⏳ Генерую відгук ({lang})...")
     
     # Получаем проект
@@ -109,7 +161,7 @@ def handle_generate(call):
                 "title": project["title"],
                 "description": project["description"],
                 "lang": lang,
-                "callback_url": f"https://ingenious-cooperation-production-5f53.up.railway.app/callback"  # замени на свой URL
+                "callback_url": CALLBACK_URL
             },
             timeout=90
         )
@@ -158,14 +210,19 @@ def handle_generate(call):
             bot.send_message(CHAT_ID, f"❌ Помилка Mac сервера: {response.status_code}")
             
     except requests.exceptions.ConnectionError:
+        # Мягкая обработка - не падаем
         bot.send_message(
             CHAT_ID,
-            "⚠️ <b>Mac сервер недоступний</b>\n\n"
-            "Переконайся що:\n"
-            "1. Mac увімкнений\n"
-            "2. Сервер запущений: <code>python3 mac_server_v3.py</code>\n"
-            "3. ngrok працює (якщо потрібен)\n\n"
-            f"URL: {MAC_SERVER_URL}",
+            "⚠️ <b>Втрачено зв'язок з Mac</b>\n\n"
+            "Перевір підключення та спробуй ще раз.\n"
+            "Проекти продовжують надходити.",
+            parse_mode="HTML"
+        )
+    except requests.exceptions.Timeout:
+        bot.send_message(
+            CHAT_ID,
+            "⚠️ <b>Таймаут генерації</b>\n\n"
+            "Mac не відповідає. Перевір що сервер працює.",
             parse_mode="HTML"
         )
     except Exception as e:
@@ -178,6 +235,15 @@ def handle_send(call):
     global daily_bids, weekly_bids
     
     project_id = int(call.data.split("_")[1])
+    
+    # Проверяем доступность Mac сервера
+    if not check_mac_server():
+        bot.answer_callback_query(
+            call.id,
+            "⚠️ Mac сервер недоступний",
+            show_alert=True
+        )
+        return
     
     # Anti-duplicate
     if project_id in sent_bids_today:
@@ -205,7 +271,7 @@ def handle_send(call):
                 "message": result["message"],
                 "days": result["days"],
                 "price": result["price_max"],
-                "callback_url": f"https://ingenious-cooperation-production-5f53.up.railway.app/callback"
+                "callback_url": CALLBACK_URL
             },
             timeout=10
         )
@@ -231,7 +297,7 @@ def handle_send(call):
         bot.send_message(
             CHAT_ID,
             "⚠️ <b>Mac сервер недоступний</b>\n\n"
-            f"URL: {MAC_SERVER_URL}",
+            "Відгук НЕ відправлено. Спробуй пізніше.",
             parse_mode="HTML"
         )
     except Exception as e:
@@ -244,6 +310,17 @@ def handle_regen(call):
     parts = call.data.split("_")
     lang = parts[1].upper()
     project_id = int(parts[2])
+    
+    # Проверяем доступность
+    if not check_mac_server():
+        bot.answer_callback_query(
+            call.id,
+            "⚠️ Mac сервер недоступний",
+            show_alert=True
+        )
+        return
+    
+    bot.answer_callback_query(call.id, "🔄 Перегенеровую...")
     
     # Используем ту же логику что и generate
     handle_generate_internal(project_id, lang, call.message)
@@ -348,38 +425,45 @@ def callback():
     """Принимает статусы от Mac сервера."""
     global daily_bids, weekly_bids
     
-    data = flask_request.json
-    project_id = data.get("project_id")
-    status = data.get("status")
-    message = data.get("message")
-    
-    if status == "success":
-        daily_bids += 1
-        weekly_bids += 1
+    try:
+        data = flask_request.json
+        project_id = data.get("project_id")
+        status = data.get("status")
+        message = data.get("message")
         
-        bot.send_message(
-            CHAT_ID,
-            f"✅ <b>Відгук відправлено!</b>\n\n"
-            f"📊 Сьогодні: <b>{daily_bids}</b> | За тиждень: <b>{weekly_bids}</b>",
-            parse_mode="HTML"
-        )
-    elif status == "failed" or status == "error":
-        bot.send_message(
-            CHAT_ID,
-            f"❌ <b>Помилка відправки</b>\n\n"
-            f"{message or 'Невідома помилка'}",
-            parse_mode="HTML"
-        )
-    elif status == "processing":
-        # Опционально - можно отправить статус
-        pass
-    
-    return {"status": "ok"}, 200
+        if status == "success":
+            daily_bids += 1
+            weekly_bids += 1
+            
+            bot.send_message(
+                CHAT_ID,
+                f"✅ <b>Відгук відправлено!</b>\n\n"
+                f"📊 Сьогодні: <b>{daily_bids}</b> | За тиждень: <b>{weekly_bids}</b>",
+                parse_mode="HTML"
+            )
+        elif status == "failed" or status == "error":
+            bot.send_message(
+                CHAT_ID,
+                f"❌ <b>Помилка відправки</b>\n\n"
+                f"{message or 'Невідома помилка'}",
+                parse_mode="HTML"
+            )
+        elif status == "processing":
+            # Опционально - можно отправить статус
+            pass
+        
+        return {"status": "ok"}, 200
+    except Exception as e:
+        print(f"❌ Callback error: {e}")
+        return {"status": "error", "message": str(e)}, 500
 
 
 # Мониторинг проектов
 def init_seen_projects():
-    """Инициализация."""
+    """
+    Инициализация.
+    Работает независимо от Mac сервера.
+    """
     headers = {"Authorization": f"Bearer {FREELANCEHUNT_TOKEN}"}
     url = "https://api.freelancehunt.com/v2/projects"
     total = 0
@@ -393,14 +477,18 @@ def init_seen_projects():
             for item in resp.json().get("data", []):
                 seen_projects.add(item["id"])
                 total += 1
-        except:
-            pass
+        except Exception as e:
+            print(f"⚠️ Помилка категорії {cat}: {e}")
+            continue
     
     print(f"✅ Завершено. Проектів: {total}")
 
 
 def check_new_projects():
-    """Проверка новых проектов."""
+    """
+    Проверка новых проектов.
+    Работает независимо от Mac сервера - только мониторинг Freelancehunt.
+    """
     headers = {"Authorization": f"Bearer {FREELANCEHUNT_TOKEN}"}
     url = "https://api.freelancehunt.com/v2/projects"
     
@@ -457,45 +545,70 @@ def check_new_projects():
                             reply_markup=markup,
                             disable_web_page_preview=True
                         )
-                    except:
-                        pass
+                    except Exception as e:
+                        print(f"⚠️ Помилка відправки проекту {project_id}: {e}")
         
-        except:
-            pass
+        except Exception as e:
+            print(f"⚠️ Помилка категорії {cat}: {e}")
+            continue
 
 
 def scheduler():
-    """Главный планировщик."""
+    """
+    Главный планировщик.
+    Работает независимо - мониторинг проектов всегда активен.
+    """
     print("🚀 Cloud Telegram Bot v3 запускається...")
+    print(f"📡 Freelancehunt API: активний")
+    print(f"🖥 Mac Server: {MAC_SERVER_URL}")
+    
+    # Проверяем Mac сервер при старте
+    mac_status = "✅ підключений" if check_mac_server() else "⚠️ недоступний"
+    print(f"🔌 Mac Server: {mac_status}")
+    
     init_seen_projects()
     
     try:
-        bot.send_message(
-            CHAT_ID,
+        status_msg = (
             "🚀 <b>Ninja v3 запущений!</b>\n\n"
-            "☁️ Бот в хмарі (Render/Railway)\n"
-            "🖥 Mac сервер для автоматизації\n"
-            "🦊 OS-level Firefox automation",
-            parse_mode="HTML"
+            "☁️ Бот в хмарі (Railway)\n"
+            "📡 Мониторинг проектів: <b>активний</b>\n"
         )
-    except:
-        pass
+        
+        if mac_server_available:
+            status_msg += "🖥 Mac сервер: <b>підключений</b>\n"
+            status_msg += "🦊 OS-level automation: <b>готовий</b>"
+        else:
+            status_msg += "⚠️ Mac сервер: <b>недоступний</b>\n"
+            status_msg += "Проекти надходять в Telegram.\n"
+            status_msg += "Генерація запрацює після підключення Mac."
+        
+        bot.send_message(CHAT_ID, status_msg, parse_mode="HTML")
+    except Exception as e:
+        print(f"⚠️ Помилка відправки статусу: {e}")
     
     # Polling
     polling_thread = threading.Thread(target=bot.polling, kwargs={"none_stop": True})
     polling_thread.daemon = True
     polling_thread.start()
     
-    # Monitoring loop
+    # Monitoring loop - работает всегда
     while True:
         try:
             check_new_projects()
-        except:
-            pass
-        time.sleep(300)
+        except Exception as e:
+            print(f"⚠️ Помилка моніторингу: {e}")
+            # Не падаем - продолжаем работать
+        time.sleep(300)  # каждые 5 минут
 
 
 if __name__ == "__main__":
+    print("\n" + "="*60)
+    print("FREELANCEHUNT NINJA v3 - CLOUD BOT")
+    print("="*60)
+    print("Resilient mode: работает даже если Mac offline")
+    print("="*60 + "\n")
+    
     # Запускаем Flask callback сервер
     flask_thread = threading.Thread(
         target=lambda: flask_app.run(host='0.0.0.0', port=int(os.getenv("PORT", 8080))),
