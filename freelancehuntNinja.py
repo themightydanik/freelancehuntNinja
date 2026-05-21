@@ -1,5 +1,5 @@
 """
-Telegram Bot для FreelanceHunt Ninja v3
+Облачный Telegram Bot для FreelanceHunt Ninja v3
 Работает независимо от доступности Mac сервера.
 Продолжает мониторить проекты даже если генерация/отправка недоступна.
 """
@@ -22,10 +22,19 @@ load_dotenv()
 API_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7474098596:AAGbmTknoHjMFSMa9zomn_GFUtt0lyGEVDY")
 FREELANCEHUNT_TOKEN = os.getenv("FREELANCEHUNT_TOKEN", "dae434aed0d10e2e317db5784e1c9d9e9a1965cc")
 CHAT_ID = os.getenv("CHAT_ID", "-1003016177605")
-MAC_SERVER_URL = os.getenv("MAC_SERVER_URL", "http://localhost:3000")  # Fallback на localhost
-CALLBACK_URL = os.getenv("CALLBACK_URL", "https://ingenious-cooperation-production-5f53.up.railway.app/callback")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")  # Добавь в Railway variables
+
+# Railway URL для Telegram webhook
+RAILWAY_URL = os.getenv("RAILWAY_URL", "https://ingenious-cooperation-production-5f53.up.railway.app")
+
+# Mac server URL для отправки команд автоматизации
+MAC_SERVER_URL = os.getenv("MAC_SERVER_URL", "http://localhost:3000")
 
 bot = telebot.TeleBot(API_TOKEN)
+
+# Groq client для генерации
+from groq import Groq
+groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
 KYIV_TZ = pytz.timezone("Europe/Kiev")
 CATEGORIES = [99, 78, 175, 124, 43, 129, 68, 96, 134, 14, 183, 120]
@@ -44,6 +53,148 @@ last_weekly_report = None
 # Статус Mac сервера
 mac_server_available = False
 last_mac_check = 0
+
+
+# ─── Промпты для генерации ──────────────────────────────────────────────────
+
+SYSTEM_PROMPT_UA = """Ти — досвідчений веб-дизайнер, WordPress розробник і SEO спеціаліст з 10 роками досвіду. Пишеш відгук від імені жінки-фрілансера УКРАЇНСЬКОЮ мовою.
+
+КРИТИЧНО ВАЖЛИВО: Кожен відгук повинен бути АБСОЛЮТНО УНІКАЛЬНИМ за структурою.
+
+Базова структура (але ВАРІЮЙ):
+- Доброго дня [ім'я якщо є]
+- Розуміння проекту (2-3 речення)
+- Що зроблю (3-6 пунктів)
+- Бонус/додаткова цінність
+- Строки: X–Y днів після отримання матеріалів
+- Вартість: X–Y грн (залежить від конкретного фактора)
+
+ЗАБОРОНИ:
+- НЕ згадуй Kolos Agency
+- Без emoji
+- НЕ використовуй шаблонні фрази
+- Тон — впевнений, природній, жіночий
+
+ВАЖЛИВО: Відповідь у форматі JSON:
+{
+  "message": "текст відгуку",
+  "price_min": 3000,
+  "price_max": 6000,
+  "days": 7,
+  "confidence": 0.85
+}"""
+
+SYSTEM_PROMPT_RU = """Ты — опытный веб-дизайнер, WordPress разработчик и SEO специалист с 10 годами опыта. Пишешь отклик от имени женщины-фрилансера на РУССКОМ языке.
+
+КРИТИЧЕСКИ ВАЖНО: Каждый отклик должен быть АБСОЛЮТНО УНИКАЛЬНЫМ по структуре.
+
+Базовая структура (но ВАРЬИРУЙ):
+- Добрый день [имя если есть]
+- Понимание проекта (2-3 предложения)
+- Что сделаю (3-6 пунктов)
+- Бонус/дополнительная ценность
+- Сроки: X–Y дней после получения материалов
+- Стоимость: X–Y грн (зависит от конкретного фактора)
+
+ЗАПРЕТЫ:
+- НЕ упоминай Kolos Agency
+- Без emoji
+- НЕ используй шаблонные фразы
+- Тон — уверенный, естественный, женский
+
+ВАЖНО: Ответ в формате JSON:
+{
+  "message": "текст отклика",
+  "price_min": 3000,
+  "price_max": 6000,
+  "days": 7,
+  "confidence": 0.85
+}"""
+
+
+def generate_response_groq(title: str, description: str, lang: str = "UA", budget: dict = None) -> dict:
+    """
+    Генерирует отклик через Groq API.
+    Работает прямо в Railway - быстро и надежно.
+    """
+    if not groq_client:
+        return {
+            "message": "❌ GROQ_API_KEY не настроен",
+            "price_min": 0,
+            "price_max": 0,
+            "days": 0,
+            "confidence": 0
+        }
+    
+    system_prompt = SYSTEM_PROMPT_UA if lang == "UA" else SYSTEM_PROMPT_RU
+    
+    budget_info = ""
+    if budget and budget.get("amount"):
+        budget_info = f"\nБюджет клиента: {budget['amount']} {budget.get('currency', 'UAH')}"
+    
+    user_prompt = f"""Назва проекту: {title}
+
+Опис: {description}{budget_info}
+
+Створи УНІКАЛЬНИЙ відгук. Проаналізуй складність, запропонуй реалістичну ціну (2000-20000 грн) і строки (3-21 днів).
+
+Відповідь СТРОГО у форматі JSON (без markdown, без пояснень):
+{{
+  "message": "текст",
+  "price_min": число,
+  "price_max": число,
+  "days": число,
+  "confidence": 0.0-1.0
+}}"""
+
+    try:
+        response = groq_client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            max_tokens=500,
+            temperature=0.85
+        )
+        
+        text = response.choices[0].message.content
+        
+        # Парсим JSON
+        import json
+        text = re.sub(r'```json\s*', '', text)
+        text = re.sub(r'```\s*', '', text)
+        
+        json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', text, re.DOTALL)
+        if json_match:
+            parsed = json.loads(json_match.group(0))
+            if "message" in parsed:
+                return {
+                    "message": parsed.get("message", text),
+                    "price_min": max(1000, min(parsed.get("price_min", 3000), 50000)),
+                    "price_max": max(1000, min(parsed.get("price_max", 5000), 50000)),
+                    "days": max(1, min(parsed.get("days", 7), 30)),
+                    "confidence": max(0, min(parsed.get("confidence", 0.75), 1))
+                }
+        
+        # Fallback
+        return {
+            "message": text,
+            "price_min": 3000,
+            "price_max": 5000,
+            "days": 7,
+            "confidence": 0.5
+        }
+        
+    except Exception as e:
+        print(f"❌ Groq error: {e}")
+        return {
+            "message": f"❌ Помилка генерації: {str(e)}",
+            "price_min": 0,
+            "price_max": 0,
+            "days": 0,
+            "confidence": 0
+        }
 
 
 def check_mac_server():
@@ -115,32 +266,13 @@ def get_full_project(project_id: int) -> dict:
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("generate_"))
 def handle_generate(call):
-    """Генерация отклика - отправляет запрос на Mac сервер."""
+    """
+    Генерация отклика - теперь прямо здесь через Groq API.
+    Mac не нужен для генерации.
+    """
     parts = call.data.split("_")
     lang = parts[1].upper()
     project_id = int(parts[2])
-    
-    # Проверяем доступность Mac сервера
-    if not check_mac_server():
-        bot.answer_callback_query(
-            call.id,
-            "⚠️ Mac сервер недоступний. Перевір підключення.",
-            show_alert=True
-        )
-        bot.send_message(
-            CHAT_ID,
-            "⚠️ <b>Mac сервер недоступний</b>\n\n"
-            "Переконайся що:\n"
-            "1. Mac увімкнений\n"
-            "2. <code>python3 mac_server_v3.py</code> запущений\n"
-            "3. ngrok працює\n"
-            "4. MAC_SERVER_URL правильний\n\n"
-            f"Поточний URL: <code>{MAC_SERVER_URL}</code>\n\n"
-            "Проекти продовжують надходити в Telegram.\n"
-            "Генерація запрацює коли Mac підключиться.",
-            parse_mode="HTML"
-        )
-        return
     
     bot.answer_callback_query(call.id, f"⏳ Генерую відгук ({lang})...")
     
@@ -150,88 +282,64 @@ def handle_generate(call):
         bot.send_message(CHAT_ID, "❌ Не вдалось отримати проект")
         return
     
-    bot.send_message(CHAT_ID, f"🤖 Відправляю запит на Mac...\n<b>{project['title']}</b>", parse_mode="HTML")
+    bot.send_message(CHAT_ID, f"🤖 Генерую відгук через Groq AI...\n<b>{project['title']}</b>", parse_mode="HTML")
     
-    # Отправляем запрос на Mac сервер для генерации
-    try:
-        response = requests.post(
-            f"{MAC_SERVER_URL}/webhook/generate",
-            json={
-                "project_id": project_id,
-                "title": project["title"],
-                "description": project["description"],
-                "lang": lang,
-                "callback_url": CALLBACK_URL
-            },
-            timeout=90
-        )
-        
-        if response.status_code == 200:
-            result_data = response.json()
-            result = result_data.get("result", {})
-            
-            # Сохраняем для подтверждения
-            pending_bids[project_id] = {
-                "project": project,
-                "result": result,
-                "lang": lang
-            }
-            
-            # Формируем сообщение
-            message_text = result.get("message", "Ошибка генерации")
-            price_min = result.get("price_min", 0)
-            price_max = result.get("price_max", 0)
-            days = result.get("days", 7)
-            confidence = int(result.get("confidence", 0) * 100)
-            
-            markup = InlineKeyboardMarkup()
-            markup.row(
-                InlineKeyboardButton("✅ Відправити", callback_data=f"send_{project_id}"),
-                InlineKeyboardButton(f"🔄 Ще раз ({lang})", callback_data=f"regen_{lang.lower()}_{project_id}")
-            )
-            markup.row(
-                InlineKeyboardButton("❌ Скасувати", callback_data=f"cancel_{project_id}")
-            )
-            
-            bot.send_message(
-                CHAT_ID,
-                f"📋 <b>Готовий відгук:</b>\n\n"
-                f"{message_text}\n\n"
-                f"━━━━━━━━━━━━━━\n"
-                f"💰 Ціна: <b>{price_min}-{price_max} грн</b>\n"
-                f"⏱ Строки: <b>{days} днів</b>\n"
-                f"🎯 Впевненість AI: <b>{confidence}%</b>\n\n"
-                f"🔗 <a href='{project['link']}'>Відкрити проект</a>",
-                parse_mode="HTML",
-                reply_markup=markup,
-                disable_web_page_preview=True
-            )
-        else:
-            bot.send_message(CHAT_ID, f"❌ Помилка Mac сервера: {response.status_code}")
-            
-    except requests.exceptions.ConnectionError:
-        # Мягкая обработка - не падаем
-        bot.send_message(
-            CHAT_ID,
-            "⚠️ <b>Втрачено зв'язок з Mac</b>\n\n"
-            "Перевір підключення та спробуй ще раз.\n"
-            "Проекти продовжують надходити.",
-            parse_mode="HTML"
-        )
-    except requests.exceptions.Timeout:
-        bot.send_message(
-            CHAT_ID,
-            "⚠️ <b>Таймаут генерації</b>\n\n"
-            "Mac не відповідає. Перевір що сервер працює.",
-            parse_mode="HTML"
-        )
-    except Exception as e:
-        bot.send_message(CHAT_ID, f"❌ Помилка: {e}")
+    # Генерируем прямо здесь в Railway
+    result = generate_response_groq(
+        title=project["title"],
+        description=project["description"],
+        lang=lang,
+        budget=project.get("budget")
+    )
+    
+    if result["confidence"] == 0:
+        bot.send_message(CHAT_ID, result["message"])  # Ошибка
+        return
+    
+    # Сохраняем для подтверждения
+    pending_bids[project_id] = {
+        "project": project,
+        "result": result,
+        "lang": lang
+    }
+    
+    # Формируем сообщение
+    message_text = result.get("message", "Ошибка генерации")
+    price_min = result.get("price_min", 0)
+    price_max = result.get("price_max", 0)
+    days = result.get("days", 7)
+    confidence = int(result.get("confidence", 0) * 100)
+    
+    markup = InlineKeyboardMarkup()
+    markup.row(
+        InlineKeyboardButton("✅ Відправити", callback_data=f"send_{project_id}"),
+        InlineKeyboardButton(f"🔄 Ще раз ({lang})", callback_data=f"regen_{lang.lower()}_{project_id}")
+    )
+    markup.row(
+        InlineKeyboardButton("❌ Скасувати", callback_data=f"cancel_{project_id}")
+    )
+    
+    bot.send_message(
+        CHAT_ID,
+        f"📋 <b>Готовий відгук:</b>\n\n"
+        f"{message_text}\n\n"
+        f"━━━━━━━━━━━━━━\n"
+        f"💰 Ціна: <b>{price_min}-{price_max} грн</b>\n"
+        f"⏱ Строки: <b>{days} днів</b>\n"
+        f"🎯 Впевненість AI: <b>{confidence}%</b>\n\n"
+        f"🔗 <a href='{project['link']}'>Відкрити проект</a>",
+        parse_mode="HTML",
+        reply_markup=markup,
+        disable_web_page_preview=True
+    )
 
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("send_"))
 def handle_send(call):
-    """Отправка отклика - триггерит OS-level автоматизацию на Mac."""
+    """
+    Отправка отклика - триггерит автоматизацию на Mac.
+    Mac получает готовые данные (текст, цену, сроки).
+    """
     global daily_bids, weekly_bids
     
     project_id = int(call.data.split("_")[1])
@@ -240,8 +348,18 @@ def handle_send(call):
     if not check_mac_server():
         bot.answer_callback_query(
             call.id,
-            "⚠️ Mac сервер недоступний",
+            "⚠️ Mac сервер недоступний. Запусти локально.",
             show_alert=True
+        )
+        bot.send_message(
+            CHAT_ID,
+            "⚠️ <b>Mac сервер недоступний</b>\n\n"
+            "Запусти на Mac:\n"
+            "1. <code>python3 mac_server_v3.py</code>\n"
+            "2. <code>ngrok http 3000</code>\n"
+            "3. Оновіть MAC_SERVER_URL в Railway\n\n"
+            f"Поточний URL: <code>{MAC_SERVER_URL}</code>",
+            parse_mode="HTML"
         )
         return
     
@@ -256,12 +374,12 @@ def handle_send(call):
         bot.answer_callback_query(call.id, "❌ Дані втрачені")
         return
     
-    bot.answer_callback_query(call.id, "🚀 Запускаю Mac автоматизацію...")
+    bot.answer_callback_query(call.id, "🚀 Запускаю автоматизацію...")
     
     project = bid_data["project"]
     result = bid_data["result"]
     
-    # Отправляем команду на Mac для OS-level автоматизации
+    # Отправляем команду на Mac - только готовые данные для автоматизации
     try:
         response = requests.post(
             f"{MAC_SERVER_URL}/webhook/submit",
@@ -270,8 +388,7 @@ def handle_send(call):
                 "url": project["link"],
                 "message": result["message"],
                 "days": result["days"],
-                "price": result["price_max"],
-                "callback_url": CALLBACK_URL
+                "price": result["price_max"]
             },
             timeout=10
         )
@@ -297,7 +414,7 @@ def handle_send(call):
         bot.send_message(
             CHAT_ID,
             "⚠️ <b>Mac сервер недоступний</b>\n\n"
-            "Відгук НЕ відправлено. Спробуй пізніше.",
+            "Відгук НЕ відправлено. Запусти Mac сервер.",
             parse_mode="HTML"
         )
     except Exception as e:
@@ -306,24 +423,65 @@ def handle_send(call):
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("regen_"))
 def handle_regen(call):
-    """Регенерация отклика."""
+    """Регенерация отклика через Groq."""
     parts = call.data.split("_")
     lang = parts[1].upper()
     project_id = int(parts[2])
     
-    # Проверяем доступность
-    if not check_mac_server():
-        bot.answer_callback_query(
-            call.id,
-            "⚠️ Mac сервер недоступний",
-            show_alert=True
-        )
-        return
-    
     bot.answer_callback_query(call.id, "🔄 Перегенеровую...")
     
-    # Используем ту же логику что и generate
-    handle_generate_internal(project_id, lang, call.message)
+    bid_data = pending_bids.get(project_id)
+    if not bid_data:
+        bot.send_message(CHAT_ID, "❌ Дані проекту втрачено")
+        return
+    
+    project = bid_data["project"]
+    
+    # Генерируем заново через Groq
+    result = generate_response_groq(
+        title=project["title"],
+        description=project["description"],
+        lang=lang,
+        budget=project.get("budget")
+    )
+    
+    if result["confidence"] == 0:
+        bot.send_message(CHAT_ID, result["message"])
+        return
+    
+    # Обновляем данные
+    pending_bids[project_id]["result"] = result
+    pending_bids[project_id]["lang"] = lang
+    
+    message_text = result.get("message", "")
+    price_min = result.get("price_min", 0)
+    price_max = result.get("price_max", 0)
+    days = result.get("days", 7)
+    confidence = int(result.get("confidence", 0) * 100)
+    
+    markup = InlineKeyboardMarkup()
+    markup.row(
+        InlineKeyboardButton("✅ Відправити", callback_data=f"send_{project_id}"),
+        InlineKeyboardButton(f"🔄 Ще раз ({lang})", callback_data=f"regen_{lang.lower()}_{project_id}")
+    )
+    markup.row(
+        InlineKeyboardButton("❌ Скасувати", callback_data=f"cancel_{project_id}")
+    )
+    
+    bot.edit_message_text(
+        f"📋 <b>Новий відгук:</b>\n\n"
+        f"{message_text}\n\n"
+        f"━━━━━━━━━━━━━━\n"
+        f"💰 Ціна: <b>{price_min}-{price_max} грн</b>\n"
+        f"⏱ Строки: <b>{days} днів</b>\n"
+        f"🎯 Впевненість AI: <b>{confidence}%</b>\n\n"
+        f"🔗 <a href='{project['link']}'>Відкрити проект</a>",
+        call.message.chat.id,
+        call.message.message_id,
+        parse_mode="HTML",
+        reply_markup=markup,
+        disable_web_page_preview=True
+    )
 
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith("cancel_"))
@@ -353,69 +511,7 @@ def handle_skip(call):
     )
 
 
-def handle_generate_internal(project_id, lang, message):
-    """Внутренняя функция для генерации (для regen)."""
-    bid_data = pending_bids.get(project_id)
-    if not bid_data:
-        bot.send_message(CHAT_ID, "❌ Дані проекту втрачено")
-        return
-    
-    project = bid_data["project"]
-    
-    try:
-        response = requests.post(
-            f"{MAC_SERVER_URL}/webhook/generate",
-            json={
-                "project_id": project_id,
-                "title": project["title"],
-                "description": project["description"],
-                "lang": lang,
-                "callback_url": None
-            },
-            timeout=90
-        )
-        
-        if response.status_code == 200:
-            result_data = response.json()
-            result = result_data.get("result", {})
-            
-            pending_bids[project_id]["result"] = result
-            pending_bids[project_id]["lang"] = lang
-            
-            message_text = result.get("message", "")
-            price_min = result.get("price_min", 0)
-            price_max = result.get("price_max", 0)
-            days = result.get("days", 7)
-            confidence = int(result.get("confidence", 0) * 100)
-            
-            markup = InlineKeyboardMarkup()
-            markup.row(
-                InlineKeyboardButton("✅ Відправити", callback_data=f"send_{project_id}"),
-                InlineKeyboardButton(f"🔄 Ще раз ({lang})", callback_data=f"regen_{lang.lower()}_{project_id}")
-            )
-            markup.row(
-                InlineKeyboardButton("❌ Скасувати", callback_data=f"cancel_{project_id}")
-            )
-            
-            bot.edit_message_text(
-                f"📋 <b>Новий відгук:</b>\n\n"
-                f"{message_text}\n\n"
-                f"━━━━━━━━━━━━━━\n"
-                f"💰 Ціна: <b>{price_min}-{price_max} грн</b>\n"
-                f"⏱ Строки: <b>{days} днів</b>\n"
-                f"🎯 Впевненість AI: <b>{confidence}%</b>\n\n"
-                f"🔗 <a href='{project['link']}'>Відкрити проект</a>",
-                message.chat.id,
-                message.message_id,
-                parse_mode="HTML",
-                reply_markup=markup,
-                disable_web_page_preview=True
-            )
-    except Exception as e:
-        bot.send_message(CHAT_ID, f"❌ Помилка: {e}")
-
-
-# Callback endpoint для статусов от Mac
+# ─── Callback endpoint для статусов от Mac ──────────────────────────────────
 from flask import Flask, request as flask_request
 
 flask_app = Flask(__name__)
@@ -553,11 +649,65 @@ def check_new_projects():
             continue
 
 
-def scheduler():
+def projects_monitor():
     """
-    Главный планировщик.
-    Работает независимо - мониторинг проектов всегда активен.
+    Фоновый мониторинг проектов.
+    Работает в отдельном потоке.
     """
+    print("🔍 Мониторинг проектів запущено")
+    
+    while True:
+        try:
+            check_new_projects()
+        except Exception as e:
+            print(f"⚠️ Помилка моніторингу: {e}")
+        time.sleep(300)  # каждые 5 минут
+
+
+@flask_app.route(f'/{API_TOKEN}', methods=['POST'])
+def webhook():
+    """
+    Webhook endpoint для Telegram.
+    Принимает обновления от Telegram вместо polling.
+    """
+    try:
+        json_string = request.get_data().decode('UTF-8')
+        update = telebot.types.Update.de_json(json_string)
+        bot.process_new_updates([update])
+        return '', 200
+    except Exception as e:
+        print(f"❌ Webhook error: {e}")
+        return '', 500
+
+
+def setup_webhook():
+    """
+    Настраивает webhook для Telegram.
+    Вызывается один раз при старте.
+    """
+    try:
+        # Удаляем старый webhook/polling
+        bot.remove_webhook()
+        time.sleep(1)
+        
+        # Устанавливаем новый webhook
+        webhook_url = f"{RAILWAY_URL}/{API_TOKEN}"
+        bot.set_webhook(url=webhook_url)
+        
+        print(f"✅ Webhook установлен: {webhook_url}")
+        return True
+    except Exception as e:
+        print(f"❌ Ошибка установки webhook: {e}")
+        return False
+
+
+if __name__ == "__main__":
+    print("\n" + "="*60)
+    print("FREELANCEHUNT NINJA v3 - CLOUD BOT")
+    print("="*60)
+    print("Webhook mode (stable for Railway)")
+    print("="*60 + "\n")
+    
     print("🚀 Cloud Telegram Bot v3 запускається...")
     print(f"📡 Freelancehunt API: активний")
     print(f"🖥 Mac Server: {MAC_SERVER_URL}")
@@ -566,14 +716,28 @@ def scheduler():
     mac_status = "✅ підключений" if check_mac_server() else "⚠️ недоступний"
     print(f"🔌 Mac Server: {mac_status}")
     
+    # Инициализация
     init_seen_projects()
     
+    # Запускаем мониторинг проектов в фоне
+    monitor_thread = threading.Thread(target=projects_monitor, daemon=True)
+    monitor_thread.start()
+    
+    # Настраиваем webhook
+    webhook_ok = setup_webhook()
+    
+    # Отправляем статус в Telegram
     try:
         status_msg = (
             "🚀 <b>Ninja v3 запущений!</b>\n\n"
             "☁️ Бот в хмарі (Railway)\n"
             "📡 Мониторинг проектів: <b>активний</b>\n"
         )
+        
+        if webhook_ok:
+            status_msg += "🔗 Webhook: <b>активний</b>\n"
+        else:
+            status_msg += "⚠️ Webhook: <b>помилка налаштування</b>\n"
         
         if mac_server_available:
             status_msg += "🖥 Mac сервер: <b>підключений</b>\n"
@@ -587,34 +751,12 @@ def scheduler():
     except Exception as e:
         print(f"⚠️ Помилка відправки статусу: {e}")
     
-    # Polling
-    polling_thread = threading.Thread(target=bot.polling, kwargs={"none_stop": True})
-    polling_thread.daemon = True
-    polling_thread.start()
-    
-    # Monitoring loop - работает всегда
-    while True:
-        try:
-            check_new_projects()
-        except Exception as e:
-            print(f"⚠️ Помилка моніторингу: {e}")
-            # Не падаем - продолжаем работать
-        time.sleep(300)  # каждые 5 минут
-
-
-if __name__ == "__main__":
-    print("\n" + "="*60)
-    print("FREELANCEHUNT NINJA v3 - CLOUD BOT")
-    print("="*60)
-    print("Resilient mode: работает даже если Mac offline")
-    print("="*60 + "\n")
-    
-    # Запускаем Flask callback сервер
-    flask_thread = threading.Thread(
-        target=lambda: flask_app.run(host='0.0.0.0', port=int(os.getenv("PORT", 8080))),
-        daemon=True
+    # Запускаем Flask (blocking)
+    # Это единственный запущенный процесс - никаких конфликтов
+    print("🌐 Запускаю Flask webhook server...")
+    flask_app.run(
+        host='0.0.0.0',
+        port=int(os.getenv("PORT", 8080)),
+        debug=False,
+        use_reloader=False  # ВАЖНО: отключаем reloader чтобы не было дублей
     )
-    flask_thread.start()
-    
-    # Запускаем scheduler
-    scheduler()
