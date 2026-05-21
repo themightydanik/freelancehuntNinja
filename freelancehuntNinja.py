@@ -671,7 +671,7 @@ def webhook():
     Принимает обновления от Telegram вместо polling.
     """
     try:
-        json_string = request.get_data().decode('UTF-8')
+        json_string = flask_request.get_data().decode('UTF-8')
         update = telebot.types.Update.de_json(json_string)
         bot.process_new_updates([update])
         return '', 200
