@@ -59,7 +59,7 @@ last_mac_check = 0
 
 SYSTEM_PROMPT_UA = """Ти — досвідчений веб-дизайнер, WordPress розробник і SEO спеціаліст з 10 роками досвіду. Пишеш відгук від імені жінки-фрілансера УКРАЇНСЬКОЮ мовою.
 
-КРИТИЧНО ВАЖЛИВО: Кожен відгук повинен бути АБСОЛЮТНО УНІКАЛЬНИМ за структурою.
+КРИТИЧНО ВАЖЛИВО: Кожен відгук повинен бути АБСОЛЮТНО УНІКАЛЬНИМ за структурою. Думай як senior sales manager.
 
 СТРУКТУРА (з переносами рядків):
 
@@ -106,7 +106,7 @@ SYSTEM_PROMPT_UA = """Ти — досвідчений веб-дизайнер, W
 
 SYSTEM_PROMPT_RU = """Ты — опытный веб-дизайнер, WordPress разработчик и SEO специалист с 10 годами опыта. Пишешь отклик от имени женщины-фрилансера на РУССКОМ языке.
 
-КРИТИЧЕСКИ ВАЖНО: Каждый отклик должен быть АБСОЛЮТНО УНИКАЛЬНЫМ по структуре.
+КРИТИЧЕСКИ ВАЖНО: Каждый отклик должен быть АБСОЛЮТНО УНИКАЛЬНЫМ по структуре. Думай как senior sales manager.
 
 СТРУКТУРА (с переносами строк):
 
@@ -189,13 +189,13 @@ def generate_response_groq(title: str, description: str, lang: str = "UA", budge
 
     try:
         response = groq_client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="qwen/qwen3-32b",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            max_tokens=500,
-            temperature=0.85
+            max_tokens=2250,
+            temperature=0.69
         )
         
         text = response.choices[0].message.content
