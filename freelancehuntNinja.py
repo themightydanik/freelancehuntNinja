@@ -516,88 +516,181 @@ SYSTEM_PROMPT_RU = """Ты — опытный фрилансер, который
 
 
 def generate_response_groq(title: str, description: str, lang: str = "UA", budget: dict = None) -> dict:
-    """
-    Генерирует отклик через Groq API.
-    Работает прямо в Railway - быстро и надежно.
-    """
-    if not groq_client:
-        return {
-            "message": "❌ GROQ_API_KEY не настроен",
-            "price_min": 0,
-            "price_max": 0,
-            "days": 0,
-            "confidence": 0
-        }
-    
-    system_prompt = SYSTEM_PROMPT_UA if lang == "UA" else SYSTEM_PROMPT_RU
-    
-    budget_info = ""
-    if budget and budget.get("amount"):
-        budget_info = f"\nБюджет клиента: {budget['amount']} {budget.get('currency', 'UAH')}"
-    
-    user_prompt = f"""Назва проекту: {title}
+"""
+Генерирует отклик через Groq API.
+Работает прямо в Railway.
+"""
 
-Опис: {description}{budget_info}
+```
+if not groq_client:
+    return {
+        "message": "❌ GROQ_API_KEY не настроен",
+        "real_price": 0,
+        "price_min": 0,
+        "price_max": 0,
+        "days": 0,
+        "confidence": 0
+    }
 
-Створи УНІКАЛЬНИЙ відгук. Проаналізуй складність, запропонуй реалістичну ціну (2000-20000 грн) і строки (3-21 днів).
+system_prompt = SYSTEM_PROMPT_UA if lang == "UA" else SYSTEM_PROMPT_RU
 
-Відповідь СТРОГО у форматі JSON (без markdown, без пояснень):
+style = random.choice([
+    "consultant",
+    "business",
+    "technical",
+    "direct",
+    "friendly"
+])
+
+budget_info = ""
+if budget and budget.get("amount"):
+    budget_info = f"\nБюджет клиента: {budget['amount']} {budget.get('currency', 'UAH')}"
+
+user_prompt = f"""
+```
+
+Стиль відповіді: {style}
+
+Назва проекту:
+{title}
+
+Опис проекту:
+{description}
+
+{budget_info}
+
+Проаналізуй проект перед написанням відповіді.
+
+Визнач:
+
+* який бізнес або тип проекту у клієнта
+* яку проблему він намагається вирішити
+* який результат хоче отримати
+* що для нього може бути найважливішим при виборі виконавця
+* який найкращий кут для початку розмови
+
+Після цього створи відгук відповідно до системних інструкцій.
+
+ВАЖЛИВО:
+
+* не переказуй опис проекту
+* не переказуй заголовок проекту
+* не використовуй шаблонні фрази
+* не використовуй привітання
+* не використовуй emoji
+* не пиши як AI
+* пиши як людина, яка вже почала думати над рішенням
+
+Відгук повинен виглядати як особисте повідомлення клієнту.
+
+Якщо обсяг робіт великий і реальна вартість перевищує 27000 грн:
+
+* у тексті відгуку вкажи реальну попередню оцінку
+* у полі real_price поверни реальну оцінку
+* у полях price_min та price_max поверни максимум 27000
+
+Якщо реальна вартість менша за 27000 грн:
+
+* використовуй однакову вартість і в тексті, і в JSON
+
+Поверни ВИКЛЮЧНО JSON.
+
+Без markdown.
+Без пояснень.
+Без тексту до JSON.
+Без тексту після JSON.
+
+Формат:
+
 {{
-  "message": "текст",
-  "price_min": число,
-  "price_max": число,
-  "days": число,
-  "confidence": 0.0-1.0
-}}"""
+"message": "текст відгуку з переносами рядків \n\n",
+"real_price": число,
+"price_min": число,
+"price_max": число,
+"days": число,
+"confidence": число
+}}
+"""
 
-    try:
-        response = groq_client.chat.completions.create(
-            model="qwen/qwen3-32b",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            max_tokens=2250,
-            temperature=0.69
-        )
-        
-        text = response.choices[0].message.content
-        
-        # Парсим JSON
-        import json
-        text = re.sub(r'```json\s*', '', text)
-        text = re.sub(r'```\s*', '', text)
-        
-        json_match = re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', text, re.DOTALL)
-        if json_match:
-            parsed = json.loads(json_match.group(0))
-            if "message" in parsed:
-                return {
-                    "message": parsed.get("message", text),
-                    "price_min": max(1000, min(parsed.get("price_min", 3000), 50000)),
-                    "price_max": max(1000, min(parsed.get("price_max", 5000), 50000)),
-                    "days": max(1, min(parsed.get("days", 7), 30)),
-                    "confidence": max(0, min(parsed.get("confidence", 0.75), 1))
-                }
-        
-        # Fallback
-        return {
-            "message": text,
-            "price_min": 3000,
-            "price_max": 5000,
-            "days": 7,
-            "confidence": 0.5
-        }
-        
-    except Exception as e:
-        print(f"❌ Groq error: {e}")
-        return {
-            "message": f"❌ Помилка генерації: {str(e)}",
-            "price_min": 0,
-            "price_max": 0,
-            "days": 0,
-            "confidence": 0
-        }
+````
+try:
+    response = groq_client.chat.completions.create(
+        model="qwen/qwen3-32b",
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ],
+        max_tokens=2250,
+        temperature=0.9
+    )
+
+    text = response.choices[0].message.content
+
+    import json
+
+    text = re.sub(r'```json\s*', '', text)
+    text = re.sub(r'```\s*', '', text)
+
+    json_match = re.search(
+        r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}',
+        text,
+        re.DOTALL
+    )
+
+    if json_match:
+        parsed = json.loads(json_match.group(0))
+
+        if "message" in parsed:
+
+            real_price = parsed.get(
+                "real_price",
+                parsed.get("price_max", 5000)
+            )
+
+            return {
+                "message": parsed.get("message", text),
+                "real_price": real_price,
+                "price_min": max(
+                    1000,
+                    min(parsed.get("price_min", 3000), 27000)
+                ),
+                "price_max": max(
+                    1000,
+                    min(parsed.get("price_max", 5000), 27000)
+                ),
+                "days": max(
+                    1,
+                    min(parsed.get("days", 7), 60)
+                ),
+                "confidence": max(
+                    0,
+                    min(parsed.get("confidence", 0.75), 1)
+                )
+            }
+
+    return {
+        "message": text,
+        "real_price": 5000,
+        "price_min": 5000,
+        "price_max": 5000,
+        "days": 7,
+        "confidence": 0.5
+    }
+
+except Exception as e:
+    print(f"❌ Groq error: {e}")
+
+    return {
+        "message": f"❌ Помилка генерації: {str(e)}",
+        "real_price": 0,
+        "price_min": 0,
+        "price_max": 0,
+        "days": 0,
+        "confidence": 0
+    }
+````
+
+
 
 
 def check_mac_server():
