@@ -521,7 +521,6 @@ def generate_response_groq(title: str, description: str, lang: str = "UA", budge
 Работает прямо в Railway.
 """
 
-```
 if not groq_client:
     return {
         "message": "❌ GROQ_API_KEY не настроен",
@@ -547,7 +546,6 @@ if budget and budget.get("amount"):
     budget_info = f"\nБюджет клиента: {budget['amount']} {budget.get('currency', 'UAH')}"
 
 user_prompt = f"""
-```
 
 Стиль відповіді: {style}
 
@@ -612,7 +610,6 @@ user_prompt = f"""
 }}
 """
 
-````
 try:
     response = groq_client.chat.completions.create(
         model="qwen/qwen3-32b",
@@ -688,7 +685,6 @@ except Exception as e:
         "days": 0,
         "confidence": 0
     }
-````
 
 
 
