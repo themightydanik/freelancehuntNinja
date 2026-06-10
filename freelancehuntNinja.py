@@ -1,5 +1,5 @@
 """
-Telegram Bot для FreelanceHunt Ninja v3
+Telegram Bot для FreelanceHunt Ninja
 Работает независимо от доступности Mac сервера.
 Продолжает мониторить проекты даже если генерация/отправка недоступна.
 """
