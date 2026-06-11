@@ -516,10 +516,10 @@ SYSTEM_PROMPT_RU = """Ты — опытный фрилансер, который
 
 
 def generate_response_groq(title: str, description: str, lang: str = "UA", budget: dict = None) -> dict:
-"""
-Генерирует отклик через Groq API.
-Работает прямо в Railway.
-"""
+    """
+    Генерирует отклик через Groq API.
+    Работает прямо в Railway.
+    """
 
 if not groq_client:
     return {
