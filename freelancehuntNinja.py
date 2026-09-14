@@ -31,7 +31,7 @@ from groq import Groq
 groq_client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
 KYIV_TZ = pytz.timezone("Europe/Kiev")
-CATEGORIES = [99, 78, 175, 124, 43, 129, 68, 96, 134, 14, 183, 120]
+CATEGORIES = [86, 89, 99, 77, 78, 175, 124, 43, 45, 120, 129, 68, 94, 95, 96, 134, 135, 136, 14, 183, 120, 127, 1, 2, 13, 22, 57, 58, 88, 103, 104, 151, 162, 169, 170, 171, 172, 178, 179, 180, 182, 189, 199, 42, ]
 
 seen_projects = set()
 projects_cache = {}
