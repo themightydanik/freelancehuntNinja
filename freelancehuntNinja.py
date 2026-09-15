@@ -1,6 +1,5 @@
 """
 Telegram Bot для FreelanceHunt Ninja
-Работает независимо от доступности Mac сервера.
 """
 
 import os
