@@ -1,0 +1,241 @@
+{
+  "status": "All acquisition, conversion, price, workload, growth and lag priors ASSUMED; no calibration to paid outcomes",
+  "seed": 20261113,
+  "runs": 5000,
+  "channels": [
+    "UA_marketplace",
+    "INT_marketplace",
+    "organic_website",
+    "qualified_direct_inbound",
+    "B2B_partner_conversations"
+  ],
+  "traffic_triangles": {
+    "Conservative": [
+      [
+        0,
+        120,
+        500
+      ],
+      [
+        0,
+        150,
+        600
+      ],
+      [
+        0,
+        40,
+        200
+      ],
+      [
+        0,
+        0.2,
+        1
+      ],
+      [
+        0,
+        0.2,
+        1
+      ]
+    ],
+    "Base": [
+      [
+        100,
+        700,
+        1800
+      ],
+      [
+        200,
+        1000,
+        2500
+      ],
+      [
+        0,
+        150,
+        600
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        3
+      ]
+    ],
+    "Upside": [
+      [
+        400,
+        1500,
+        3000
+      ],
+      [
+        1000,
+        3500,
+        7000
+      ],
+      [
+        300,
+        1000,
+        2500
+      ],
+      [
+        1,
+        3,
+        6
+      ],
+      [
+        1,
+        4,
+        8
+      ]
+    ]
+  },
+  "prices_local_currency_triangles": [
+    [
+      3000,
+      5000,
+      8000
+    ],
+    [
+      150,
+      220,
+      350
+    ],
+    [
+      150,
+      220,
+      350
+    ],
+    [
+      150,
+      250,
+      400
+    ],
+    [
+      250,
+      300,
+      600
+    ]
+  ],
+  "UA_price_currency": "UAH",
+  "other_price_currency": "USD",
+  "planning_FX_UAH_per_USD": 45.0,
+  "FX_status": "ASSUMED; NBU request403; bank conversion not verified",
+  "lag_month_probabilities": [
+    [
+      0.55,
+      0.4,
+      0.05
+    ],
+    [
+      0.35,
+      0.5,
+      0.15
+    ],
+    [
+      0.3,
+      0.5,
+      0.2
+    ],
+    [
+      0.45,
+      0.45,
+      0.1
+    ],
+    [
+      0.1,
+      0.5,
+      0.4
+    ]
+  ],
+  "marketplace_ctr_triangle": [
+    0.01,
+    0.03,
+    0.05
+  ],
+  "marketplace_qualified_click_triangle": [
+    0.04,
+    0.1,
+    0.18
+  ],
+  "proposal_per_conversation_triangle": [
+    0.45,
+    0.7,
+    0.9
+  ],
+  "accepted_per_proposal_triangle": [
+    0.08,
+    0.2,
+    0.35
+  ],
+  "funded_per_accepted_triangle": [
+    0.65,
+    0.85,
+    0.98
+  ],
+  "delivery_hours_triangle": [
+    4,
+    6,
+    10
+  ],
+  "refund_triangle": [
+    0,
+    0.02,
+    0.1
+  ],
+  "capacity_hours": 120,
+  "presales_cap_hours": 16,
+  "marketing_hours_shared": 24,
+  "build_hours_month1": 16,
+  "build_hours_later": 4,
+  "int_fee_planning": 0.15,
+  "fee_sources": [
+    "FH_FEES: UAH Safe paid by client, not seller",
+    "UW_FEES:0-15% per contract; plan uses15%",
+    "CO_FEES:15/29 transaction; payer assumption conservative;2% payout and3flat are planning route"
+  ],
+  "direct_invoice_flat_fee": [
+    15,
+    29
+  ],
+  "direct_payout_rate": 0.02,
+  "direct_payout_flat_month": 3,
+  "int_bank_payout_flat_month": 0.99,
+  "retainer_price": [
+    700,
+    39,
+    39,
+    39,
+    39
+  ],
+  "retainer_attach_triangle": [
+    0,
+    0.08,
+    0.2
+  ],
+  "retainer_churn_triangle": [
+    0.02,
+    0.08,
+    0.2
+  ],
+  "support_hours_per_retainer": 0.75,
+  "repeat_order_probability_month": 0.03,
+  "backlog_expiry_month": 0.35,
+  "direct_cost_per_job": 2,
+  "direct_cost_per_retainer": 0.5,
+  "monthly_cash_reserve": 5,
+  "growth_triangle": [
+    0,
+    0.1,
+    0.25
+  ],
+  "outgoing_messages": {
+    "enabled": false,
+    "count": 0,
+    "not_a_source_of_leads": true
+  },
+  "launch_gates": "Planning rows assume channel admission, explicit launch authorization, account/payout and distribution; none verified by simulation",
+  "no_detected_problem_counts_as_leads": true
+}

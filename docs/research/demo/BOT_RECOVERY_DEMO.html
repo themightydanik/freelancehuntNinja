@@ -1,0 +1,62 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bot recovery — offline synthetic rehearsal</title><style>body{font:17px system-ui;max-width:900px;margin:40px auto;padding:0 20px;color:#152337;background:#f4f7fb}section{background:white;padding:20px;margin:18px 0;border-radius:12px;border:1px solid #d1dbe7}pre{overflow:auto;font-size:14px}header{padding:20px;background:#dff3eb;border-radius:12px}h1{font-size:30px}</style><header><h1>Bot recovery rehearsal / Відновлення бота</h1><p><b>100% synthetic, offline research artifact; not hosted.</b> No real Telegram account, messages, customer data, secrets or production changes.</p><p>A working-looking bot can silently lose approval clicks. This rehearsal shows a failed update filter, diagnosis, a minimal repair, duplicate handling, an exact rollback, and final recovery.</p></header><section><h2>failure</h2><p>callback filtered; zero effects</p><p><b>Observed:</b> filtered_before_handler</p><pre>{
+  &quot;allowed_updates&quot;: [
+    &quot;message&quot;
+  ],
+  &quot;processed_update_ids&quot;: [],
+  &quot;synthetic_effects&quot;: [],
+  &quot;dropped_types&quot;: [
+    &quot;callback_query&quot;
+  ]
+}</pre></section><section><h2>diagnosis</h2><p>missing update type identified</p><p><b>Observed:</b> {&#x27;root_cause&#x27;: &#x27;callback_query excluded by synthetic allowed_updates filter&#x27;, &#x27;supported&#x27;: True, &#x27;required_change&#x27;: &#x27;Include callback_query; verify unique update processing&#x27;, &#x27;production_caveat&#x27;: &#x27;A similar symptom can have other causes; no real Telegram incident diagnosed&#x27;}</p><pre>{
+  &quot;allowed_updates&quot;: [
+    &quot;message&quot;
+  ],
+  &quot;processed_update_ids&quot;: [],
+  &quot;synthetic_effects&quot;: [],
+  &quot;dropped_types&quot;: [
+    &quot;callback_query&quot;
+  ]
+}</pre></section><section><h2>repair_and_replay</h2><p>exactly one LOCAL mock effect</p><p><b>Observed:</b> accepted once; duplicate skipped</p><pre>{
+  &quot;allowed_updates&quot;: [
+    &quot;callback_query&quot;,
+    &quot;message&quot;
+  ],
+  &quot;processed_update_ids&quot;: [
+    2002
+  ],
+  &quot;synthetic_effects&quot;: [
+    {
+      &quot;action&quot;: &quot;record_mock_approval&quot;,
+      &quot;fixture&quot;: &quot;demo-order-1&quot;
+    }
+  ],
+  &quot;dropped_types&quot;: [
+    &quot;callback_query&quot;
+  ]
+}</pre></section><section><h2>rollback</h2><p>exact pre-fix snapshot, including broken filter</p><p><b>Observed:</b> digest matches; this is NOT a healthy state</p><pre>{
+  &quot;allowed_updates&quot;: [
+    &quot;message&quot;
+  ],
+  &quot;processed_update_ids&quot;: [],
+  &quot;synthetic_effects&quot;: [],
+  &quot;dropped_types&quot;: [
+    &quot;callback_query&quot;
+  ]
+}</pre></section><section><h2>final_recovery</h2><p>repair reapplied and acceptance restored</p><p><b>Observed:</b> one local mock approval</p><pre>{
+  &quot;allowed_updates&quot;: [
+    &quot;callback_query&quot;,
+    &quot;message&quot;
+  ],
+  &quot;processed_update_ids&quot;: [
+    2002
+  ],
+  &quot;synthetic_effects&quot;: [
+    {
+      &quot;action&quot;: &quot;record_mock_approval&quot;,
+      &quot;fixture&quot;: &quot;demo-order-1&quot;
+    }
+  ],
+  &quot;dropped_types&quot;: [
+    &quot;callback_query&quot;
+  ]
+}</pre></section><section><h2>What a real service would verify</h2><p>One agreed incident, client authorization, staging access, reproducible acceptance, a reversible change and a written handover. This demonstration is not a customer case, a security audit, cloud deployment evidence, or an SLA.</p><p>Rollback here returns to the pre-fix broken snapshot to prove reversibility; final recovery explicitly reapplies the fix. Local idempotency is not an exactly-once guarantee for external APIs.</p></section></html>

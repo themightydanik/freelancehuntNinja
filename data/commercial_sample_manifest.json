@@ -1,0 +1,256 @@
+{
+  "window_start_inclusive": "2026-10-14T00:00:00+00:00",
+  "window_end_exclusive": "2026-11-13T00:00:00+00:00",
+  "sampling_frame": "active/open listings only; bounded non-probability sample; no platform census",
+  "query_definitions": [],
+  "fh_skill_strata": [
+    180,
+    181,
+    22
+  ],
+  "requests": [
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=1",
+      "status": 200,
+      "elapsed_seconds": 0.667,
+      "bytes": 41908,
+      "sha256": "4238148399afb98143d8cbd9e840712d3a97f7a59a6a987f6cc6f83ee8c0b17b"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=2",
+      "status": 200,
+      "elapsed_seconds": 0.436,
+      "bytes": 79774,
+      "sha256": "6b756bdde2cd2df328f4162ad9065ed97229bcad1156c4a1fb4c4d76db086bf0"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=3",
+      "status": 200,
+      "elapsed_seconds": 0.424,
+      "bytes": 49079,
+      "sha256": "7cff9ab2daf2608aaeb16f78552bcec732371775f42318faef41b6b791ccb5b8"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=4",
+      "status": 200,
+      "elapsed_seconds": 0.304,
+      "bytes": 65535,
+      "sha256": "0c70695f485505244d1de2a8e96d67376d01b31772d71848d6884972a19b0476"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=5",
+      "status": 200,
+      "elapsed_seconds": 0.328,
+      "bytes": 56488,
+      "sha256": "df96c6efb4695e6979caa14ba44b7fb15aebf15557037b7bf3025eac99fa96c1"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=6",
+      "status": 200,
+      "elapsed_seconds": 0.258,
+      "bytes": 44098,
+      "sha256": "38c6bc8e67b371e6555e0378cf37a7be279272b676621cb5a484b74b6f6df3f1"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=7",
+      "status": 200,
+      "elapsed_seconds": 0.29,
+      "bytes": 42467,
+      "sha256": "00b4f8de947416707693287b7aa5a0fb0152fc494db81c4ae92a182b6180f9c4"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=8",
+      "status": 200,
+      "elapsed_seconds": 0.353,
+      "bytes": 49403,
+      "sha256": "70ebca31e3358800c5f5261e4ffa6985869a74e9e0ab3be74539c522bedc6fc3"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=9",
+      "status": 200,
+      "elapsed_seconds": 0.329,
+      "bytes": 52157,
+      "sha256": "86b53889b3358b21843bf0e5ce959e59c935d6f72ebe3fcad1b6440f77e604c6"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=10",
+      "status": 200,
+      "elapsed_seconds": 0.271,
+      "bytes": 54453,
+      "sha256": "57aced9b85b2e6450fb07fe7aa29a6fe8cd34fb22b079ce759f4b09393ac704d"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=11",
+      "status": 200,
+      "elapsed_seconds": 0.312,
+      "bytes": 60216,
+      "sha256": "a800a6eab299ccb939fc0dce7a625850d72268823762d7cfd5a98101113f8290"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=12",
+      "status": 200,
+      "elapsed_seconds": 0.283,
+      "bytes": 45622,
+      "sha256": "2296760ab3506dbcc480f4264beedbbd0f9f03e4fbf0f9dacab1d94baf035290"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=13",
+      "status": 200,
+      "elapsed_seconds": 0.271,
+      "bytes": 36675,
+      "sha256": "5153ffbe845b2707bf52afa57d4235ecf4143b84ac1ca34ab5d1ce8530b75bd0"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=14",
+      "status": 200,
+      "elapsed_seconds": 0.321,
+      "bytes": 76426,
+      "sha256": "beb8b27476eaf8d63be1ba32da76d6850fffb06653df986ce71cd1d0823c47b9"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=15",
+      "status": 200,
+      "elapsed_seconds": 0.271,
+      "bytes": 42155,
+      "sha256": "262e7699dfddb80a40ac00a73d4b68c96333d3ffac7ce7f227bda6c1fa2df65c"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=16",
+      "status": 200,
+      "elapsed_seconds": 0.273,
+      "bytes": 58957,
+      "sha256": "254365d428f9cf0ddfcca97b472cf9be1f6563f8a745fbccf221cb557a2a9af4"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=17",
+      "status": 200,
+      "elapsed_seconds": 0.263,
+      "bytes": 49609,
+      "sha256": "b28a5b1c45d66f39fac881535643869856ed1897a306112745238c15cc657c6a"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=18",
+      "status": 200,
+      "elapsed_seconds": 0.295,
+      "bytes": 50664,
+      "sha256": "cc5f0be4bce9102c3618d9dd855b907a70cef3d039f5c60df3d34e7afe72734b"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=19",
+      "status": 200,
+      "elapsed_seconds": 0.572,
+      "bytes": 61913,
+      "sha256": "6fc556b889f34df36a359311bed3c9b3914836567cd34bf70960672c9b4884fd"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=20",
+      "status": 200,
+      "elapsed_seconds": 0.271,
+      "bytes": 36556,
+      "sha256": "1078bce7ce28208c4cb5b2ccb0ad0bc556f7e5adb7ecfe84fc54c761788e61b7"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=21",
+      "status": 200,
+      "elapsed_seconds": 0.29,
+      "bytes": 44297,
+      "sha256": "f15af2198e252231ffcb80e088cf2fd6ba1479f1b9b0f2bc5e97d09a66a6895d"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=22",
+      "status": 200,
+      "elapsed_seconds": 0.266,
+      "bytes": 50622,
+      "sha256": "214d77066c843a59fa195ca269cf5161c059d095a54fd1fe8c63368c9796a09e"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=23",
+      "status": 200,
+      "elapsed_seconds": 0.524,
+      "bytes": 58424,
+      "sha256": "a53a9f5d331d1d24c2405f4daabcc562c187fe0c8df332d8dd56f9c1581b7973"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=24",
+      "status": 200,
+      "elapsed_seconds": 0.497,
+      "bytes": 97182,
+      "sha256": "a62ddd40d6d16379324417e46d0c937c3cb9164bae07bc4a56b525464122b873"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=25",
+      "status": 200,
+      "elapsed_seconds": 0.308,
+      "bytes": 55449,
+      "sha256": "b104b63a79cf75445b526195160d17ce7237dbf9d145d82055f8532f3b0c34ab"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=26",
+      "status": 200,
+      "elapsed_seconds": 0.263,
+      "bytes": 58124,
+      "sha256": "d0063b6c58974f4753bcb5fa38efeca55863269ea419feb507794500d9f65be4"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=27",
+      "status": 200,
+      "elapsed_seconds": 0.277,
+      "bytes": 108718,
+      "sha256": "bf4ae16a8dcc68328376b6c2fac5947f236ad54827b92a171477125ab56efa0b"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=28",
+      "status": 200,
+      "elapsed_seconds": 0.292,
+      "bytes": 71875,
+      "sha256": "350ef97c1a21d69461ba23fb853f70e7db1eafdef9b4aae6e1bde15111b39e3f"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=29",
+      "status": 200,
+      "elapsed_seconds": 0.272,
+      "bytes": 83577,
+      "sha256": "15fe659dcbe3dbcedb933439fb04a8b4036fa2b122f314b1c1ee54927dc55d5a"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?page%5Bnumber%5D=30",
+      "status": 200,
+      "elapsed_seconds": 0.29,
+      "bytes": 33807,
+      "sha256": "743804e36470b8eed1ee068081abd8d2a07a39af36b827eea6704fc3aa7fc45c"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?filter%5Bskill_id%5D=180&page%5Bnumber%5D=1",
+      "status": 200,
+      "elapsed_seconds": 0.27,
+      "bytes": 65264,
+      "sha256": "188171270583387efc191171f1bb30f918f3f9e863a83773a9e5c958b985651c"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?filter%5Bskill_id%5D=181&page%5Bnumber%5D=1",
+      "status": 200,
+      "elapsed_seconds": 0.256,
+      "bytes": 14428,
+      "sha256": "aa8f6996d967884495ca99d2b995827bbf86c328280c7afd1c535e46400f6abd"
+    },
+    {
+      "url": "https://api.freelancehunt.com/v2/projects?filter%5Bskill_id%5D=22&page%5Bnumber%5D=1",
+      "status": 200,
+      "elapsed_seconds": 0.28,
+      "bytes": 77306,
+      "sha256": "40eec078842262a8eefc59a75d543a1fa282c0eb555795cc1c1b62ccd8e69ab2"
+    }
+  ],
+  "errors": [],
+  "unique_by_platform": {
+    "FH": 306
+  },
+  "in_window_by_platform": {
+    "FH": 304
+  },
+  "candidate_by_platform": {
+    "FH": 59
+  },
+  "no_contacts_or_authors_retained": true,
+  "source_exclusion": "Freelancer listing records removed; automated access requires express written permission under section33"
+}

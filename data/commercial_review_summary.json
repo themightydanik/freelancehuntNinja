@@ -1,0 +1,130 @@
+{
+  "retained_FH_unique": 306,
+  "retained_FH_window_records": 304,
+  "FH_keyword_candidates_reviewed": 59,
+  "FH_adjacent_existing_repair_deploy_migration_records": 4,
+  "strict_existing_telegram_recovery_found": 0,
+  "FH_groups": {
+    "adjacent_large": {
+      "records": 3,
+      "missing_budget": 1,
+      "budget_groups": [
+        {
+          "currency": "EUR",
+          "type": "fixed",
+          "n": 2,
+          "min": 2500.0,
+          "median": 2750.0,
+          "max": 3000.0
+        }
+      ],
+      "bids_snapshot": {
+        "n": 3,
+        "min": 47,
+        "median": 54,
+        "max": 133
+      }
+    },
+    "bounded_deployment_candidate": {
+      "records": 1,
+      "missing_budget": 1,
+      "budget_groups": [],
+      "bids_snapshot": {
+        "n": 1,
+        "min": 126,
+        "median": 126,
+        "max": 126
+      }
+    },
+    "new_integration": {
+      "records": 5,
+      "missing_budget": 4,
+      "budget_groups": [
+        {
+          "currency": "EUR",
+          "type": "fixed",
+          "n": 1,
+          "min": 1000.0,
+          "median": 1000.0,
+          "max": 1000.0
+        }
+      ],
+      "bids_snapshot": {
+        "n": 5,
+        "min": 98,
+        "median": 109,
+        "max": 124
+      }
+    },
+    "not_comparable": {
+      "records": 50,
+      "missing_budget": 27,
+      "budget_groups": [
+        {
+          "currency": "UAH",
+          "type": "fixed",
+          "n": 16,
+          "min": 1111.0,
+          "median": 9000.0,
+          "max": 100000.0
+        },
+        {
+          "currency": "PLN",
+          "type": "fixed",
+          "n": 3,
+          "min": 1000.0,
+          "median": 1000.0,
+          "max": 1800.0
+        },
+        {
+          "currency": "USD",
+          "type": "fixed",
+          "n": 2,
+          "min": 100.0,
+          "median": 200.0,
+          "max": 300.0
+        },
+        {
+          "currency": "EUR",
+          "type": "fixed",
+          "n": 2,
+          "min": 50.0,
+          "median": 275.0,
+          "max": 500.0
+        }
+      ],
+      "bids_snapshot": {
+        "n": 50,
+        "min": 2,
+        "median": 58.0,
+        "max": 195
+      }
+    }
+  },
+  "international_bounty_context": {
+    "sample_size": 30,
+    "one_sponsor_only": true,
+    "advertised_USD_reward": {
+      "n": 30,
+      "min": 175.0,
+      "median": 175.0,
+      "max": 175.0
+    },
+    "state_counts": {
+      "open": 29,
+      "closed": 1
+    },
+    "not_Telegram_recovery": true
+  },
+  "restricted_source": "Freelancer listing records removed and not used; see restricted_source_exclusion.json",
+  "price_inference": "Bot Recovery accepted-price range UNKNOWN; adjacent budgets and one-sponsor rewards are not comparable transaction prices",
+  "limits": [
+    "non-random active-only FH sample",
+    "single-sponsor international context",
+    "keyword false negatives possible",
+    "single manual reviewer, excerpt-limited",
+    "different project IDs do not prove independent buyers",
+    "buyer geography UNKNOWN; platform or currency does not establish residence",
+    "no sales or account/payout tests"
+  ]
+}

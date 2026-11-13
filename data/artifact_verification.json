@@ -1,0 +1,11 @@
+{
+  "catalog_counts": {
+    "source_registry.csv": 30,
+    "competitor_registry.csv": 38,
+    "distribution_channels.csv": 36,
+    "product_opportunities.csv": 30
+  },
+  "original_files_unchanged": 5,
+  "known_source_credential_values_absent_from_research": true,
+  "local_markdown_links_resolve": true
+}

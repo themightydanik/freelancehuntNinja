@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-11-13T02:56:12.857269+00:00",
+  "query": {
+    "query": "classification-cpv=72262000 AND publication-date >= 20261001 AND notice-type=can-standard",
+    "limit": 5,
+    "fields": [
+      "publication-number",
+      "publication-date",
+      "notice-title",
+      "classification-cpv",
+      "winner-name",
+      "winner-identifier",
+      "total-value",
+      "total-value-cur"
+    ],
+    "onlyLatestVersions": true
+  },
+  "requests": [
+    {
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "method": "POST",
+      "status": 200,
+      "bytes": 44083
+    },
+    {
+      "url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/07241127",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4861
+    },
+    {
+      "url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/26775794",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4798
+    },
+    {
+      "url": "https://ted.europa.eu/en/notice/674368-2026/xml",
+      "method": "GET",
+      "status": 202,
+      "bytes": 0
+    },
+    {
+      "url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/26480981",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4690
+    },
+    {
+      "url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/26284146",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4317
+    },
+    {
+      "url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/07436505",
+      "method": "GET",
+      "status": 200,
+      "bytes": 4715
+    }
+  ],
+  "national_registry_crosschecks": [
+    {
+      "scheme": "CZ-ICO",
+      "identifier": "07241127",
+      "legal_name": "Tekies s.r.o.",
+      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/07241127",
+      "status": 200
+    },
+    {
+      "scheme": "CZ-ICO",
+      "identifier": "26775794",
+      "legal_name": "Principal engineering s.r.o.",
+      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/26775794",
+      "status": 200
+    },
+    {
+      "scheme": "CZ-ICO",
+      "identifier": "26480981",
+      "legal_name": "Perfect System, s.r.o.",
+      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/26480981",
+      "status": 200
+    },
+    {
+      "scheme": "CZ-ICO",
+      "identifier": "26284146",
+      "legal_name": "OR-NEXT spol. s r.o.",
+      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/26284146",
+      "status": 200
+    },
+    {
+      "scheme": "CZ-ICO",
+      "identifier": "07436505",
+      "legal_name": "Bindworks s.r.o.",
+      "source": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/07436505",
+      "status": 200
+    }
+  ],
+  "notice_xml_probe": {
+    "status": 202,
+    "bytes": 0,
+    "usable_xml": false
+  },
+  "errors": [],
+  "subcontractor_demand": "UNKNOWN; no partnerships, contacts or account actions performed"
+}

@@ -1,0 +1,454 @@
+[
+  {
+    "id": "FH_DOC",
+    "url": "https://apidocs.freelancehunt.com/"
+  },
+  {
+    "id": "NETLIFY",
+    "url": "https://www.netlify.com/pricing/"
+  },
+  {
+    "id": "SUPABASE",
+    "url": "https://supabase.com/pricing"
+  },
+  {
+    "id": "SUPA_LIMIT",
+    "url": "https://supabase.com/docs/guides/functions/limits"
+  },
+  {
+    "id": "SUPA_CRON",
+    "url": "https://supabase.com/docs/guides/cron"
+  },
+  {
+    "id": "GH_ACTIONS",
+    "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
+  },
+  {
+    "id": "GH_BILLING",
+    "url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions"
+  },
+  {
+    "id": "CF",
+    "url": "https://developers.cloudflare.com/workers/platform/limits/"
+  },
+  {
+    "id": "GROQ",
+    "url": "https://groq.com/pricing"
+  },
+  {
+    "id": "GH_TERMS",
+    "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service"
+  },
+  {
+    "id": "GDPR",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+  },
+  {
+    "id": "EPRIVACY",
+    "url": "https://eur-lex.europa.eu/eli/dir/2002/58/oj/eng"
+  },
+  {
+    "id": "UA_PRIVACY",
+    "url": "https://zakon.rada.gov.ua/laws/show/2297-17#Text"
+  },
+  {
+    "id": "UA_COMMERCE",
+    "url": "https://zakon.rada.gov.ua/laws/show/675-19#Text"
+  },
+  {
+    "id": "UA_OPEN",
+    "url": "https://zakon.rada.gov.ua/laws/show/835-2015-%D0%BF#Text"
+  },
+  {
+    "id": "CH_DOC",
+    "url": "https://developer.company-information.service.gov.uk/overview"
+  },
+  {
+    "id": "TED_DOC",
+    "url": "https://docs.ted.europa.eu/api/latest/index.html"
+  },
+  {
+    "id": "PROZORRO",
+    "url": "https://prozorro-api-docs.readthedocs.io/en/master/"
+  },
+  {
+    "id": "GLEIF",
+    "url": "https://www.gleif.org/en/lei-data/gleif-api"
+  },
+  {
+    "id": "WP_GUIDE",
+    "url": "https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/"
+  },
+  {
+    "id": "WP_API",
+    "url": "https://codex.wordpress.org/WordPress.org_API"
+  },
+  {
+    "id": "CORDIS",
+    "url": "https://cordis.europa.eu/about/dataextractions"
+  },
+  {
+    "id": "EU_REUSE",
+    "url": "https://commission.europa.eu/legal-notice_en"
+  },
+  {
+    "id": "UPWORK",
+    "url": "https://www.upwork.com/pricing"
+  },
+  {
+    "id": "UPWORK_UA",
+    "url": "https://support.upwork.com/hc/en-us/articles/211067778-Eligibility-to-join-and-use-Upwork"
+  },
+  {
+    "id": "FIVERR",
+    "url": "https://help.fiverr.com/hc/en-us/articles/360010451297-Your-earnings-page"
+  },
+  {
+    "id": "CONTRA",
+    "url": "https://contra.com/commission-free"
+  },
+  {
+    "id": "FREELANCER",
+    "url": "https://www.freelancer.com/feesandcharges"
+  },
+  {
+    "id": "PPH",
+    "url": "https://www.peopleperhour.com/static/terms"
+  },
+  {
+    "id": "FH",
+    "url": "https://freelancehunt.com/service"
+  },
+  {
+    "id": "GURU",
+    "url": "https://www.guru.com/pricing-freelancer/"
+  },
+  {
+    "id": "TOPTAL",
+    "url": "https://www.toptal.com/talent/apply"
+  },
+  {
+    "id": "CODEABLE",
+    "url": "https://www.codeable.io/developers/apply/"
+  },
+  {
+    "id": "CODEMENTOR",
+    "url": "https://www.codementor.io/mentor"
+  },
+  {
+    "id": "LEMON",
+    "url": "https://lemon.io/for-developers/"
+  },
+  {
+    "id": "CLUTCH",
+    "url": "https://clutch.co/get-listed"
+  },
+  {
+    "id": "GOODFIRMS",
+    "url": "https://www.goodfirms.co/get-listed"
+  },
+  {
+    "id": "DESIGNRUSH",
+    "url": "https://www.designrush.com/agency/profile/create"
+  },
+  {
+    "id": "WPEXPERT",
+    "url": "https://woocommerce.com/partners/"
+  },
+  {
+    "id": "SHOPIFY",
+    "url": "https://www.shopify.com/partners"
+  },
+  {
+    "id": "ZAPIER",
+    "url": "https://zapier.com/pricing"
+  },
+  {
+    "id": "ZAP_PARTNER",
+    "url": "https://zapier.com/l/experts"
+  },
+  {
+    "id": "MAKE",
+    "url": "https://www.make.com/en/pricing"
+  },
+  {
+    "id": "MAKE_PARTNER",
+    "url": "https://www.make.com/en/partners"
+  },
+  {
+    "id": "N8N",
+    "url": "https://n8n.io/pricing/"
+  },
+  {
+    "id": "N8N_LICENSE",
+    "url": "https://docs.n8n.io/sustainable-use-license/"
+  },
+  {
+    "id": "PIPEDREAM",
+    "url": "https://pipedream.com/pricing"
+  },
+  {
+    "id": "ACTIVEPIECES",
+    "url": "https://www.activepieces.com/pricing"
+  },
+  {
+    "id": "GUMROAD",
+    "url": "https://gumroad.com/pricing"
+  },
+  {
+    "id": "GUMROAD_PAY",
+    "url": "https://gumroad.com/help/article/13-getting-paid.html"
+  },
+  {
+    "id": "LEMONSQUEEZY",
+    "url": "https://docs.lemonsqueezy.com/help/getting-started/supported-countries"
+  },
+  {
+    "id": "LEMON_FEES",
+    "url": "https://www.lemonsqueezy.com/pricing"
+  },
+  {
+    "id": "PADDLE",
+    "url": "https://www.paddle.com/help/start/account-verification/which-countries-are-supported-by-paddle"
+  },
+  {
+    "id": "ENVATO",
+    "url": "https://help.author.envato.com/hc/en-us/articles/360000471943-Introduction-to-Earnings"
+  },
+  {
+    "id": "WP",
+    "url": "https://wordpress.org/plugins/developers/"
+  },
+  {
+    "id": "CHROME",
+    "url": "https://developer.chrome.com/docs/webstore/register"
+  },
+  {
+    "id": "GITHUB_MARKET",
+    "url": "https://docs.github.com/en/apps/github-marketplace/creating-apps-for-github-marketplace/requirements-for-listing-an-app"
+  },
+  {
+    "id": "NPM",
+    "url": "https://docs.npmjs.com/policies/terms"
+  },
+  {
+    "id": "PYPI",
+    "url": "https://docs.pypi.org/policy/terms-of-use/"
+  },
+  {
+    "id": "PRODUCTHUNT",
+    "url": "https://www.producthunt.com/launch"
+  },
+  {
+    "id": "INDIE",
+    "url": "https://www.indiehackers.com/"
+  },
+  {
+    "id": "REDDIT",
+    "url": "https://support.reddithelp.com/hc/en-us/articles/205926439-Reddiquette"
+  },
+  {
+    "id": "ALTERNATIVETO",
+    "url": "https://alternativeto.net/"
+  },
+  {
+    "id": "CAPTERRA",
+    "url": "https://www.capterra.com/vendors/sign-up"
+  },
+  {
+    "id": "G2",
+    "url": "https://sell.g2.com/create-a-profile"
+  },
+  {
+    "id": "DEVTO",
+    "url": "https://dev.to/terms"
+  },
+  {
+    "id": "SOURCEFORGE",
+    "url": "https://sourceforge.net/create/"
+  },
+  {
+    "id": "MALT",
+    "url": "https://www.malt.com/"
+  },
+  {
+    "id": "WPCODE",
+    "url": "https://wpcode.com/pricing/"
+  },
+  {
+    "id": "UNCANNY",
+    "url": "https://automatorplugin.com/pricing/"
+  },
+  {
+    "id": "WPFUSION",
+    "url": "https://wpfusion.com/pricing/"
+  },
+  {
+    "id": "WPWEBHOOKS",
+    "url": "https://wp-webhooks.com/pricing/"
+  },
+  {
+    "id": "BUDIBASE",
+    "url": "https://budibase.com/pricing/"
+  },
+  {
+    "id": "RETOOL",
+    "url": "https://retool.com/pricing/"
+  },
+  {
+    "id": "APPSMITH",
+    "url": "https://www.appsmith.com/pricing"
+  },
+  {
+    "id": "NOCODB",
+    "url": "https://nocodb.com/pricing"
+  },
+  {
+    "id": "N8N_TEMPLATES",
+    "url": "https://n8n.io/workflows/"
+  },
+  {
+    "id": "APIFY",
+    "url": "https://apify.com/pricing"
+  },
+  {
+    "id": "VISUALPING",
+    "url": "https://visualping.io/pricing"
+  },
+  {
+    "id": "DISTILL",
+    "url": "https://distill.io/pricing/"
+  },
+  {
+    "id": "HEXOWATCH",
+    "url": "https://hexowatch.com/"
+  },
+  {
+    "id": "WAPPALYZER",
+    "url": "https://www.wappalyzer.com/pricing/"
+  },
+  {
+    "id": "BUILTWITH",
+    "url": "https://builtwith.com/plans"
+  },
+  {
+    "id": "WPSCAN",
+    "url": "https://wpscan.com/pricing/"
+  },
+  {
+    "id": "WPMU",
+    "url": "https://wpmudev.com/pricing/"
+  },
+  {
+    "id": "MANAGEWP",
+    "url": "https://managewp.com/pricing"
+  },
+  {
+    "id": "UPDRAFT",
+    "url": "https://updraftplus.com/shop/updraftplus-premium/"
+  },
+  {
+    "id": "SUPA_ADVISOR",
+    "url": "https://supabase.com/docs/guides/database/database-advisors"
+  },
+  {
+    "id": "CHECKLY",
+    "url": "https://www.checklyhq.com/pricing/"
+  },
+  {
+    "id": "BETTERSTACK",
+    "url": "https://betterstack.com/uptime/pricing"
+  },
+  {
+    "id": "UPTIMEROBOT",
+    "url": "https://uptimerobot.com/pricing/"
+  },
+  {
+    "id": "CRONJOB",
+    "url": "https://cron-job.org/en/"
+  },
+  {
+    "id": "COOLIFY",
+    "url": "https://coolify.io/pricing/"
+  },
+  {
+    "id": "TENDERLY",
+    "url": "https://www.stotles.com/"
+  },
+  {
+    "id": "GOVTRIBE",
+    "url": "https://govtribe.com/"
+  },
+  {
+    "id": "TENDERSINFO",
+    "url": "https://www.tendersinfo.com/"
+  },
+  {
+    "id": "OPENOPPS",
+    "url": "https://openopps.com/"
+  },
+  {
+    "id": "GRANTFORWARD",
+    "url": "https://www.grantforward.com/"
+  },
+  {
+    "id": "INSTRUMENTL",
+    "url": "https://www.instrumentl.com/pricing"
+  },
+  {
+    "id": "OPENDATABOT",
+    "url": "https://opendatabot.ua/open"
+  },
+  {
+    "id": "YOUCONTROL",
+    "url": "https://youcontrol.com.ua/"
+  },
+  {
+    "id": "OPENCONTRACTING",
+    "url": "https://standard.open-contracting.org/latest/en/"
+  },
+  {
+    "id": "FT_DOC",
+    "url": "https://www.find-tender.service.gov.uk/apidocumentation"
+  },
+  {
+    "id": "CF_DOC",
+    "url": "https://www.contractsfinder.service.gov.uk/apidocumentation"
+  },
+  {
+    "id": "OPENALEX_DOC",
+    "url": "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+  },
+  {
+    "id": "GH_RATE",
+    "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api"
+  },
+  {
+    "id": "GH_ADDITIONAL",
+    "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features"
+  },
+  {
+    "id": "NET_FUNCTION",
+    "url": "https://docs.netlify.com/build/functions/overview/"
+  },
+  {
+    "id": "NET_SCHEDULE",
+    "url": "https://docs.netlify.com/build/functions/scheduled-functions/"
+  },
+  {
+    "id": "CH_RATE",
+    "url": "https://developer.company-information.service.gov.uk/developer-guidelines/"
+  },
+  {
+    "id": "GROQ_CURRENT",
+    "url": "https://console.groq.com/docs/models"
+  },
+  {
+    "id": "FUNDING",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search"
+  },
+  {
+    "id": "N8N_LICENSE_CURRENT",
+    "url": "https://docs.n8n.io/embed/"
+  }
+]
