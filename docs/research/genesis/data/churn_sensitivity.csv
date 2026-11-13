@@ -1,0 +1,9 @@
+candidate_id,active_customers,churn,expected_replacements_per_month,whole_customer_replacement_planning,mrr_lost_if_no_replacement,six_month_retained_fraction_no_acquisition,new_customer_onboarding_hours
+C02,8,0,0,0,0,1,UNKNOWN; extra to steady-state delivery hours
+C02,8,0.05,0.4,1,100.0,0.7351,UNKNOWN; extra to steady-state delivery hours
+C02,8,0.1,0.8,1,200.0,0.5314,UNKNOWN; extra to steady-state delivery hours
+C02,8,0.2,1.6,2,400.0,0.2621,UNKNOWN; extra to steady-state delivery hours
+C03,10,0,0,0,0,1,UNKNOWN; extra to steady-state delivery hours
+C03,10,0.05,0.5,1,100.0,0.7351,UNKNOWN; extra to steady-state delivery hours
+C03,10,0.1,1.0,1,200.0,0.5314,UNKNOWN; extra to steady-state delivery hours
+C03,10,0.2,2.0,2,400.0,0.2621,UNKNOWN; extra to steady-state delivery hours

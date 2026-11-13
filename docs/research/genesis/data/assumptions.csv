@@ -1,0 +1,16 @@
+assumption_id,parameter,base,sensitivity,status,basis,checked_date
+A01,Founder labor rate USD/hour,25,10;25;40,ASSUMED,"Opportunity cost, not salary fact",2026-11-13
+A02,Refund/noncollection fraction,0.05,0;.05;.15,ASSUMED,No own observations,2026-11-13
+A03,Platform fee fraction,0.15,0;.10;.15,ASSUMED,Stress at documented Upwork upper bound; actual contract UNKNOWN,2026-11-13
+A04,Sales/admin hours monthly,16,8;16;32,ASSUMED,Includes qualification; no traffic guarantee,2026-11-13
+A05,Fixed cash/month,20,0;20;50,ASSUMED,Planning reserve; not vendor quote,2026-11-13
+A06,Withdrawal/month USD,0.99,.99;unknown FX,ASSUMED,"One transfer; bank/FX not modeled, net profit upper bound",2026-11-13
+A07,Close qualified-to-sale,0.2,.05;.10;.20,ASSUMED,Threshold only; not forecast,2026-11-13
+A08,Qualified inquiry/targeted visit,0.05,.01;.05;.10,ASSUMED,Threshold only; not forecast,2026-11-13
+A09,Monthly churn,0.05,0;.05;.10;.20,ASSUMED,Recurring candidates only; no observed renewal,2026-11-13
+A10,Acceptance-to-available cash days,UNKNOWN,0;14;30;60,UNKNOWN,Withdrawal time excludes approval/security delays,2026-11-13
+A11,Applicable UA tax,UNKNOWN,0%;6%;10% illustrative only,UNKNOWN,No FOP group/residency/ESV facts; rates not legal advice,2026-11-13
+A12,KYC/payout founder,UNKNOWN,pass;blocked,UNKNOWN,No registrations or live payout test permitted,2026-11-13
+A13,C01 initial preparation hours,16,8;16;32,ASSUMED,Bounded offline validator and offer; not full MVP,2026-11-13
+A14,C02 initial preparation hours,20,10;20;40,ASSUMED,No PHP/recovery expertise assumed,2026-11-13
+A15,C03 initial preparation hours,24,12;24;48,ASSUMED,Need DNS/change-management expertise verification,2026-11-13
