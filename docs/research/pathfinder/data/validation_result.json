@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "partners": 22,
+  "mobile": 15,
+  "extensions": 15,
+  "plugins": 15,
+  "evidence_records": 126,
+  "red_team": 15,
+  "build_ready_products": 0,
+  "experiment_candidates": 1,
+  "financial_models": 7,
+  "financial_rows": 18,
+  "ad_sensitivity_rows": 108,
+  "limitations": "Checks verify integrity and arithmetic, not demand, source truth, bank payout or production reliability"
+}
