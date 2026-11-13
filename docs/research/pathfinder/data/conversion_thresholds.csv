@@ -1,0 +1,46 @@
+model,target_gross,payers,assumed_qualified_or_activated_to_paid,required_qualified_or_activated,unit,channel_evidence
+B2B_FIXED,500,2,0.005,400,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,500,2,0.02,100,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,500,2,0.05,40,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,2000,5,0.005,1000,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,2000,5,0.02,250,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,2000,5,0.05,100,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,5000,12,0.005,2400,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,5000,12,0.02,600,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_FIXED,5000,12,0.05,240,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,500,7,0.005,1400,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,500,7,0.02,350,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,500,7,0.05,140,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,2000,26,0.005,5200,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,2000,26,0.02,1300,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,2000,26,0.05,520,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,5000,64,0.005,12800,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,5000,64,0.02,3200,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+B2B_LICENSE,5000,64,0.05,1280,qualified B2B opportunities,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,500,101,0.005,20200,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,500,101,0.02,5050,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,500,101,0.05,2020,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,2000,401,0.005,80200,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,2000,401,0.02,20050,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,2000,401,0.05,8020,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,5000,1003,0.005,200600,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,5000,1003,0.02,50150,activated users,UNKNOWN volume; no success probability inferred
+MOBILE_SUB,5000,1003,0.05,20060,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,500,100,0.005,20000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,500,100,0.02,5000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,500,100,0.05,2000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,2000,400,0.005,80000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,2000,400,0.02,20000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,2000,400,0.05,8000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,5000,1000,0.005,200000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,5000,1000,0.02,50000,activated users,UNKNOWN volume; no success probability inferred
+CHROME_SUB,5000,1000,0.05,20000,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,500,123,0.005,24600,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,500,123,0.02,6150,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,500,123,0.05,2460,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,2000,490,0.005,98000,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,2000,490,0.02,24500,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,2000,490,0.05,9800,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,5000,1225,0.005,245000,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,5000,1225,0.02,61250,activated users,UNKNOWN volume; no success probability inferred
+PLUGIN_FREEMIUM,5000,1225,0.05,24500,activated users,UNKNOWN volume; no success probability inferred

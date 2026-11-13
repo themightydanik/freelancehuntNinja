@@ -1,0 +1,43 @@
+{
+  "equal_pair": {
+    "status": "PASS",
+    "missing": [],
+    "extra": [],
+    "changed": [],
+    "left_total": "80.00",
+    "right_total": "80.00"
+  },
+  "omitted_refund": {
+    "status": "FAIL",
+    "missing": [
+      "synthetic-refund"
+    ],
+    "extra": [],
+    "changed": [],
+    "left_total": "80.00",
+    "right_total": "100.00"
+  },
+  "different_definition": {
+    "status": "BLOCKED_DEFINITION",
+    "reason": "Policies differ; do not call this a migration failure"
+  },
+  "duplicate": {
+    "status": "BLOCKED_DATA",
+    "errors": [
+      "empty or duplicate key"
+    ]
+  },
+  "mixed_currency": {
+    "status": "BLOCKED_DATA",
+    "errors": [
+      "mixed currency"
+    ]
+  },
+  "missing_timezone": {
+    "status": "BLOCKED_DATA",
+    "errors": [
+      "unsupported or missing timezone"
+    ]
+  },
+  "limitations": "Synthetic USD/UTC/signed-lines contract only. No production Shopify/Woo mapping, tax audit, performance test or actual customer evidence."
+}
