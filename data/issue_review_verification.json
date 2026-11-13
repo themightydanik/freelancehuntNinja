@@ -1,0 +1,69 @@
+[
+  {
+    "evidence_id": "GH-supabase-supabase-47206",
+    "url": "https://api.github.com/repos/supabase/supabase/issues/47206",
+    "checked_at": "2026-11-13T02:25:05.169575+00:00",
+    "status": 200,
+    "technical_markers": {
+      "spatial_ref_sys": true,
+      "owner": true,
+      "RLS": true
+    },
+    "scope": "source text only; bug not reproduced; author/contact/body not retained"
+  },
+  {
+    "evidence_id": "GH-supabase-supabase-48382",
+    "url": "https://api.github.com/repos/supabase/supabase/issues/48382",
+    "checked_at": "2026-11-13T02:25:05.815295+00:00",
+    "status": 200,
+    "technical_markers": {
+      "TRUNCATE": true,
+      "GRANT": true
+    },
+    "scope": "source text only; bug not reproduced; author/contact/body not retained"
+  },
+  {
+    "evidence_id": "GH-n8n-io-n8n-42667",
+    "url": "https://api.github.com/repos/n8n-io/n8n/issues/42667",
+    "checked_at": "2026-11-13T02:25:06.335973+00:00",
+    "status": 200,
+    "technical_markers": {
+      "allowed_updates": true,
+      "callback_query": true
+    },
+    "scope": "source text only; bug not reproduced; author/contact/body not retained"
+  },
+  {
+    "evidence_id": "GH-n8n-io-n8n-37361",
+    "url": "https://api.github.com/repos/n8n-io/n8n/issues/37361",
+    "checked_at": "2026-11-13T02:25:06.766403+00:00",
+    "status": 200,
+    "technical_markers": {
+      "line": true,
+      "rich": true
+    },
+    "scope": "source text only; bug not reproduced; author/contact/body not retained"
+  },
+  {
+    "evidence_id": "GH-woocommerce-woocommerce-69438",
+    "url": "https://api.github.com/repos/woocommerce/woocommerce/issues/69438",
+    "checked_at": "2026-11-13T02:25:07.234332+00:00",
+    "status": 200,
+    "technical_markers": {
+      "delivery": true,
+      "second": true
+    },
+    "scope": "source text only; bug not reproduced; author/contact/body not retained"
+  },
+  {
+    "evidence_id": "GH-woocommerce-woocommerce-69807",
+    "url": "https://api.github.com/repos/woocommerce/woocommerce/issues/69807",
+    "checked_at": "2026-11-13T02:25:07.685489+00:00",
+    "status": 200,
+    "technical_markers": {
+      "stock_notification": true,
+      "webhook": true
+    },
+    "scope": "source text only; bug not reproduced; author/contact/body not retained"
+  }
+]

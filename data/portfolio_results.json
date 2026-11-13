@@ -1,0 +1,179 @@
+{
+  "status": "ESTIMATED optimization under ASSUMED prices, demand caps, reuse and workload",
+  "products": [
+    {
+      "id": "P01",
+      "name": "Bot recovery",
+      "price": 350,
+      "hours": 8,
+      "support": 1,
+      "build": 12,
+      "cash": 1,
+      "cap": 3,
+      "dependency": "ops"
+    },
+    {
+      "id": "P02",
+      "name": "WooCommerce connector",
+      "price": 500,
+      "hours": 12,
+      "support": 1,
+      "build": 20,
+      "cash": 2,
+      "cap": 3,
+      "dependency": "events"
+    },
+    {
+      "id": "P03",
+      "name": "RLS review",
+      "price": 450,
+      "hours": 10,
+      "support": 0.5,
+      "build": 10,
+      "cash": 0,
+      "cap": 2,
+      "dependency": "security"
+    },
+    {
+      "id": "P04",
+      "name": "Webhook replay",
+      "price": 600,
+      "hours": 14,
+      "support": 1,
+      "build": 16,
+      "cash": 1,
+      "cap": 2,
+      "dependency": "events"
+    },
+    {
+      "id": "P05",
+      "name": "Kit license",
+      "price": 49,
+      "hours": 0.25,
+      "support": 0.25,
+      "build": 24,
+      "cash": 0.5,
+      "cap": 10,
+      "dependency": "ops"
+    }
+  ],
+  "base": {
+    "units": {
+      "P01": 2,
+      "P02": 2,
+      "P03": 0,
+      "P04": 2,
+      "P05": 0
+    },
+    "monthly_gross": 2900,
+    "monthly_contribution": 2521.7,
+    "hours": 108.0,
+    "cash_cost": 10.0,
+    "launch_build_hours": 60,
+    "economic_profit_at_20_per_hour": 361.7,
+    "contribution_per_hour": 23.35,
+    "demand_caps_assumed": true
+  },
+  "no_reuse": {
+    "units": {
+      "P01": 2,
+      "P02": 2,
+      "P03": 0,
+      "P04": 2,
+      "P05": 0
+    },
+    "monthly_gross": 2900,
+    "monthly_contribution": 2521.7,
+    "hours": 109.0,
+    "cash_cost": 10.0,
+    "launch_build_hours": 66,
+    "economic_profit_at_20_per_hour": 341.7,
+    "contribution_per_hour": 23.13,
+    "demand_caps_assumed": true
+  },
+  "with_security_qualification": {
+    "units": {
+      "P01": 3,
+      "P02": 0,
+      "P03": 2,
+      "P04": 2,
+      "P05": 0
+    },
+    "monthly_gross": 3150,
+    "monthly_contribution": 2742.95,
+    "hours": 111.33,
+    "cash_cost": 7.0,
+    "launch_build_hours": 56,
+    "economic_profit_at_20_per_hour": 516.28,
+    "contribution_per_hour": 24.64,
+    "demand_caps_assumed": true
+  },
+  "fee20": {
+    "units": {
+      "P01": 2,
+      "P02": 2,
+      "P03": 0,
+      "P04": 2,
+      "P05": 0
+    },
+    "monthly_gross": 2900,
+    "monthly_contribution": 2240.4,
+    "hours": 108.0,
+    "cash_cost": 10.0,
+    "launch_build_hours": 60,
+    "economic_profit_at_20_per_hour": 80.4,
+    "contribution_per_hour": 20.74,
+    "demand_caps_assumed": true
+  },
+  "fee30": {
+    "units": {
+      "P01": 2,
+      "P02": 2,
+      "P03": 0,
+      "P04": 2,
+      "P05": 0
+    },
+    "monthly_gross": 2900,
+    "monthly_contribution": 1959.1,
+    "hours": 108.0,
+    "cash_cost": 10.0,
+    "launch_build_hours": 60,
+    "economic_profit_at_20_per_hour": -200.9,
+    "contribution_per_hour": 18.14,
+    "demand_caps_assumed": true
+  },
+  "capacity80": {
+    "units": {
+      "P01": 1,
+      "P02": 0,
+      "P03": 0,
+      "P04": 2,
+      "P05": 10
+    },
+    "monthly_gross": 2040,
+    "monthly_contribution": 1770.92,
+    "hours": 78.67,
+    "cash_cost": 10.0,
+    "launch_build_hours": 64,
+    "economic_profit_at_20_per_hour": 197.59,
+    "contribution_per_hour": 22.51,
+    "demand_caps_assumed": true
+  },
+  "relaxed_demand_caps_warning": {
+    "units": {
+      "P01": 0,
+      "P02": 0,
+      "P03": 0,
+      "P04": 6,
+      "P05": 0
+    },
+    "monthly_gross": 3600,
+    "monthly_contribution": 3134.8,
+    "hours": 117.67,
+    "cash_cost": 8.0,
+    "launch_build_hours": 22,
+    "economic_profit_at_20_per_hour": 781.47,
+    "contribution_per_hour": 26.64,
+    "demand_caps_assumed": false
+  }
+}

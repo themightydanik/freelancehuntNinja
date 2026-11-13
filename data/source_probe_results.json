@@ -1,0 +1,3385 @@
+{
+  "scope": "one bounded request per target; two pages only for S13/S14; no retries",
+  "results": [
+    {
+      "source_id": "S01",
+      "url": "https://data.gov.ua/api/3/action/package_search?rows=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:14.687166+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "elapsed_seconds": 1.139,
+      "bytes_read": 89128,
+      "truncated": false,
+      "response_sha256": "8ac98f1b6270098cb7fbb7143bc7c585b6ad94c3bd5181af418b8ce65f361f62",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "help": "str",
+        "success": "bool",
+        "result": {
+          "count": "int",
+          "sort": "str",
+          "facets": {},
+          "results": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "license_title": "str",
+              "maintainer": "str",
+              "relationships_as_object": {
+                "type": "array",
+                "length": 0,
+                "item": null
+              },
+              "tag_string": "str",
+              "purpose_of_collecting_information": "str",
+              "private": "bool",
+              "maintainer_email": "str",
+              "num_tags": "int",
+              "update_frequency": "str",
+              "id": "str",
+              "metadata_created": "str",
+              "metadata_modified": "str",
+              "author": "str",
+              "author_email": "str",
+              "isopen": "bool",
+              "state": "str",
+              "version": "str",
+              "license_id": "str",
+              "type": "str",
+              "resources": {
+                "type": "array",
+                "length": 2,
+                "item": "dict"
+              },
+              "num_resources": "int",
+              "tags": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "title_chosen": "str",
+              "groups": {
+                "type": "array",
+                "length": 0,
+                "item": null
+              },
+              "creator_user_id": "str",
+              "relationships_as_subject": {
+                "type": "array",
+                "length": 0,
+                "item": null
+              },
+              "organization": {
+                "koatuu_identifier": "str",
+                "description": "str",
+                "name": "str",
+                "created": "str",
+                "title": "str",
+                "katottg_identifier": "NoneType",
+                "edrpou": "str",
+                "is_organization": "bool",
+                "state": "str",
+                "image_url": "str",
+                "revision_id": "str",
+                "type": "str",
+                "id": "str",
+                "approval_status": "str"
+              },
+              "name": "str",
+              "language": "str",
+              "url": "NoneType",
+              "notes": "str",
+              "owner_org": "str",
+              "license_url": "str",
+              "title": "str",
+              "revision_id": "str"
+            }
+          },
+          "search_facets": {}
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S02",
+      "url": "https://public.api.openprocurement.org/api/2.5/tenders?limit=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:14.687655+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.883,
+      "bytes_read": 512,
+      "truncated": false,
+      "response_sha256": "9118b69bbfd90f4c9e853bdadee00f6e611b46694d1697b3948c5bd693a6fe67",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "data": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "dateModified": "str",
+            "id": "str"
+          }
+        },
+        "next_page": {
+          "offset": "str",
+          "path": "str",
+          "uri": "str"
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "next_page"
+      ],
+      "page_record_count": 2,
+      "cursor_present": true,
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S03",
+      "url": "https://api.spending.gov.ua/api/v2/api/transactions/top100?region=26",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:14.688150+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 500,
+      "content_type": "application/json;charset=UTF-8",
+      "elapsed_seconds": 0.889,
+      "bytes_read": 39,
+      "truncated": false,
+      "response_sha256": "d35a337255542966aca422d77613064eadc62174f69cbf4a2838cc97ccfd9239",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "errorMessage": "str"
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "http_error"
+    },
+    {
+      "source_id": "S04",
+      "url": "https://usr.minjust.gov.ua/",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:15.574074+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 503,
+      "content_type": "text/plain",
+      "elapsed_seconds": 5.236,
+      "bytes_read": 91,
+      "truncated": false,
+      "response_sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "valid_json": false,
+      "outcome": "http_error"
+    },
+    {
+      "source_id": "S05",
+      "url": "https://e-construction.gov.ua/",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:15.579119+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "elapsed_seconds": 0.94,
+      "bytes_read": 50679,
+      "truncated": false,
+      "response_sha256": "333f2748f248cb9410e54f0677788a4e66fc9a156292ba7e4548f269b47fba7c",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "valid_json": false,
+      "outcome": "html_only_not_api_validation"
+    },
+    {
+      "source_id": "S06",
+      "url": "https://sis.nipo.gov.ua/uk/search/simple/",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:15.827878+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "elapsed_seconds": 1.363,
+      "bytes_read": 23237,
+      "truncated": false,
+      "response_sha256": "0f521ac491a3552681ed808c08d0b8d12fc403527f94d3d91d196ec5b16986ba",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "valid_json": false,
+      "outcome": "html_only_not_api_validation"
+    },
+    {
+      "source_id": "S07",
+      "url": "https://data.lvivcity.gov.ua/api/3/action/package_search?rows=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:16.520941+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "outcome": "transport_error",
+      "error_type": "ProxyError",
+      "elapsed_seconds": 0.205
+    },
+    {
+      "source_id": "S08",
+      "url": "https://data.kyivcity.gov.ua/api/3/action/package_search?rows=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:16.725992+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "elapsed_seconds": 0.409,
+      "bytes_read": 31102,
+      "truncated": false,
+      "response_sha256": "f9a2d5d0463671a57991443c78fcf45096cdb60d49485cd0217c8f86a813c3d6",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "success": "bool",
+        "result": {
+          "count": "int",
+          "facets": {},
+          "results": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "added_to_favorites_number": "int",
+              "additional_owners": "str",
+              "author": "NoneType",
+              "author_email": "NoneType",
+              "average_rating": "float",
+              "average_rating_count": "int",
+              "category": "str",
+              "collection_basis": "str",
+              "creator_user_id": "str",
+              "id": "str",
+              "isopen": "bool",
+              "language": "str",
+              "license_id": "NoneType",
+              "license_title": "NoneType",
+              "maintainer": "NoneType",
+              "maintainer_email": "NoneType",
+              "metadata_created": "str",
+              "metadata_modified": "str",
+              "name": "str",
+              "notes": "str",
+              "num_resources": "int",
+              "num_tags": "int",
+              "number_of_all_downloads": "int",
+              "number_of_views": "int",
+              "organization": {
+                "id": "str",
+                "name": "str",
+                "title": "str",
+                "type": "str",
+                "description": "str",
+                "image_url": "str",
+                "created": "str",
+                "is_organization": "bool",
+                "approval_status": "str",
+                "state": "str",
+                "edrpou": "str",
+                "administrative_unit_id": "str",
+                "address": "str",
+                "email": "str",
+                "phone": "str",
+                "number_of_linked_packages": "int",
+                "date_of_refresh": "str",
+                "number_of_views": "int",
+                "number_of_categories": "int",
+                "number_of_all_downloads": "int",
+                "average_rating": "str",
+                "subscription_should_be_checked": "bool",
+                "favorites_should_be_checked": "bool",
+                "in_progress": "bool",
+                "is_changed": "bool",
+                "legal_status": "str",
+                "successor_id": "NoneType"
+              },
+              "owner_org": "str",
+              "plugin_data": {
+                "ua_moderation": "dict"
+              },
+              "private": "bool",
+              "responsible_person": "str",
+              "responsible_person_id": "str",
+              "state": "str",
+              "title": "str",
+              "type": "str",
+              "update_frequency": "str",
+              "url": "NoneType",
+              "version": "NoneType",
+              "resources": {
+                "type": "array",
+                "length": 2,
+                "item": "dict"
+              },
+              "tags": {
+                "type": "array",
+                "length": 4,
+                "item": "dict"
+              },
+              "groups": {
+                "type": "array",
+                "length": 0,
+                "item": null
+              },
+              "relationships_as_subject": {
+                "type": "array",
+                "length": 0,
+                "item": null
+              }
+            }
+          },
+          "sort": "str",
+          "search_facets": {}
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S09",
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "method": "POST",
+      "payload": {
+        "query": "publication-date >= 20260101",
+        "limit": 2,
+        "fields": [
+          "publication-number",
+          "publication-date",
+          "notice-title"
+        ]
+      },
+      "checked_at": "2026-11-13T01:59:17.136694+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.733,
+      "bytes_read": 13294,
+      "truncated": false,
+      "response_sha256": "2eeca25a51abe90dbfbad9d42daa80f8ffd3ee9b7bacfabee1810911fe786659",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "notices": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "publication-number": "str",
+            "publication-date": "str",
+            "links": {
+              "xml": {
+                "MUL": "str"
+              },
+              "pdf": {
+                "BUL": "str",
+                "SPA": "str",
+                "CES": "str",
+                "DAN": "str",
+                "DEU": "str",
+                "EST": "str",
+                "ELL": "str",
+                "ENG": "str",
+                "FRA": "str",
+                "GLE": "str",
+                "HRV": "str",
+                "ITA": "str",
+                "LAV": "str",
+                "LIT": "str",
+                "HUN": "str",
+                "MLT": "str",
+                "NLD": "str",
+                "POL": "str",
+                "POR": "str",
+                "RON": "str",
+                "SLK": "str",
+                "SLV": "str",
+                "FIN": "str",
+                "SWE": "str"
+              },
+              "pdfs": {
+                "HRV": "str"
+              },
+              "html": {
+                "BUL": "str",
+                "SPA": "str",
+                "CES": "str",
+                "DAN": "str",
+                "DEU": "str",
+                "EST": "str",
+                "ELL": "str",
+                "ENG": "str",
+                "FRA": "str",
+                "GLE": "str",
+                "HRV": "str",
+                "ITA": "str",
+                "LAV": "str",
+                "LIT": "str",
+                "HUN": "str",
+                "MLT": "str",
+                "NLD": "str",
+                "POL": "str",
+                "POR": "str",
+                "RON": "str",
+                "SLK": "str",
+                "SLV": "str",
+                "FIN": "str",
+                "SWE": "str"
+              },
+              "htmlDirect": {
+                "BUL": "str",
+                "SPA": "str",
+                "CES": "str",
+                "DAN": "str",
+                "DEU": "str",
+                "EST": "str",
+                "ELL": "str",
+                "ENG": "str",
+                "FRA": "str",
+                "GLE": "str",
+                "HRV": "str",
+                "ITA": "str",
+                "LAV": "str",
+                "LIT": "str",
+                "HUN": "str",
+                "MLT": "str",
+                "NLD": "str",
+                "POL": "str",
+                "POR": "str",
+                "RON": "str",
+                "SLK": "str",
+                "SLV": "str",
+                "FIN": "str",
+                "SWE": "str"
+              }
+            },
+            "notice-title": {
+              "hun": "str",
+              "lav": "str",
+              "swe": "str",
+              "gle": "str",
+              "ell": "str",
+              "spa": "str",
+              "est": "str",
+              "nld": "str",
+              "fin": "str",
+              "pol": "str",
+              "hrv": "str",
+              "ces": "str",
+              "dan": "str",
+              "ron": "str",
+              "por": "str",
+              "slk": "str",
+              "fra": "str",
+              "mlt": "str",
+              "deu": "str",
+              "lit": "str",
+              "ita": "str",
+              "bul": "str",
+              "slv": "str",
+              "eng": "str"
+            }
+          }
+        },
+        "totalNoticeCount": "int",
+        "iterationNextToken": "NoneType",
+        "timedOut": "bool"
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S10",
+      "url": "https://cordis.europa.eu/about/dataextractions",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:17.191915+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "elapsed_seconds": 0.89,
+      "bytes_read": 46871,
+      "truncated": false,
+      "response_sha256": "8140deb6cf537407be811babe0d35976568b06bb09f713ca977f618fe8caa4be",
+      "pagination_header_present": true,
+      "retry_after": null,
+      "rate_remaining": null,
+      "valid_json": false,
+      "outcome": "html_only_not_api_validation"
+    },
+    {
+      "source_id": "S11",
+      "url": "https://data.europa.eu/api/hub/search/search?query=energy&limit=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:17.871646+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.489,
+      "bytes_read": 23896,
+      "truncated": false,
+      "response_sha256": "767d119006ee436bfbbd90968acf870641d0462c9634598400b34aef42f7a532",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "result": {
+          "count": "int",
+          "results": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "country": {
+                "label": "str",
+                "id": "str",
+                "resource": "str"
+              },
+              "translation_meta": {
+                "details": "dict",
+                "full_available_languages": "list",
+                "status": "str"
+              },
+              "count": "int",
+              "description": {
+                "ga": "str",
+                "et": "str",
+                "cs": "str",
+                "fi": "str",
+                "es": "str",
+                "sv": "str",
+                "sk": "str",
+                "lt": "str",
+                "sl": "str",
+                "hr": "str",
+                "nl": "str",
+                "ro": "str",
+                "hu": "str",
+                "fr": "str",
+                "de": "str",
+                "el": "str",
+                "da": "str",
+                "bg": "str",
+                "it": "str",
+                "pl": "str",
+                "mt": "str",
+                "lv": "str",
+                "pt": "str",
+                "uk": "str",
+                "en": "str"
+              },
+              "index": "str",
+              "source_type": "str",
+              "language": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "title": {
+                "el": "str",
+                "nl": "str",
+                "de": "str",
+                "da": "str",
+                "lt": "str",
+                "pl": "str",
+                "uk": "str",
+                "sl": "str",
+                "bg": "str",
+                "sv": "str",
+                "pt": "str",
+                "lv": "str",
+                "it": "str",
+                "fi": "str",
+                "cs": "str",
+                "en": "str",
+                "hr": "str",
+                "ga": "str",
+                "sk": "str",
+                "et": "str",
+                "mt": "str",
+                "ro": "str",
+                "hu": "str",
+                "fr": "str",
+                "es": "str"
+              },
+              "spatial_resource": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "modified": "str",
+              "publisher": {
+                "type": "str",
+                "email": "str",
+                "homepage": "str",
+                "name": "str"
+              },
+              "id": "str",
+              "issued": "str",
+              "homepage": "str"
+            }
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S12",
+      "url": "https://api.company-information.service.gov.uk/search/companies?q=software&items_per_page=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:18.083274+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 401,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.599,
+      "bytes_read": 58,
+      "truncated": false,
+      "response_sha256": "0662b188b7b87b9ed8b7b1d78baa8ea47d8ec6626a603220245c5b9c225ce0c3",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "error": "str",
+        "type": "str"
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "http_error"
+    },
+    {
+      "source_id": "S13",
+      "url": "https://api.github.com/repos/supabase/supabase/issues?state=open&per_page=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:18.361394+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "elapsed_seconds": 0.546,
+      "bytes_read": 7516,
+      "truncated": false,
+      "response_sha256": "af734ced5782bfa318e8746ab41bf337b2a416a9a226bdfe2fd565e164f135ef",
+      "pagination_header_present": true,
+      "retry_after": null,
+      "rate_remaining": "14977",
+      "anonymized_example": {
+        "type": "array",
+        "length": 2,
+        "item": {
+          "url": "str",
+          "repository_url": "str",
+          "labels_url": "str",
+          "comments_url": "str",
+          "events_url": "str",
+          "html_url": "str",
+          "id": "int",
+          "node_id": "str",
+          "number": "int",
+          "title": "str",
+          "user": {
+            "login": "str",
+            "id": "int",
+            "node_id": "str",
+            "avatar_url": "str",
+            "gravatar_id": "str",
+            "url": "str",
+            "html_url": "str",
+            "followers_url": "str",
+            "following_url": "str",
+            "gists_url": "str",
+            "starred_url": "str",
+            "subscriptions_url": "str",
+            "organizations_url": "str",
+            "repos_url": "str",
+            "events_url": "str",
+            "received_events_url": "str",
+            "type": "str",
+            "user_view_type": "str",
+            "site_admin": "bool"
+          },
+          "labels": {
+            "type": "array",
+            "length": 1,
+            "item": {
+              "id": "int",
+              "node_id": "str",
+              "url": "str",
+              "name": "str",
+              "color": "str",
+              "default": "bool",
+              "description": "str",
+              "archived_at": "NoneType",
+              "archived_by": "NoneType"
+            }
+          },
+          "state": "str",
+          "locked": "bool",
+          "assignees": {
+            "type": "array",
+            "length": 0,
+            "item": null
+          },
+          "milestone": "NoneType",
+          "comments": "int",
+          "created_at": "str",
+          "updated_at": "str",
+          "closed_at": "NoneType",
+          "assignee": "NoneType",
+          "author_association": "str",
+          "issue_field_values": {
+            "type": "array",
+            "length": 0,
+            "item": null
+          },
+          "type": "NoneType",
+          "active_lock_reason": "NoneType",
+          "draft": "bool",
+          "pull_request": {
+            "url": "str",
+            "html_url": "str",
+            "diff_url": "str",
+            "patch_url": "str",
+            "merged_at": "NoneType"
+          },
+          "body": "str",
+          "closed_by": "NoneType",
+          "reactions": {
+            "url": "str",
+            "total_count": "int",
+            "+1": "int",
+            "-1": "int",
+            "laugh": "int",
+            "hooray": "int",
+            "confused": "int",
+            "heart": "int",
+            "rocket": "int",
+            "eyes": "int"
+          },
+          "timeline_url": "str",
+          "performed_via_github_app": "NoneType",
+          "state_reason": "NoneType"
+        }
+      },
+      "valid_json": true,
+      "page_record_count": 2,
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S13p2",
+      "url": "https://api.github.com/repos/supabase/supabase/issues?state=open&per_page=2&page=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:18.683177+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "elapsed_seconds": 0.607,
+      "bytes_read": 10814,
+      "truncated": false,
+      "response_sha256": "c0183077e948067daff6a5a2c8803f1051dae7eadcb291b126010ffc388c994f",
+      "pagination_header_present": true,
+      "retry_after": null,
+      "rate_remaining": "14976",
+      "anonymized_example": {
+        "type": "array",
+        "length": 2,
+        "item": {
+          "url": "str",
+          "repository_url": "str",
+          "labels_url": "str",
+          "comments_url": "str",
+          "events_url": "str",
+          "html_url": "str",
+          "id": "int",
+          "node_id": "str",
+          "number": "int",
+          "title": "str",
+          "user": {
+            "login": "str",
+            "id": "int",
+            "node_id": "str",
+            "avatar_url": "str",
+            "gravatar_id": "str",
+            "url": "str",
+            "html_url": "str",
+            "followers_url": "str",
+            "following_url": "str",
+            "gists_url": "str",
+            "starred_url": "str",
+            "subscriptions_url": "str",
+            "organizations_url": "str",
+            "repos_url": "str",
+            "events_url": "str",
+            "received_events_url": "str",
+            "type": "str",
+            "user_view_type": "str",
+            "site_admin": "bool"
+          },
+          "labels": {
+            "type": "array",
+            "length": 0,
+            "item": null
+          },
+          "state": "str",
+          "locked": "bool",
+          "assignees": {
+            "type": "array",
+            "length": 0,
+            "item": null
+          },
+          "milestone": "NoneType",
+          "comments": "int",
+          "created_at": "str",
+          "updated_at": "str",
+          "closed_at": "NoneType",
+          "assignee": "NoneType",
+          "author_association": "str",
+          "issue_field_values": {
+            "type": "array",
+            "length": 0,
+            "item": null
+          },
+          "type": "NoneType",
+          "active_lock_reason": "NoneType",
+          "draft": "bool",
+          "pull_request": {
+            "url": "str",
+            "html_url": "str",
+            "diff_url": "str",
+            "patch_url": "str",
+            "merged_at": "NoneType"
+          },
+          "body": "str",
+          "closed_by": "NoneType",
+          "reactions": {
+            "url": "str",
+            "total_count": "int",
+            "+1": "int",
+            "-1": "int",
+            "laugh": "int",
+            "hooray": "int",
+            "confused": "int",
+            "heart": "int",
+            "rocket": "int",
+            "eyes": "int"
+          },
+          "timeline_url": "str",
+          "performed_via_github_app": "NoneType",
+          "state_reason": "NoneType"
+        }
+      },
+      "valid_json": true,
+      "page_record_count": 2,
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S14",
+      "url": "https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[search]=telegram&request[per_page]=2&request[page]=1",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:18.908398+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.588,
+      "bytes_read": 30252,
+      "truncated": false,
+      "response_sha256": "592b29d97336465291e000491094ba153c9ac3fb2802bcc2cebeeaad087f78cf",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "info": {
+          "page": "int",
+          "pages": "int",
+          "results": "int"
+        },
+        "plugins": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "name": "str",
+            "slug": "str",
+            "version": "str",
+            "author": "str",
+            "author_profile": "str",
+            "requires": "str",
+            "tested": "str",
+            "requires_php": "str",
+            "requires_plugins": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "rating": "int",
+            "ratings": {
+              "5": "int",
+              "4": "int",
+              "3": "int",
+              "2": "int",
+              "1": "int"
+            },
+            "num_ratings": "int",
+            "support_threads": "int",
+            "support_threads_resolved": "int",
+            "active_installs": "int",
+            "downloaded": "int",
+            "last_updated": "str",
+            "added": "str",
+            "homepage": "str",
+            "short_description": "str",
+            "description": "str",
+            "download_link": "str",
+            "tags": {
+              "ai": "str",
+              "mcp": "str",
+              "notification": "str",
+              "telegram": "str",
+              "woocommerce": "str"
+            },
+            "donate_link": "str",
+            "icons": {
+              "1x": "str",
+              "2x": "str"
+            }
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "info"
+      ],
+      "pagination_metadata": {
+        "page": 1,
+        "pages": 50,
+        "results": 1062
+      },
+      "useful_field_presence": {
+        "slug": 2,
+        "last_updated": 2,
+        "tested": 2,
+        "active_installs": 2,
+        "requires": 2,
+        "version": 2
+      },
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S14p2",
+      "url": "https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[search]=telegram&request[per_page]=2&request[page]=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:19.291295+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.447,
+      "bytes_read": 13145,
+      "truncated": false,
+      "response_sha256": "053ce2af15babe8fb414475ceb6e98ed782e2ed50d06e000652732a3693e5324",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "info": {
+          "page": "int",
+          "pages": "int",
+          "results": "int"
+        },
+        "plugins": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "name": "str",
+            "slug": "str",
+            "version": "str",
+            "author": "str",
+            "author_profile": "str",
+            "requires": "str",
+            "tested": "str",
+            "requires_php": "str",
+            "requires_plugins": {
+              "type": "array",
+              "length": 1,
+              "item": "str"
+            },
+            "rating": "int",
+            "ratings": {
+              "5": "int",
+              "4": "int",
+              "3": "int",
+              "2": "int",
+              "1": "int"
+            },
+            "num_ratings": "int",
+            "support_threads": "int",
+            "support_threads_resolved": "int",
+            "active_installs": "int",
+            "downloaded": "int",
+            "last_updated": "str",
+            "added": "str",
+            "homepage": "str",
+            "short_description": "str",
+            "description": "str",
+            "download_link": "str",
+            "tags": {
+              "contact-form-7": "str",
+              "contact-form-telegram": "str",
+              "telegram": "str"
+            },
+            "donate_link": "str",
+            "icons": {
+              "1x": "str",
+              "2x": "str"
+            }
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "info"
+      ],
+      "pagination_metadata": {
+        "page": 2,
+        "pages": 50,
+        "results": 1062
+      },
+      "useful_field_presence": {
+        "slug": 2,
+        "last_updated": 2,
+        "tested": 2,
+        "active_installs": 2,
+        "requires": 2,
+        "version": 2
+      },
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S15",
+      "url": "https://api.worldbank.org/v2/country/UA/indicator/IT.NET.USER.ZS?format=json&per_page=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:19.497248+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "outcome": "transport_error",
+      "error_type": "ReadTimeout",
+      "elapsed_seconds": 25.096
+    },
+    {
+      "source_id": "S16",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjan?geo=UA&time=2023&sex=T&age=TOTAL",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:19.739212+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 1.529,
+      "bytes_read": 2592,
+      "truncated": false,
+      "response_sha256": "87baf323f573e2cd007d280a1692222d6044ef29e404ad916d5babefc683c492",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "version": "str",
+        "class": "str",
+        "label": "str",
+        "source": "str",
+        "updated": "str",
+        "value": {},
+        "id": {
+          "type": "array",
+          "length": 6,
+          "item": "str"
+        },
+        "size": {
+          "type": "array",
+          "length": 6,
+          "item": "int"
+        },
+        "dimension": {
+          "freq": {
+            "label": "str",
+            "category": {
+              "index": {
+                "A": "int"
+              },
+              "label": {
+                "A": "str"
+              }
+            }
+          },
+          "unit": {
+            "label": "str",
+            "category": {
+              "index": {
+                "NR": "int"
+              },
+              "label": {
+                "NR": "str"
+              }
+            }
+          },
+          "age": {
+            "label": "str",
+            "category": {
+              "index": {
+                "TOTAL": "int"
+              },
+              "label": {
+                "TOTAL": "str"
+              }
+            }
+          },
+          "sex": {
+            "label": "str",
+            "category": {
+              "index": {
+                "T": "int"
+              },
+              "label": {
+                "T": "str"
+              }
+            }
+          },
+          "geo": {
+            "label": "str",
+            "category": {
+              "index": {
+                "UA": "int"
+              },
+              "label": {
+                "UA": "str"
+              }
+            }
+          },
+          "time": {
+            "label": "str",
+            "category": {
+              "index": {
+                "2023": "int"
+              },
+              "label": {
+                "2023": "str"
+              }
+            }
+          }
+        },
+        "extension": {
+          "lang": "str",
+          "id": "str",
+          "agencyId": "str",
+          "version": "str",
+          "datastructure": {
+            "id": "str",
+            "agencyId": "str",
+            "version": "str"
+          },
+          "annotation": {
+            "type": "array",
+            "length": 14,
+            "item": {
+              "type": "str",
+              "date": "str"
+            }
+          },
+          "positions-with-no-data": {
+            "freq": {
+              "type": "array",
+              "length": 1,
+              "item": "int"
+            },
+            "unit": {
+              "type": "array",
+              "length": 1,
+              "item": "int"
+            },
+            "age": {
+              "type": "array",
+              "length": 1,
+              "item": "int"
+            },
+            "sex": {
+              "type": "array",
+              "length": 1,
+              "item": "int"
+            },
+            "geo": {
+              "type": "array",
+              "length": 1,
+              "item": "int"
+            },
+            "time": {
+              "type": "array",
+              "length": 1,
+              "item": "int"
+            }
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S17",
+      "url": "https://api.gleif.org/api/v1/lei-records?page[size]=2&filter[entity.legalAddress.country]=UA",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:20.812298+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 1.51,
+      "bytes_read": 8582,
+      "truncated": false,
+      "response_sha256": "70172401aa6b1b5e98ff367b2d5fd1f58b87bd4020b5751f5dfa064f1546967c",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "meta": {
+          "goldenCopy": {
+            "publishDate": "str"
+          },
+          "pagination": {
+            "currentPage": "int",
+            "perPage": "int",
+            "from": "int",
+            "to": "int",
+            "total": "int",
+            "lastPage": "int"
+          }
+        },
+        "links": {
+          "first": "str",
+          "next": "str",
+          "last": "str"
+        },
+        "data": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "type": "str",
+            "id": "str",
+            "attributes": {
+              "lei": "str",
+              "entity": {
+                "legalName": "dict",
+                "otherNames": "list",
+                "transliteratedOtherNames": "list",
+                "legalAddress": "dict",
+                "headquartersAddress": "dict",
+                "registeredAt": "dict",
+                "registeredAs": "str",
+                "jurisdiction": "str",
+                "category": "str",
+                "legalForm": "dict",
+                "associatedEntity": "dict",
+                "status": "str",
+                "expiration": "dict",
+                "successorEntity": "dict",
+                "successorEntities": "list",
+                "creationDate": "str",
+                "subCategory": "NoneType",
+                "otherAddresses": "list",
+                "eventGroups": "list"
+              },
+              "registration": {
+                "initialRegistrationDate": "str",
+                "lastUpdateDate": "str",
+                "status": "str",
+                "nextRenewalDate": "str",
+                "managingLou": "str",
+                "corroborationLevel": "str",
+                "validatedAt": "dict",
+                "validatedAs": "str",
+                "otherValidationAuthorities": "list"
+              },
+              "bic": "NoneType",
+              "mic": "NoneType",
+              "ocid": "NoneType",
+              "qcc": "NoneType",
+              "gem": "NoneType",
+              "spglobal": "NoneType",
+              "conformityFlag": "str"
+            },
+            "relationships": {
+              "managing-lou": {
+                "links": "dict"
+              },
+              "lei-issuer": {
+                "links": "dict"
+              },
+              "field-modifications": {
+                "links": "dict"
+              },
+              "direct-parent": {
+                "links": "dict"
+              },
+              "ultimate-parent": {
+                "links": "dict"
+              }
+            },
+            "links": {
+              "self": "str"
+            }
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "meta",
+        "links"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S18",
+      "url": "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?limit=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:21.268920+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 1.372,
+      "bytes_read": 20101,
+      "truncated": false,
+      "response_sha256": "c10f5a5025dab06dcc2c90bed8e8605ae1dcb0516c472e7acdca48d2dd910adf",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "uri": "str",
+        "version": "str",
+        "extensions": {
+          "type": "array",
+          "length": 7,
+          "item": "str"
+        },
+        "publishedDate": "str",
+        "publisher": {
+          "name": "str",
+          "scheme": "str",
+          "uid": "str",
+          "uri": "str"
+        },
+        "license": "str",
+        "publicationPolicy": "str",
+        "releases": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "ocid": "str",
+            "id": "str",
+            "language": "str",
+            "date": "str",
+            "tag": {
+              "type": "array",
+              "length": 1,
+              "item": "str"
+            },
+            "initiationType": "str",
+            "tender": {
+              "id": "str",
+              "title": "str",
+              "description": "str",
+              "status": "str",
+              "classification": {
+                "scheme": "str",
+                "id": "str",
+                "description": "str"
+              },
+              "additionalClassifications": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "items": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "value": {
+                "amount": "int",
+                "currency": "str"
+              },
+              "procurementMethod": "str",
+              "procurementMethodDetails": "str",
+              "tenderPeriod": {
+                "endDate": "str"
+              },
+              "contractPeriod": {
+                "startDate": "str",
+                "endDate": "str"
+              },
+              "suitability": {
+                "sme": "bool",
+                "vcse": "bool"
+              },
+              "mainProcurementCategory": "str"
+            },
+            "parties": {
+              "type": "array",
+              "length": 2,
+              "item": {
+                "id": "str",
+                "name": "str",
+                "identifier": "dict",
+                "address": "dict",
+                "contactPoint": "dict",
+                "details": "dict",
+                "roles": "list"
+              }
+            },
+            "buyer": {
+              "id": "str",
+              "name": "str"
+            },
+            "awards": {
+              "type": "array",
+              "length": 1,
+              "item": {
+                "id": "str",
+                "status": "str",
+                "date": "str",
+                "datePublished": "str",
+                "value": "dict",
+                "suppliers": "list",
+                "contractPeriod": "dict",
+                "documents": "list"
+              }
+            }
+          }
+        },
+        "links": {
+          "next": "str"
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "links"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S19",
+      "url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:22.323422+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.849,
+      "bytes_read": 16357,
+      "truncated": false,
+      "response_sha256": "b9cbd2351af3cfd3d91c43f839a2b6a428be86a73550b13ce9c5d4e892a63b00",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "uri": "str",
+        "version": "str",
+        "extensions": {
+          "type": "array",
+          "length": 10,
+          "item": "str"
+        },
+        "publishedDate": "str",
+        "publisher": {
+          "name": "str",
+          "scheme": "str",
+          "uid": "str",
+          "uri": "str"
+        },
+        "license": "str",
+        "publicationPolicy": "str",
+        "releases": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "ocid": "str",
+            "buyerID": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "id": "str",
+            "tag": {
+              "type": "array",
+              "length": 1,
+              "item": "str"
+            },
+            "date": "str",
+            "initiationType": "str",
+            "planning": {
+              "documents": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              }
+            },
+            "parties": {
+              "type": "array",
+              "length": 2,
+              "item": {
+                "name": "str",
+                "id": "str",
+                "identifier": "dict",
+                "additionalIdentifiers": "list",
+                "address": "dict",
+                "contactPoint": "dict",
+                "roles": "list",
+                "details": "dict"
+              }
+            },
+            "buyer": {
+              "id": "str",
+              "name": "str"
+            },
+            "tender": {
+              "id": "str",
+              "legalBasis": {
+                "id": "str",
+                "scheme": "str",
+                "uri": "str"
+              },
+              "title": "str",
+              "description": "str",
+              "items": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "mainProcurementCategory": "str",
+              "techniques": {
+                "hasFrameworkAgreement": "bool"
+              },
+              "lots": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "communication": {
+                "futureNoticeDate": "str"
+              },
+              "status": "str"
+            },
+            "language": "str"
+          }
+        },
+        "links": {
+          "next": "str"
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "links"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S20",
+      "url": "https://hds.healdata.eu/",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:22.641941+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "outcome": "transport_error",
+      "error_type": "ProxyError",
+      "elapsed_seconds": 0.207
+    },
+    {
+      "source_id": "S21",
+      "url": "https://api.crossref.org/works?filter=type:grant&rows=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:22.848947+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.635,
+      "bytes_read": 3573,
+      "truncated": false,
+      "response_sha256": "d13072da78134b18e3a6d782db47ac4c5eef52956d90493159db582a551d774a",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "status": "str",
+        "message-type": "str",
+        "message-version": "str",
+        "message": {
+          "facets": {},
+          "total-results": "int",
+          "items": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "indexed": {
+                "date-parts": "list",
+                "date-time": "str",
+                "timestamp": "int"
+              },
+              "publisher": "str",
+              "award": "str",
+              "DOI": "str",
+              "type": "str",
+              "created": {
+                "date-parts": "list",
+                "date-time": "str",
+                "timestamp": "int"
+              },
+              "source": "str",
+              "prefix": "str",
+              "member": "str",
+              "project": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "deposited": {
+                "date-parts": "list",
+                "date-time": "str",
+                "timestamp": "int"
+              },
+              "score": "float",
+              "resource": {
+                "primary": "dict"
+              },
+              "issued": {
+                "date-parts": "list"
+              },
+              "URL": "str"
+            }
+          },
+          "items-per-page": "int",
+          "query": {
+            "start-index": "int",
+            "search-terms": "NoneType"
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S22",
+      "url": "https://api.openalex.org/works?filter=institutions.country_code:ua&per-page=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:23.173975+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.937,
+      "bytes_read": 354297,
+      "truncated": true,
+      "response_sha256": "950479128225853791ca71c87e5ed8cf56f10e4c93cca4084bf3d40e585ac148",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": "999",
+      "valid_json": false,
+      "outcome": "html_only_not_api_validation"
+    },
+    {
+      "source_id": "S23",
+      "url": "https://api.npmjs.org/downloads/point/last-week/@supabase/supabase-js",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:23.484963+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "elapsed_seconds": 0.162,
+      "bytes_read": 96,
+      "truncated": false,
+      "response_sha256": "72c50c8ebd41a857cf00876ffa3854451c0e1a64d876c37b571a6c636c013eb7",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "downloads": "int",
+        "start": "str",
+        "end": "str",
+        "package": "str"
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S24",
+      "url": "https://pypi.org/pypi/groq/json",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:23.648396+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.167,
+      "bytes_read": 101339,
+      "truncated": false,
+      "response_sha256": "c7acc3b0a920761941078f0158174943c801853e1a91c13ec2843cac7dedaa37",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "info": {
+          "author": "NoneType",
+          "author_email": "str",
+          "bugtrack_url": "NoneType",
+          "classifiers": {
+            "type": "array",
+            "length": 14,
+            "item": "str"
+          },
+          "description": "str",
+          "description_content_type": "str",
+          "docs_url": "NoneType",
+          "download_url": "NoneType",
+          "downloads": {
+            "last_day": "int",
+            "last_month": "int",
+            "last_week": "int"
+          },
+          "dynamic": "NoneType",
+          "home_page": "NoneType",
+          "keywords": "NoneType",
+          "license": "str",
+          "license_expression": "NoneType",
+          "license_files": "NoneType",
+          "maintainer": "NoneType",
+          "maintainer_email": "NoneType",
+          "name": "str",
+          "package_url": "str",
+          "platform": "NoneType",
+          "project_url": "str",
+          "project_urls": {
+            "Homepage": "str",
+            "Repository": "str"
+          },
+          "provides_extra": {
+            "type": "array",
+            "length": 1,
+            "item": "str"
+          },
+          "release_url": "str",
+          "requires_dist": {
+            "type": "array",
+            "length": 8,
+            "item": "str"
+          },
+          "requires_python": "str",
+          "summary": "str",
+          "version": "str",
+          "yanked": "bool",
+          "yanked_reason": "NoneType"
+        },
+        "last_serial": "int",
+        "ownership": {
+          "organization": "NoneType",
+          "roles": {
+            "type": "array",
+            "length": 1,
+            "item": {
+              "role": "str",
+              "user": "str"
+            }
+          }
+        },
+        "releases": {
+          "0.0.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.1.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.10.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.11.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.12.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.13.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.13.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.14.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.15.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.16.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.17.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.18.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.19.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.2.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.20.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.21.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.22.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.23.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.23.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.24.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.25.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.26.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.27.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.28.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.29.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.3.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.30.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.31.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.31.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.32.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.33.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.34.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.34.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.35.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.36.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.37.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.37.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.4.0": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.4.1": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          },
+          "0.4.2": {
+            "type": "array",
+            "length": 2,
+            "item": {
+              "comment_text": "str",
+              "core-metadata": {
+                "sha256": "str"
+              },
+              "digests": {
+                "blake2b_256": "str",
+                "md5": "str",
+                "sha256": "str"
+              },
+              "downloads": "int",
+              "filename": "str",
+              "has_sig": "bool",
+              "md5_digest": "str",
+              "packagetype": "str",
+              "python_version": "str",
+              "requires_python": "str",
+              "size": "int",
+              "upload_time": "str",
+              "upload_time_iso_8601": "str",
+              "url": "str",
+              "yanked": "bool",
+              "yanked_reason": "NoneType"
+            }
+          }
+        },
+        "urls": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "comment_text": "str",
+            "core-metadata": {
+              "sha256": "str"
+            },
+            "digests": {
+              "blake2b_256": "str",
+              "md5": "str",
+              "sha256": "str"
+            },
+            "downloads": "int",
+            "filename": "str",
+            "has_sig": "bool",
+            "md5_digest": "str",
+            "packagetype": "str",
+            "python_version": "str",
+            "requires_python": "str",
+            "size": "int",
+            "upload_time": "str",
+            "upload_time_iso_8601": "str",
+            "url": "str",
+            "yanked": "bool",
+            "yanked_reason": "NoneType"
+          }
+        },
+        "vulnerabilities": {
+          "type": "array",
+          "length": 0,
+          "item": null
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "info"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S25",
+      "url": "https://api.freelancehunt.com/v2/projects",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:23.817350+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "elapsed_seconds": 0.199,
+      "bytes_read": 40684,
+      "truncated": false,
+      "response_sha256": "95856a3e830ea90fd442b94d9a8b8a70bfd46a3dace82e213e92ab92d305e291",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "data": {
+          "type": "array",
+          "length": 10,
+          "item": {
+            "id": "int",
+            "type": "str",
+            "attributes": {
+              "name": "str",
+              "description": "str",
+              "description_html": "str",
+              "skills": {
+                "type": "array",
+                "length": 1,
+                "item": "dict"
+              },
+              "status": {
+                "id": "int",
+                "name": "str"
+              },
+              "budget": {
+                "amount": "int",
+                "currency": "str"
+              },
+              "bid_count": "int",
+              "is_remote_job": "bool",
+              "is_premium": "bool",
+              "location": "NoneType",
+              "safe_type": "str",
+              "is_personal": "bool",
+              "employer": {
+                "id": "int",
+                "type": "str",
+                "login": "str",
+                "first_name": "str",
+                "last_name": "str",
+                "avatar": "dict",
+                "self": "str",
+                "rating": "int",
+                "completed_projects": "int",
+                "positive_reviews": "int",
+                "negative_reviews": "int",
+                "average_grade": "int"
+              },
+              "freelancer": "NoneType",
+              "tags": {
+                "type": "array",
+                "length": 4,
+                "item": "dict"
+              },
+              "updates": {
+                "type": "array",
+                "length": 0,
+                "item": null
+              },
+              "published_at": "str",
+              "expired_at": "str"
+            },
+            "links": {
+              "self": {
+                "api": "str",
+                "web": "str"
+              },
+              "comments": "str",
+              "bids": "str"
+            }
+          }
+        },
+        "links": {
+          "self": "str",
+          "next": "str",
+          "last": "str"
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "links"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S26",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q212.json",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:24.018528+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json; charset=UTF-8",
+      "elapsed_seconds": 0.556,
+      "bytes_read": 351187,
+      "truncated": true,
+      "response_sha256": "f7fb32a68d258033517f2412ebbadb62ae7df5cbfa594982f42fa55861cc9710",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "valid_json": false,
+      "outcome": "html_only_not_api_validation"
+    },
+    {
+      "source_id": "S27",
+      "url": "https://api.data.gov/ed/collegescorecard/v1/schools?per_page=1",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:24.117165+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 403,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.555,
+      "bytes_read": 330,
+      "truncated": false,
+      "response_sha256": "a32aba291f5ef2ab66a51c0c0dfc20cf3bb534923ab687782c8fd493a854c7c2",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "error": {
+          "code": "str",
+          "message": "str"
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [],
+      "outcome": "http_error"
+    },
+    {
+      "source_id": "S28",
+      "url": "https://api.energidataservice.dk/dataset/Elspotprices?limit=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:24.578432+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "elapsed_seconds": 0.874,
+      "bytes_read": 338,
+      "truncated": false,
+      "response_sha256": "0ee63eccd1a45c0a1ac8f573d3aab13054c468737e4ca12f1e16cb59531d9835",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "total": "int",
+        "filters": "str",
+        "limit": "int",
+        "dataset": "str",
+        "records": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "HourUTC": "str",
+            "HourDK": "str",
+            "PriceArea": "str",
+            "SpotPriceDKK": "float",
+            "SpotPriceEUR": "float"
+          }
+        }
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "total"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S29",
+      "url": "https://www.data.gouv.fr/api/1/datasets/?q=sirene&page_size=2",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:24.683799+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "application/json",
+      "elapsed_seconds": 0.725,
+      "bytes_read": 4869,
+      "truncated": false,
+      "response_sha256": "702db2d5f4874ad8ff31ec6bbca6b92a21c8e6c55b23edfd33b1c3e6bf5074a9",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "anonymized_example": {
+        "data": {
+          "type": "array",
+          "length": 2,
+          "item": {
+            "access_audiences": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "access_type": "str",
+            "access_type_reason": "NoneType",
+            "access_type_reason_category": "NoneType",
+            "acronym": "NoneType",
+            "archived": "NoneType",
+            "authorization_request_url": "NoneType",
+            "badges": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "contact_points": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "created_at": "str",
+            "deleted": "NoneType",
+            "description": "str",
+            "description_short": "NoneType",
+            "doi": "NoneType",
+            "extras": {},
+            "featured": "bool",
+            "frequency": "str",
+            "frequency_date": "NoneType",
+            "geopf": "NoneType",
+            "harvest": "NoneType",
+            "id": "str",
+            "internal": {
+              "created_at_internal": "str",
+              "last_modified_internal": "str"
+            },
+            "last_modified": "str",
+            "last_update": "str",
+            "license": "str",
+            "metrics": {
+              "dataservices": "int",
+              "discussions": "int",
+              "discussions_open": "int",
+              "followers": "int",
+              "followers_by_months": {
+                "2024-08": "int",
+                "2024-09": "int",
+                "2024-10": "int",
+                "2024-11": "int",
+                "2024-12": "int",
+                "2025-01": "int",
+                "2025-02": "int",
+                "2025-03": "int",
+                "2025-04": "int",
+                "2025-05": "int",
+                "2025-06": "int",
+                "2025-07": "int",
+                "2025-08": "int"
+              },
+              "resources_downloads": "NoneType",
+              "reuses": "int",
+              "reuses_by_months": {
+                "2024-08": "int",
+                "2024-09": "int",
+                "2024-10": "int",
+                "2024-11": "int",
+                "2024-12": "int",
+                "2025-01": "int",
+                "2025-02": "int",
+                "2025-03": "int",
+                "2025-04": "int",
+                "2025-05": "int",
+                "2025-06": "int",
+                "2025-07": "int",
+                "2025-08": "int"
+              },
+              "views": "int"
+            },
+            "organization": {
+              "acronym": "NoneType",
+              "badges": {
+                "type": "array",
+                "length": 2,
+                "item": "dict"
+              },
+              "class": "str",
+              "id": "str",
+              "logo": "str",
+              "logo_thumbnail": "str",
+              "name": "str",
+              "page": "str",
+              "permissions": {
+                "delete": "bool",
+                "edit": "bool",
+                "harvest": "bool",
+                "members": "bool",
+                "private": "bool"
+              },
+              "slug": "str",
+              "uri": "str"
+            },
+            "owner": "NoneType",
+            "page": "str",
+            "permissions": {
+              "delete": "bool",
+              "edit": "bool",
+              "edit_resources": "bool"
+            },
+            "private": "bool",
+            "quality": {
+              "dataset_description_quality": "bool",
+              "license": "bool",
+              "score": "float",
+              "spatial": "bool",
+              "temporal_coverage": "bool",
+              "update_frequency": "bool"
+            },
+            "resources": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "schema": "NoneType",
+            "slug": "str",
+            "spatial": "NoneType",
+            "tags": {
+              "type": "array",
+              "length": 0,
+              "item": null
+            },
+            "temporal_coverage": "NoneType",
+            "title": "str",
+            "uri": "str"
+          }
+        },
+        "next_page": "str",
+        "page": "int",
+        "page_size": "int",
+        "previous_page": "NoneType",
+        "total": "int"
+      },
+      "valid_json": true,
+      "pagination_fields": [
+        "next_page",
+        "total"
+      ],
+      "outcome": "json_sample"
+    },
+    {
+      "source_id": "S30",
+      "url": "https://api.patentsview.org/patent/?q=%7B%22patent_id%22:%227861317%22%7D",
+      "method": "GET",
+      "payload": null,
+      "checked_at": "2026-11-13T01:59:25.410211+00:00",
+      "authentication": "none",
+      "byte_cap": 350000,
+      "status": 200,
+      "content_type": "text/html",
+      "elapsed_seconds": 0.603,
+      "bytes_read": 20666,
+      "truncated": false,
+      "response_sha256": "4ccc927a003f3944c18c0c3394af2d6f2504b194a72ab480ef77fff21b997b85",
+      "pagination_header_present": false,
+      "retry_after": null,
+      "rate_remaining": null,
+      "valid_json": false,
+      "outcome": "html_only_not_api_validation"
+    }
+  ]
+}

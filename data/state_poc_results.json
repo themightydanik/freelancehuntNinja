@@ -1,0 +1,10 @@
+{
+  "scope": "local synthetic SQLite; not Supabase/Edge deployment validation",
+  "idempotent_replay": true,
+  "history_preserved": true,
+  "checkpoint_rollback": true,
+  "missing_identity_not_merged": true,
+  "leading_zero_identifier_preserved": true,
+  "budget_reservation_refused_over_cap": true,
+  "real_ai_calls": 0
+}

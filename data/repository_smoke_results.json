@@ -1,0 +1,9 @@
+{
+  "synthetic_credentials": true,
+  "outbound_http_denied": true,
+  "neutral_callback_200": true,
+  "unauthenticated_success_callback_mutates_counter": true,
+  "unauthenticated_callback_attempts_mocked_notification": true,
+  "telegram_delivery_or_bidding_validated": false,
+  "mac_server_present_in_repository": false
+}

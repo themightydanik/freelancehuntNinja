@@ -1,0 +1,531 @@
+{
+  "scope": "all blobs in all locally reachable refs; heuristic, not exhaustive",
+  "baseline_head": "c6acf4ecbb5ef6cee238ef206a6923b4e9a6288e",
+  "commits_scanned": 64,
+  "unique_blob_path_pairs": 64,
+  "findings": [
+    {
+      "commit_first_encountered": "c6acf4ecbb5ef6cee238ef206a6923b4e9a6288e",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "c6acf4ecbb5ef6cee238ef206a6923b4e9a6288e",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "d998988296daaca8d1da966f0ec156de5abc66d5",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "d998988296daaca8d1da966f0ec156de5abc66d5",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "94fe18ff8523eeae996d3b3e207ad4242d4cc359",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "94fe18ff8523eeae996d3b3e207ad4242d4cc359",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "e3ddc6c3b686ef193944821c900d9221575ce99c",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "e3ddc6c3b686ef193944821c900d9221575ce99c",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "e71f4f54d456544b055b06cf18ed91113637a7d7",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "e71f4f54d456544b055b06cf18ed91113637a7d7",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "01b3961fe2a41580d644f28679aec44b93636ab5",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "01b3961fe2a41580d644f28679aec44b93636ab5",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "062f7afd8965d8b799e1ed0cd17a681c810d7e6c",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "062f7afd8965d8b799e1ed0cd17a681c810d7e6c",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "3fa6c6a73c9422689a535d2ee241c3d69c478bf4",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "3fa6c6a73c9422689a535d2ee241c3d69c478bf4",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "df18a4e939aadb07b4ead2e7ec62f8352e9f4df2",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "df18a4e939aadb07b4ead2e7ec62f8352e9f4df2",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "7926971b32745b3ce05904cec103945b446d8ec4",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "7926971b32745b3ce05904cec103945b446d8ec4",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "e82dec3d432c471225423fe8723931aa32c7beec",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "e82dec3d432c471225423fe8723931aa32c7beec",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "3cd07c892d21e632f087db72f5dc6bd364d8d182",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "3cd07c892d21e632f087db72f5dc6bd364d8d182",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "da6cff387e0dff7c891d49eb8c37658a462bc9ac",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "da6cff387e0dff7c891d49eb8c37658a462bc9ac",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "7fcdd06394cb9de53d98ba31bc3ab9429074a30a",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "7fcdd06394cb9de53d98ba31bc3ab9429074a30a",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "b9d1002467e09e029ddb0ab13431ed3bf8da2608",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "b9d1002467e09e029ddb0ab13431ed3bf8da2608",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "d733c06184f90600249a4ecc66ce69d922847f13",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "d733c06184f90600249a4ecc66ce69d922847f13",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "1746f99e6eb55acef7653025f34e65718482a467",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "1746f99e6eb55acef7653025f34e65718482a467",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "5362151211072b394e074bc79d883578ee7102cb",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "5362151211072b394e074bc79d883578ee7102cb",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "cb8ddac66cdba90b29e233e2befd93ea96aee44d",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "cb8ddac66cdba90b29e233e2befd93ea96aee44d",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "8b6bd903b9b6a6b620c07e82ef07435c82279543",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "8b6bd903b9b6a6b620c07e82ef07435c82279543",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "7ca3aaf0194ac7e3aa1ebeec1bce0450a0644d93",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "7ca3aaf0194ac7e3aa1ebeec1bce0450a0644d93",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "930221337a4daaf680a53f6336b5d6dae038035e",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "8d0e1243d87406e777cf0b614e9bd553d9099967",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "4c06bc93925a602ff7395b1017672d36850c1872",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "b546071d3444613097fd2923b35292e805e9de05",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "c9b728c302bd70decf6783bb3d67aaa535a7a143",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "c9b728c302bd70decf6783bb3d67aaa535a7a143",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "2823bb9354e8986b877706a43ddfbbbcb901d2ab",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "2823bb9354e8986b877706a43ddfbbbcb901d2ab",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "1cd7ba4a1ef7f0e806f920761913d3b3991d8d14",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "1cd7ba4a1ef7f0e806f920761913d3b3991d8d14",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "09bc7e29734359e1bf96fa456d1b8f92dd50970c",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "09bc7e29734359e1bf96fa456d1b8f92dd50970c",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "49043308f66aaef46eb7d40b6d62fca8fce2161c",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "49043308f66aaef46eb7d40b6d62fca8fce2161c",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "69e0e5e19d18960b2acded9b17ca6d3585d2db85",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "69e0e5e19d18960b2acded9b17ca6d3585d2db85",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "520558793ba02f027ecdbc5f58deed1d207d1466",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "520558793ba02f027ecdbc5f58deed1d207d1466",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "0f89526ddeb693e44a7da11252d6170f73c02b4f",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "0f89526ddeb693e44a7da11252d6170f73c02b4f",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "b38b3fdd20f9563ec6303874fcffe78ea1a485d4",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "b38b3fdd20f9563ec6303874fcffe78ea1a485d4",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "2932bf55e20486827ccbc7e4377faa63874d0aff",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "2932bf55e20486827ccbc7e4377faa63874d0aff",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "8249c8554c0953e2011a311b6859f906b085f5c3",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "8249c8554c0953e2011a311b6859f906b085f5c3",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "b1b9b9e6162aed7b10aaba2f887f2bffa3068ab4",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "b1b9b9e6162aed7b10aaba2f887f2bffa3068ab4",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "59c2a87f09ae617e2e3f7573f36c786b39474735",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "59c2a87f09ae617e2e3f7573f36c786b39474735",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "ac40990d29ec5e654834941daee3c2ffdf2fc7ba",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "ac40990d29ec5e654834941daee3c2ffdf2fc7ba",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "7d9187eb545e1e801392f02d8ce49be1ab39df38",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "7d9187eb545e1e801392f02d8ce49be1ab39df38",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "ddbf32da4bdbf3d9851b802192749f993a91fdd2",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "ddbf32da4bdbf3d9851b802192749f993a91fdd2",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "62f092a9c92de7cdd40ec77fb54d482cde7ecd5c",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "62f092a9c92de7cdd40ec77fb54d482cde7ecd5c",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "d20be87e8ab9258dff29ac200086ce8a01a18f03",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "d20be87e8ab9258dff29ac200086ce8a01a18f03",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "243102f8fb2dff6b7dd6e9edc57deb5a54dd9b37",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "243102f8fb2dff6b7dd6e9edc57deb5a54dd9b37",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "a1a28b65d8822a6140a2590c204db344f5f57618",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    },
+    {
+      "commit_first_encountered": "a1a28b65d8822a6140a2590c204db344f5f57618",
+      "path": "freelancehuntNinja.py",
+      "rule": "credential_literal",
+      "count": 2
+    },
+    {
+      "commit_first_encountered": "0ad395a03ca1dd87ac79602e470642a0705948da",
+      "path": "freelancehuntNinja.py",
+      "rule": "telegram_token_shape",
+      "count": 1
+    }
+  ],
+  "secret_values_emitted": false
+}

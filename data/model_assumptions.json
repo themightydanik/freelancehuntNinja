@@ -1,0 +1,210 @@
+{
+  "seed": 20261113,
+  "runs": 5000,
+  "status": "ASSUMED; not calibrated to customers",
+  "scenarios": {
+    "Conservative": {
+      "impressions": [
+        300,
+        700,
+        1400
+      ],
+      "growth": [
+        0,
+        0.08,
+        0.2
+      ],
+      "ctr": [
+        0.008,
+        0.018,
+        0.03
+      ],
+      "qualification": [
+        0.03,
+        0.07,
+        0.12
+      ],
+      "negotiation": [
+        0.35,
+        0.5,
+        0.65
+      ],
+      "proposal": [
+        0.4,
+        0.6,
+        0.75
+      ],
+      "close": [
+        0.08,
+        0.15,
+        0.25
+      ],
+      "ticket": [
+        180,
+        300,
+        500
+      ],
+      "delivery": [
+        12,
+        18,
+        28
+      ],
+      "delay": [
+        0.1,
+        0.4,
+        0.5
+      ]
+    },
+    "Base": {
+      "impressions": [
+        1000,
+        2400,
+        4500
+      ],
+      "growth": [
+        0.05,
+        0.18,
+        0.35
+      ],
+      "ctr": [
+        0.015,
+        0.03,
+        0.05
+      ],
+      "qualification": [
+        0.05,
+        0.12,
+        0.2
+      ],
+      "negotiation": [
+        0.5,
+        0.7,
+        0.85
+      ],
+      "proposal": [
+        0.55,
+        0.75,
+        0.9
+      ],
+      "close": [
+        0.15,
+        0.28,
+        0.4
+      ],
+      "ticket": [
+        300,
+        500,
+        800
+      ],
+      "delivery": [
+        8,
+        12,
+        20
+      ],
+      "delay": [
+        0.35,
+        0.5,
+        0.15
+      ]
+    },
+    "Upside": {
+      "impressions": [
+        2500,
+        5000,
+        10000
+      ],
+      "growth": [
+        0.1,
+        0.3,
+        0.5
+      ],
+      "ctr": [
+        0.02,
+        0.04,
+        0.065
+      ],
+      "qualification": [
+        0.08,
+        0.16,
+        0.25
+      ],
+      "negotiation": [
+        0.6,
+        0.8,
+        0.9
+      ],
+      "proposal": [
+        0.65,
+        0.8,
+        0.95
+      ],
+      "close": [
+        0.2,
+        0.35,
+        0.5
+      ],
+      "ticket": [
+        400,
+        650,
+        1000
+      ],
+      "delivery": [
+        6,
+        10,
+        16
+      ],
+      "delay": [
+        0.6,
+        0.35,
+        0.05
+      ]
+    }
+  },
+  "common": {
+    "capacity_hours": 120,
+    "marketing_hours": 24,
+    "build_hours_month1": 40,
+    "build_hours_later": 4,
+    "presales_hours_per_negotiation": 0.35,
+    "presales_hours_per_proposal": 0.15,
+    "presales_negotiation_cap": 32,
+    "service_traffic_share": 0.8,
+    "refund_triangle": [
+      0,
+      0.03,
+      0.1
+    ],
+    "fee_triangle": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "subscription_price": 39,
+    "support_hours_per_sub": 0.5,
+    "attach_triangle": [
+      0.05,
+      0.15,
+      0.3
+    ],
+    "monthly_churn_triangle": [
+      0.02,
+      0.08,
+      0.2
+    ],
+    "repeat_triangle": [
+      0,
+      0.03,
+      0.1
+    ],
+    "template_price": 49,
+    "kit_conversion_triangle": [
+      0.002,
+      0.008,
+      0.02
+    ],
+    "variable_cost_per_job": 3,
+    "variable_cost_per_kit": 0.5,
+    "monthly_cash_cost": 5,
+    "backlog_monthly_expiry": 0.35
+  }
+}

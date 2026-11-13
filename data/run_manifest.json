@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-11-13T02:29:51.625252+00:00",
+  "base_commit": "c6acf4ecbb5ef6cee238ef206a6923b4e9a6288e",
+  "branch": "research/ninja-2-evidence-driven-strategy",
+  "workflow": "research only; existing bot unchanged",
+  "runtime_python": "Python 3.13.4",
+  "dependency_lock": "research/requirements.lock.txt",
+  "seed": 20261113,
+  "runs_per_scenario": 5000,
+  "scenario_count": 3,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /workspace/.venvs/ninja-research/bin/python -m unittest discover -s research/tests -v",
+    "executed": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0
+  },
+  "initial_http_source_probes": 32,
+  "initial_priority_followup_requests": 8,
+  "pagination_quality_requests": 8,
+  "exact_issue_reviews": 6,
+  "policy_page_targets": 113,
+  "authentication": "No source credentials used by probes; existing GitHub platform authentication used only for repository/PR operations",
+  "paid_api_calls": 0,
+  "commercial_actions": 0,
+  "accounts_created": 0,
+  "cloud_deployments": 0,
+  "source_payload_retention": "Type-only schema examples, counts and technical summaries; no author/client/contact fields retained",
+  "limitations": [
+    "No customer interviews or payments",
+    "No real Ukrainian KYC/payout validation",
+    "No cloud scheduler deployment",
+    "No professional legal review",
+    "Heuristic secret scan, not exhaustive"
+  ]
+}

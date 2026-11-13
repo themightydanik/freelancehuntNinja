@@ -1,0 +1,156 @@
+{
+  "checked_at": "2026-11-13T02:28:04.207606+00:00",
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://api.ted.europa.eu/v3/api-docs/swagger-config",
+      "payload": null,
+      "status": 200,
+      "elapsed_seconds": 0.324,
+      "bytes": 240
+    },
+    {
+      "method": "GET",
+      "url": "https://api.ted.europa.eu/api-v3.yaml",
+      "payload": null,
+      "status": 200,
+      "elapsed_seconds": 0.834,
+      "bytes": 456129
+    },
+    {
+      "method": "POST",
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "payload": {
+        "query": "publication-date >= 20261001",
+        "limit": 2,
+        "page": 1,
+        "paginationMode": "PAGE_NUMBER",
+        "fields": [
+          "publication-number",
+          "publication-date",
+          "notice-title"
+        ],
+        "onlyLatestVersions": true
+      },
+      "status": 200,
+      "elapsed_seconds": 0.495,
+      "bytes": 18269
+    },
+    {
+      "method": "POST",
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "payload": {
+        "query": "publication-date >= 20261001",
+        "limit": 2,
+        "page": 2,
+        "paginationMode": "PAGE_NUMBER",
+        "fields": [
+          "publication-number",
+          "publication-date",
+          "notice-title"
+        ],
+        "onlyLatestVersions": true
+      },
+      "status": 200,
+      "elapsed_seconds": 0.252,
+      "bytes": 16267
+    },
+    {
+      "method": "GET",
+      "url": "https://public.api.openprocurement.org/api/2.5/tenders?limit=2&descending=1",
+      "payload": null,
+      "status": 200,
+      "elapsed_seconds": 0.895,
+      "bytes": 830
+    },
+    {
+      "method": "GET",
+      "url": "https://public.api.openprocurement.org/api/2.5/tenders/b2926be092e04078a620684ac2c9ac7e",
+      "payload": null,
+      "status": 200,
+      "elapsed_seconds": 1.267,
+      "bytes": 42295
+    },
+    {
+      "method": "GET",
+      "url": "https://public.api.openprocurement.org/api/2.5/tenders/db0282259b874a67ba7a886da7b7eae4",
+      "payload": null,
+      "status": 200,
+      "elapsed_seconds": 0.368,
+      "bytes": 24548
+    },
+    {
+      "method": "GET",
+      "url": "https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[search]=telegram&request[per_page]=2&request[fields][active_installs]=true&request[fields][last_updated]=true&request[fields][tested]=true",
+      "payload": null,
+      "status": 200,
+      "elapsed_seconds": 0.685,
+      "bytes": 30252
+    }
+  ],
+  "ted_documented_contract": {
+    "url": "https://api.ted.europa.eu/api-v3.yaml",
+    "sha256": "ad200964a9ce2e477702836917ee5711df7d6c278c6dddc16a7d62bf55dcac8c",
+    "page_number_mode_documented": true,
+    "iteration_mode_documented": true,
+    "page_number_15000_cap_documented": true
+  },
+  "ted_page_test": {
+    "counts": [
+      2,
+      2
+    ],
+    "disjoint_publication_numbers": true,
+    "reported_total": [
+      108069,
+      108069
+    ],
+    "timed_out": [
+      false,
+      false
+    ],
+    "title_present": [
+      2,
+      2
+    ]
+  },
+  "prozorro_descending_sample": [
+    {
+      "status": "complete",
+      "date_modified": "2026-11-13T04:24:51.133445+02:00",
+      "award_count": 1,
+      "supplier_count": 1,
+      "suppliers_with_identifier": 1,
+      "identifier_schemes": [
+        "UA-EDR"
+      ],
+      "has_cpv": true
+    },
+    {
+      "status": "complete",
+      "date_modified": "2026-11-13T04:22:14.787031+02:00",
+      "award_count": 1,
+      "supplier_count": 1,
+      "suppliers_with_identifier": 1,
+      "identifier_schemes": [
+        "UA-EDR"
+      ],
+      "has_cpv": true
+    }
+  ],
+  "wp_optional_fields": {
+    "sample_size": 2,
+    "fields_present": {
+      "slug": 2,
+      "last_updated": 2,
+      "tested": 2,
+      "active_installs": 2,
+      "version": 2
+    },
+    "pagination_metadata": {
+      "page": 1,
+      "pages": 50,
+      "results": 1062
+    }
+  }
+}
