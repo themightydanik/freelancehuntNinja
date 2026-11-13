@@ -1,0 +1,1620 @@
+{
+  "notices": [
+    {
+      "title-proc": {
+        "eng": "Call for Tenders for the selection of Artificial Intelligence Gigafactory Consortia and the establishment of AI Gigafactories"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2027-02-04+01:00",
+        "2026-12-03+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775149-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "European High-Performance Computing Joint Undertaking"
+        ]
+      },
+      "submission-url-lot": [
+        "https://webgate.ec.europa.eu/digit/opsys/esubmission?cftUuid=0a9bceff-2920-4b2b-afc6-da9eced760dd",
+        "https://webgate.ec.europa.eu/digit/opsys/esubmission?cftUuid=dfb95371-0efd-434b-a1b8-c46d559563d6"
+      ]
+    },
+    {
+      "title-proc": {
+        "spa": "Contratación de los Servicios de Desarrollo, Implantación, Soporte y Mantenimiento de la nueva aplicación para el programa de Detección Precoz de Cáncer de mama de Extremadura (SEYMA)"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-09+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775182-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Dirección General de Planificación Económica"
+        ]
+      },
+      "submission-url-lot": [
+        "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=CDjdV%2FlVw9WdkQsA7ROvsg%3D%3D"
+      ]
+    },
+    {
+      "title-proc": {
+        "lav": "Ar nākamās paaudzes sekvencēšanas iekārtām savietojamu reaģentu, programmatūras, analīzes pakalpojumu un materiālu iegāde"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775183-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lav": [
+          "Valsts zinātniskais institūts \"Nacionālais pētniecības un inovāciju institūts\""
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "pol": "Zakup wsparcia producenta, w tym subskrypcji, na rozwiązania IT dla Urzędu Regulacji Energetyki."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-12+01:00",
+        "2026-11-12+01:00",
+        "2026-11-12+01:00",
+        "2026-11-12+01:00",
+        "2026-11-12+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775185-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Urząd Regulacji Energetyki"
+        ]
+      },
+      "submission-url-lot": [
+        "https://zamowienia-ure.ezamawiajacy.pl",
+        "https://zamowienia-ure.ezamawiajacy.pl",
+        "https://zamowienia-ure.ezamawiajacy.pl",
+        "https://zamowienia-ure.ezamawiajacy.pl",
+        "https://zamowienia-ure.ezamawiajacy.pl"
+      ]
+    },
+    {
+      "title-proc": {
+        "pol": "Zakup oprogramowania systemu planowania radioterapii do celów edukacyjnych dla 10 jednoczasowych użytkowników w ramach projektu FERS.04.15-IP-004/26 dla Narodowego Instytutu Onkologii im. Marii Skłodowskiej-Curie - Państwowego Instytutu Badawczego Oddziału w Gliwicach"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775192-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Narodowy Instytut Onkologii im. Marii Skłodowskiej-Curie - Państwowy Instytut Badawczy Oddział w Gliwicach"
+        ]
+      },
+      "submission-url-lot": [
+        "https://niogliwice.ezamawiajacy.pl/pn/niogliw/demand/332837/notice/public/details"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "PeP eVergabe 2026"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775195-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Bundesagentur für Arbeit (BA), vertreten durch den Vorstand, hier vertreten durch die Leitung des Geschäftsbereiches Einkauf im BA-Service-Haus"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "KOMBA25-WAN"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775208-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Bundesagentur für Arbeit (BA), vertreten durch den Vorstand, hier vertreten durch die Leitung des Geschäftsbereiches Einkauf im BA-Service-Haus"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "por": "CP 09/IFAP/2026"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-04Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775228-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "por": [
+          "Instituto de Financiamento da Agricultura e Pescas, IP"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.anogov.com/op-ifap/faces/consultas/listaPedidosINCM.jsp"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Beschaffung von IT-Leistungen für die Netzwerk Universitätsmedizin NUM GmbH (Lose 1 bis 3)"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07+01:00",
+        "2026-12-07+01:00",
+        "2026-12-07+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775260-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Netzwerk Universitätsmedizin NUM GmbH"
+        ]
+      },
+      "submission-url-lot": [
+        "https://s2.dtvp.de/Satellite/notice/CXPIYD9YYHZ",
+        "https://s2.dtvp.de/Satellite/notice/CXPIYD9YYHZ",
+        "https://s2.dtvp.de/Satellite/notice/CXPIYD9YYHZ"
+      ]
+    },
+    {
+      "title-proc": {
+        "hrv": "Usluga pripreme i provedbe medijske kampanje i vidljivosti projekta NE rodno utemeljenom nasilju"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775264-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "hrv": [
+          "MINISTARSTVO RADA, MIROVINSKOGA SUSTAVA, OBITELJI I SOCIJALNE POLITIKE"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "ron": "”Acord cadru pentru servicii de colectare date pentru RICA din România”"
+      },
+      "notice-type": "can-modif",
+      "publication-number": "775301-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ron": [
+          "Ministerul Agriculturii si Dezvoltarii Rurale"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "lit": "(2026) SIEM PROGRAMINĖS ĮRANGOS PALAIKYMO PASLAUGŲ PIRKIMAS (PPR-621) (Konkretus pirkimas DPS)"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775331-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lit": [
+          "Išteklių agentūra prie Lietuvos Respublikos vidaus reikalų ministerijos"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "lit": "Dokumentų valdymo sistemos veikimo stebėjimas, priežiūra ir modifikavimo paslaugų pirkimas"
+      },
+      "notice-type": "can-social",
+      "publication-number": "775347-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lit": [
+          "Valstybinio socialinio draudimo fondo valdyba prie Socialinės apsaugos ir darbo ministerijos"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "spa": "Servicio de diseño, desarrollo e implementación de sistemas de gestión de información del Centro de Coordinación de la Información Nacional sobre Incendios Forestales, orientados al apoyo a la coordinación, planificación, análisis del riesgo y toma de decisiones en el ámbito de los incendios forestales."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-08+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775366-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Dirección General de Biodiversidad, Bosques y Desertificación"
+        ]
+      },
+      "submission-url-lot": [
+        "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=YFT%2BG25ovOrs%2BnLj3vAg5A%3D%3D"
+      ]
+    },
+    {
+      "title-proc": {
+        "fra": "Numérisation des objets de collection et documents conservés aux Archives et au Musée Français de la Photographie - 2 lots"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-23+01:00",
+        "2026-11-23+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775389-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fra": [
+          "Conseil Départemental de l'Essonne"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.marches-publics.info/mpiaws/index.cfm?fuseaction=demat.termes&amp;IDM=1892292",
+        "https://www.marches-publics.info/mpiaws/index.cfm?fuseaction=demat.termes&amp;IDM=1892292"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Bereitstellung eines Lernmanagementsystems"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775420-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Kassenärztliche Vereinigung Baden-Württemberg"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "App zur Unterstützung eines gesunden Lebensstils von erwachsenen Versicherten mit Adipositas"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-24+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775441-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "DAK-Gesundheit"
+        ]
+      },
+      "submission-url-lot": [
+        "https://satellite.dtvp.de/Satellite/notice/CXS0YRXDYR2LCB3H"
+      ]
+    },
+    {
+      "title-proc": {
+        "spa": "Servicios de soporte, transición y gestión de proyectos tecnológicos a oficina técnica de comunicaciones y seguridad 2027 - 2028"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775456-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "EJIE, S.A. - Sociedad Informática del Gobierno Vasco - EJIE-Sociedad Informática del Gobierno Vasco"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "eng": "Procurement of consultancy services - Product area manager for the land animal product area."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-08Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775485-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Mattilsynet",
+          "Mattilsynet"
+        ]
+      },
+      "submission-url-lot": [
+        "https://permalink.mercell.com/293985643.aspx"
+      ]
+    },
+    {
+      "title-proc": {
+        "eng": "Laboratory Information Management System (LIMS)"
+      },
+      "notice-type": "pin-only",
+      "publication-number": "775491-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Politiets fellestjenester"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "Aufbau Citrix Virtual Apps and Desktops Umgebung"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775498-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Universitätsmedizin Rostock"
+        ]
+      },
+      "submission-url-lot": [
+        "http://www.vergabemarktplatz-mv.de"
+      ]
+    },
+    {
+      "title-proc": {
+        "lit": "LRT.lt mobilios aplikacijos (Android ir iOS) palaikymo ir vystymo paslaugos"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-06+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775508-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lit": [
+          "VšĮ Lietuvos nacionalinis radijas ir televizija (PV)"
+        ]
+      },
+      "submission-url-lot": [
+        "https://viesiejipirkimai.lt/epps/cft/viewTenders.do?resourceId=9437639"
+      ]
+    },
+    {
+      "title-proc": {
+        "eng": "Invitation to Tender for Strategic Media Advisory and Auditing Services for the Irish Market"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775516-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Bord Bia (Irish Food Board)"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.etenders.gov.ie/epps/cft/viewTenders.do?resourceId=9444759"
+      ]
+    },
+    {
+      "title-proc": {
+        "hrv": "Vodnokomunalna infrastruktura Brod 2 - aglomeracije Slavonski Brod, Brodski Stupnik, Garčin i Donji Andrijevci - Usluga upravljanja projektom"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-23+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775521-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "hrv": [
+          "VODOVOD d. o. o. SLAVONSKI BROD"
+        ]
+      },
+      "submission-url-lot": [
+        "https://eojn.hr/tender-eo/102299"
+      ]
+    },
+    {
+      "title-proc": {
+        "slv": "Zunanje upravljanje, vzdrževanje in lokalna tehnična pomoč za programsko in strojno opremo"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775523-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "slv": [
+          "ZAVOD ZA ZDRAVSTVENO ZAVAROVANJE SLOVENIJE"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "eng": "Διαγωνισμός για Προμήθεια αδειών χρήσης και υποστήριξης της σουίτας λογισμικού συστήματος Ασφάλειας Πληροφοριακών Συστημάτων (Antivirus TrendAl Vision One)"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-23+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775525-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Cyprus Agricultural Payments Organization"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.eprocurement.gov.cy/epps/cft/prepareViewCfTWS.do?resourceId=9399376"
+      ]
+    },
+    {
+      "title-proc": {
+        "eng": "Current Research Information System 2026"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-24+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775539-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Technische Universiteit Delft"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.tenderned.nl/aankondigingen/overzicht/448136"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Produktivsetzung Maßnahmenpool-App"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775541-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Staatsbetrieb Sachsenforst"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "nld": "Mediadiensten"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775603-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "nld": [
+          "Kamer van Koophandel"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "bul": "„Осигуряване и поддръжка на софтуерни и хардуерни продукти по четири обособени позиции”"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07+02:00",
+        "2026-12-07+02:00",
+        "2026-12-07+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775613-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "bul": [
+          "ИНФОРМАЦИОННО ОБСЛУЖВАНЕ АД"
+        ]
+      },
+      "submission-url-lot": [
+        "https://app.eop.bg/today/615105",
+        "https://app.eop.bg/today/615105",
+        "https://app.eop.bg/today/615105"
+      ]
+    },
+    {
+      "title-proc": {
+        "pol": "Usługa dostępu on-line do Codziennego Serwisu Informacyjnego Polskiej Agencji Prasowej"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775620-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Ministerstwo Finansów"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "fra": "SI Parcours usagers"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775626-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fra": [
+          "CNSA"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "Proxmox HA-Cluster & Oracle-Infrastruktur"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "775635-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "e-netz Südhessen AG"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.subreport.de/E97558896"
+      ]
+    },
+    {
+      "title-proc": {
+        "eng": "Market dialogue - Trade system for public procurements."
+      },
+      "notice-type": "pin-only",
+      "publication-number": "775642-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Bærum kommune"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "swe": "Säkerhetskonsulter"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775645-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "swe": [
+          "Länsstyrelsen i Västra Götalands Län"
+        ]
+      },
+      "submission-url-lot": [
+        "https://tendsign.com/doc.aspx?MeFormsNoticeId=103396&GoTo=Tender"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Betriebsunterstützung für das E-Mail- und Groupwaresystem"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775649-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Deutscher Bundestag - Vergabereferat"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "ron": "Achiziție integrată de documentații de detaliere și asistență tehnică de specialitate, lucrări, dotări și active necorporale pentru realizarea obiectivului de investiții „Modernizarea și reabilitarea imobilului «Teatrul Excelsior», reconfigurarea spațiilor interioare pentru activități culturale și Muzeu de Artă și Știință și amenajări exterioare”"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-15+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775663-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ron": [
+          "Sector 1 (Sectorul 1 al municipiului Bucuresti)"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.e-licitatie.ro"
+      ]
+    },
+    {
+      "title-proc": {
+        "ces": "Modernizace portálu občana"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775669-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ces": [
+          "Statutární město Zlín"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "fra": "Prolongation de la maintenance du parc d'impression multifonction avec maintenance, logiciels d'administration, supervision du parc et gestion des impressions"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775680-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fra": [
+          "Ville d'ANNECY"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.marches-publics.info/mpiaws/index.cfm?fuseaction=demat.termes&amp;IDM=1900013"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Software zur internen Datenverarbeitung und zum meteorologischen Datenaustausch mit der World Meteorological Organization"
+      },
+      "notice-type": "veat",
+      "publication-number": "775685-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "GeoSphere Austria"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "Neuanschaffung einer kommunalen Finanzsoftware für die Verbandsgemeindeverwaltung Kirchen (Sieg)"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "775696-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Verbandsgemeindeverwaltung Kirchen (Sieg)"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.subreport.de/E22561989"
+      ]
+    },
+    {
+      "title-proc": {
+        "fin": "Senaatti-kiinteistöt - Hälytystenkäsittelyjärjestelmä"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775712-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fin": [
+          "Senaatti-kiinteistöt"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "fra": "Police des transports Système de gestion des dossiers et d’information (TPO-VIS)",
+        "deu": "Transportpolizei Vorgangsbearbeitungs- und Informationssystem (TPO-VIS)"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775734-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fra": [
+          "Schweizerische Bundesbahnen SBB, Informatik Einkauf"
+        ],
+        "deu": [
+          "Schweizerische Bundesbahnen SBB, Informatik Einkauf"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "swe": "Upphandling av Elevregister"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775744-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "swe": [
+          "Solna stad"
+        ]
+      },
+      "submission-url-lot": [
+        "https://tendsign.com/doc.aspx?MeFormsNoticeId=103402&GoTo=Tender"
+      ]
+    },
+    {
+      "title-proc": {
+        "spa": "Servicio de difusión en medios de comunicación de prensa escrita, de anuncios de publicación obligatoria por mandato legal relativos a expedientes de expropiación forzosa"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775756-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Consejería de Movilidad, Medio Ambiente y Gestión de Emergencias del Principado de Asturias"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "bul": "„Изпълнение на дейности по информация, комуникация и публичност и изработка на рекламни материали“ в две обособени позиции."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-09+02:00",
+        "2026-12-09+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775764-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "bul": [
+          "ИЗПЪЛНИТЕЛНА АГЕНЦИЯ \"МОРСКА АДМИНИСТРАЦИЯ\""
+        ]
+      },
+      "submission-url-lot": [
+        "https://app.eop.bg/today/616691",
+        "https://app.eop.bg/today/616691"
+      ]
+    },
+    {
+      "title-proc": {
+        "lav": "SAP Concur licences iegāde"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-23+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775772-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lav": [
+          "Rīgas Tehniskā universitāte"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.eis.gov.lv/EKEIS/Supplier/Procurement/185290"
+      ]
+    },
+    {
+      "title-proc": {
+        "fra": "Prestations de développements et de maintenance des applications informatiques du programme « MesAides » en mode agile"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-18+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775785-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fra": [
+          "Centre national du cinéma et de l’image animée"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.marches-publics.gouv.fr/?page=Entreprise.EntrepriseAdvancedSearch&AllCons&id=3100847&orgAcronyme=f5j"
+      ]
+    },
+    {
+      "title-proc": {
+        "spa": "Servicios de desarrollo evolutivo y soporte de la Plataforma de Rendición Telemática Automática RETAN."
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775788-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Presidencia del Tribunal de Cuentas"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "ita": "SERVIZI DI MANUTENZIONE, E ASSISTENZA DEL SISTEMA ERP SAP/4HANA (DI SEGUITO, ANCHE, SAP) A SUPPORTO DELLE ATTIVITÀ AMMINISTRATIVE, CONTABILI E GESTIONALI E AL CHANGE MANAGEMENT DELL’ENTE"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-10+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775791-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ita": [
+          "ISMEA - Istituto di Servizi per il Mercato Agricolo Alimentare"
+        ]
+      },
+      "submission-url-lot": [
+        "https://ismea.acquistitelematici.it/"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "ITDZ Berlin: OV RV Datenschleuse"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-18+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775795-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "IT-Dienstleistungszentrum Berlin (AöR)"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.meinauftrag.rib.de"
+      ]
+    },
+    {
+      "title-proc": {
+        "ell": "Δράσεις πρόληψης, έγκαιρης παρέμβασης και ψηφιακής υποστήριξης για την ψυχική υγεία της «Γενιάς Ζ» στο πλαίσιο του έργου «Prevention, early diagnosis και intervention activities to enhance the mental health of young people of generation Z» (“HealthyMinds”) του Προγράμματος Συνεργασίας Interreg Ελλάδα–Ιταλία 2021–2027, με Κωδικό ΟΠΣ (MIS): 6005597"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775801-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ell": [
+          "ΕΝΩΣΗ ΝΟΣΗΛΕΥΤΩΝ ΕΛΛΑΔΟΣ"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "spa": "Encargo Mantenimiento, soporte y evolución del Sistema ABT-GETIN 2026-2027"
+      },
+      "notice-type": "veat",
+      "publication-number": "775805-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Dirección General de Telecomunicaciones y Digitalización"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "spa": "Servicio de Oficina Técnica y soporte a la plataforma IA de MC MUTUAL"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775807-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Dirección General de la Mutual Midat Cyclops, Mutua Colaboradora con la Seguridad Social, nº 1"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "ita": "Procedura aperta ai sensi dell’art. 71 del D.Lgs. 36/2023 e s.m.i. per l’affidamento della fornitura e dei servizi connessi all’Infrastruttura Periferica di Emissione della Carta di Identità Elettronica (CIE)"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775818-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ita": [
+          "Istituto Poligrafico e Zecca dello Stato S.p.A."
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "pol": "Kompleksowa obsługa w zakresie kreacji i produkcji materiałów reklamowych i in. na potrzeby NASK-PIB"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-30+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775828-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Naukowa i Akademicka Sieć Komputerowa - Państwowy Instytut Badawczy"
+        ]
+      },
+      "submission-url-lot": [
+        "https://nask.eb2b.com.pl"
+      ]
+    },
+    {
+      "title-proc": {
+        "pol": "Kompleksowa organizacja i koordynacja warsztatów z zakresu ICT, z których część będzie klasyfikowana jako półkolonie, dla uczennic i uczniów szkół podstawowych oraz innych zadań związanych z realizacją projektu „Klub Cyfrowych Możliwości” w latach 2027-2029"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-17+01:00"
+      ],
+      "notice-type": "cn-social",
+      "publication-number": "775830-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Naukowa i Akademicka Sieć Komputerowa - Państwowy Instytut Badawczy"
+        ]
+      },
+      "submission-url-lot": [
+        "https://nask.b2b.com.pl"
+      ]
+    },
+    {
+      "title-proc": {
+        "lit": "Užklausų ir projektų valdymo sistema"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775838-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lit": [
+          "VšĮ Lietuvos nacionalinis radijas ir televizija (PV)"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "spa": "Servei d’implantació, allotjament de l’aplicació, llicències d’ús i suport tècnic del programari de gestió del manteniment dels actius de l’Ajuntament D’Esplugues de Llobregat"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-09+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775859-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Ajuntament d'Esplugues de Llobregat"
+        ]
+      },
+      "submission-url-lot": [
+        "https://contractaciopublica.cat/ca/perfils-contractant/detall/3277124"
+      ]
+    },
+    {
+      "title-proc": {
+        "ell": "Υπηρεσίες Συντήρησης και Τεχνικής Υποστήριξης σε ΟΠΣ-eServices, χρονικής διάρκειας 12μηνών για τη Δημόσια Υπηρεσία Απασχόλησης (Δ.ΥΠ.Α.), προϋπολογισθείσας δαπάνης 305.000,00€ πλέον ΦΠΑ 24%, ήτοι 378.200,00 € συμπ/νου του ΦΠΑ."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-21+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775864-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ell": [
+          "ΔΗΜΟΣΙΑ ΥΠΗΡΕΣΙΑ ΑΠΑΣΧΟΛΗΣΗΣ"
+        ]
+      },
+      "submission-url-lot": [
+        "https://portal.eprocurement.gov.gr/webcenter/portal"
+      ]
+    },
+    {
+      "title-proc": {
+        "eng": "Tender for a framework agreement on the delivery of Cybersecurity advisory and assessment services"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "775872-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "Danmarks Nationalbank"
+        ]
+      },
+      "submission-url-lot": [
+        "https://eu.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=460124&TID=200420571&B="
+      ]
+    },
+    {
+      "title-proc": {
+        "ron": "Servicii de internet, televiziune, web hosting ṣi administrare domeniu pentru Primăria Sectorului 3, Direcṭia Generală de Poliṭie Locală Sector 3, Centrul Militar Sector 3"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775894-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ron": [
+          "SECTOR 3 AL MUNICIPIULUI BUCURESTI"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "spa": "AMT-0085: Servicio de desarrollo de nuevas funcionalidades, soporte y mantenimiento de la gestión académica, gestión de personal y otros sistemas del ámbito educativo"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775917-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Agencia para la Modernización Tecnológica de Galicia"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "slk": "Zvýšenie bezpečnosti montážou ETCS do DMJ861"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-17+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775926-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "slk": [
+          "Železničná spoločnosť Slovensko, a.s."
+        ]
+      },
+      "submission-url-lot": [
+        "https://evo.isepvo.sk/"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Erweiterung Nutanix HCI Lösung"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775936-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Landratsamt Würzburg"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "Vergabe von mehreren Rahmenverträgen für Beratung, Konzeption, Neuentwicklung und Support von Web-Anwendungen und Softwareprojekten der Deutschen Energie-Agentur GmbH (dena)"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-10+01:00",
+        "2026-12-10+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775949-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Deutsche Energie-Agentur GmbH (dena)"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.evergabe.de/unterlagen/01a1a6cd-ef14-4145-8147-702bb918ab8b/zustellweg-auswaehlen",
+        "https://www.evergabe.de/unterlagen/01a1a6cd-ef14-4145-8147-702bb918ab8b/zustellweg-auswaehlen"
+      ]
+    },
+    {
+      "title-proc": {
+        "nld": "Nieuw financieel systeem"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2027-01-26+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775953-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "nld": [
+          "Gemeente Noordoostpolder"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.tenderned.nl/aankondigingen/overzicht/448133"
+      ]
+    },
+    {
+      "title-proc": {
+        "ell": "ΔΙΤΟΥΦΕ (1)/006/2026-ΔΔ - Παροχή υπηρεσιών παραμετροποίησης λογισμικού GIS και ανάπτυξης εφαρμογών κινητών, συμπεριλαμβανομένης της προμήθειας αδειών χρήσης, για το έργο MITOS"
+      },
+      "notice-type": "veat",
+      "publication-number": "775985-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ell": [
+          "Τεχνολογικό Πανεπιστήμιο Κύπρου"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "pol": "Usługi przygotowania i organizacji wydarzeń oraz zapewnienia udziału Ministerstwa Funduszy i Polityki Regionalnej w wydarzeniach targowo-wystawienniczych w celu promocji partnerstwa publiczno - prywatnego"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "775991-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Ministerstwo Funduszy i Polityki Regionalnej"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "swe": "IT Consultant Procurement - VCBB"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-07+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "775993-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "swe": [
+          "Migrationsverket"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.e-avrop.com/migrationsverket/e-Upphandling/NoticeLink.aspx?id=133047"
+      ]
+    },
+    {
+      "title-proc": {
+        "ron": "Servicii pentru tranzactionarea produselor de flexibilitate"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-03+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776017-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ron": [
+          "COMPANIA NATIONALA DE TRANSPORT AL ENERGIEI ELECTRICE \"TRANSELECTRICA\" S.A."
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.e-licitatie.ro"
+      ]
+    },
+    {
+      "title-proc": {
+        "pol": "Dzierżawa serwisu internetowego Partnerstwa Publiczno – Prywatnego (PPP) wraz z utrzymaniem i asystą techniczną oraz możliwością rozwoju o dodatkowe funkcje"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776063-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Ministerstwo Funduszy i Polityki Regionalnej"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "eng": "Extension of the term for the variation agreement between EirGrid PLC and Brady Energy UK Limited for the EDIL and OLDT systems."
+      },
+      "notice-type": "can-modif",
+      "publication-number": "776070-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "eng": [
+          "EirGrid plc"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "bul": "Осигуряване на гарантиран интернет достъп с високо качество и защита от DDoS атаки от основен и втори доставчик"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776076-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "bul": [
+          "ДЪРЖАВНО ПРЕДПРИЯТИЕ \"РЪКОВОДСТВО НА ВЪЗДУШНОТО ДВИЖЕНИЕ\" ТПП"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "slv": "Storitve vzdrževanja in nadgradnje informacijskih sistemov Asinhroni modul in Centralna Varnostna shema"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776093-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "slv": [
+          "MINISTRSTVO ZA NOTRANJE ZADEVE IN JAVNO UPRAVO"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "Rahmenvereinbarung über den Bezug von Public Cloudleistungen zur Erlangung der digitalen Souveränität für den SWR und weitere Bezugsberechtigte"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "776095-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Südwestrundfunk Anstalt des öffentlichen Rechts"
+        ]
+      },
+      "submission-url-lot": [
+        "https://it-vergabe.eu/vergabe/angebot/3b405eecfde3ccabc535cf18ad532224"
+      ]
+    },
+    {
+      "title-proc": {
+        "pol": "Usługa administrowania oprogramowaniem AMMS/Infomedica Plus, wdrażania nowych modułów oraz uruchamiania nowych funkcjonalności."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-17+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776110-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "UNIWERSYTECKI SZPITAL KLINICZNY NR 2 PUM W SZCZECINIE"
+        ]
+      },
+      "submission-url-lot": [
+        "https://platformazakupowa.pl/pn/spsk2_szczecin"
+      ]
+    },
+    {
+      "title-proc": {
+        "ron": "Servicii de consultanță și expertiză pentru implementarea proiectului ExpertRARE"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776158-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ron": [
+          "Universitatea de Medicina si Farmacie \"Carol Davila\""
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "spa": "Contratación del servicio auxiliar de atención al cliente, supervisión y visitas guiadas para la atención de clientes y eventos en en EUSKALDUNA BILBAO."
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-10+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776167-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Euskalduna Jauregia - Palacio Euskalduna, S. A. - Euskalduna Jauregia - Palacio Euskalduna S. A."
+        ]
+      },
+      "submission-url-lot": [
+        "https://apps.bizkaia.eus/sede-lantik/site/5/licitacion/oferta/asistenteInscripcion?numexpediente=EUS2026_11"
+      ]
+    },
+    {
+      "title-proc": {
+        "por": "Aquisição de serviços de desenvolvimento e de consultoria em Sistemas de Informação Geográfica (SIG) da plataforma BUPi, nas componentes de dados geográficos, desenvolvimento e manutenção evolutiva, corretiva e preventiva"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-05Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776171-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "por": [
+          "Instituto dos Registos e do Notariado, IP"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.acingov.pt"
+      ]
+    },
+    {
+      "title-proc": {
+        "ita": "Procedura aperta svolta in modalità telematica per l'acquisizione di servizi Software in cloud per l'automazione comprensivo delle attività di configurazione dei software, conversione, avviamento, manutenzione normativa-evolutiva dei servizi di assistenza - Progetto finanziato dall'Unione Europea-Nex generation EU - M1 C1 I1.2 Abilitazione al cloud per le PA locali Comuni (Luglio 2022)"
+      },
+      "notice-type": "can-modif",
+      "publication-number": "776203-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ita": [
+          "COMUNE DI GROSSETO"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "pol": "Świadczenie usług polegających na realizacji działań komunikacyjnych, promocyjnych i informacyjnych"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-17+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776220-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "pol": [
+          "Naukowa i Akademicka Sieć Komputerowa - Państwowy Instytut Badawczy"
+        ]
+      },
+      "submission-url-lot": [
+        "https://nask.eb2b.com.pl"
+      ]
+    },
+    {
+      "title-proc": {
+        "ces": "Zajištění provozu a rozvoje ICT"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776270-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ces": [
+          "Statutární město Zlín"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "fra": "Prestations d’Administration Fonctionnelle et de Support Utilisateurs du SI du Marché d’Affaires EDF Commerce"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "776298-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fra": [
+          "EDF SA"
+        ]
+      },
+      "submission-url-lot": [
+        "https://pha2.edf.com"
+      ]
+    },
+    {
+      "title-proc": {
+        "swe": "Strategisk kommunikationsbyrå"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776304-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "swe": [
+          "Pensionsmyndigheten"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "fin": "Työkykyjohtamisen järjestelmän hankinta"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776337-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "fin": [
+          "HUS-yhtymä"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "nld": "ERP-systeem"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-27Z"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776381-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "nld": [
+          "Kamer van Koophandel"
+        ]
+      },
+      "submission-url-lot": [
+        "https://s2c.mercell.com/today/225104"
+      ]
+    },
+    {
+      "title-proc": {
+        "spa": "Servicio de gestión y digitalización del archivo externo de historias clínicas y custodia de documentación del Hospital Medina del Campo"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-15+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776400-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Gerencia de Atención Especializada de Medina del Campo"
+        ]
+      },
+      "submission-url-lot": [
+        "https://contrataciondelestado.es/wps/poc?uri=deeplink:detalle_licitacion&idEvl=cfOH4E9GeD59PLkba5eRog%3D%3D"
+      ]
+    },
+    {
+      "title-proc": {
+        "lav": "Viedo aukstā ūdens skaitītāju piegāde un datu pārraide"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-12-14+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776408-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lav": [
+          "SIA \"Jūrmalas ūdens\""
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.eis.gov.lv/EKEIS/Supplier/Procurement/185539"
+      ]
+    },
+    {
+      "title-proc": {
+        "spa": "Contrato de infraestructura física (hardware) y de los servicios de software necesarios para la implantación de un sistema de soporte a la decisión clínica y cuadro de mandos corporativo en el marco del proyecto de investigación PIP-0013-2025."
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776434-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "spa": [
+          "Director Gerente de FISEVI"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "swe": "Security Operations Center (SOC-tjänst)"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776444-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "swe": [
+          "Region Dalarna"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "hrv": "SAP nadogradnja FI i MM modula za integraciju Bina-Istra d.d. i Autoceste Zagreb-Macelj d.o.o. sa sustavom naplate cestarine"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776446-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "hrv": [
+          "Hrvatske autoceste d.o.o."
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "por": "CPI N.º 1/SRAP-GSR/2025 - Prestação de Serviços de Desenvolvimento e Manutenção de Sistemas de Informação para a AG PEPAC R.A. Madeira"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776447-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "por": [
+          "Secretaria Regional de Agricultura e Pescas"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "nld": "Online Mediabureau"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "776457-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "nld": [
+          "Stichting ROC Midden Nederland"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.tenderned.nl/aankondigingen/overzicht/448358"
+      ]
+    },
+    {
+      "title-proc": {
+        "deu": "Dienstleistungen ELSI – Österreichisches Genomprojekt"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776460-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Medizinische Universität Innsbruck"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "nld": "Raamovereenkomst partners voor ontwikkeling en beheer oplossingen dataplatform OV"
+      },
+      "notice-type": "cn-standard",
+      "publication-number": "776467-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "nld": [
+          "Coöperatie Samenwerkingsverband DOVA U.A."
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.tenderned.nl/aankondigingen/overzicht/448271"
+      ]
+    },
+    {
+      "title-proc": {
+        "lav": "Maksājumu administrēšanas informācijas sistēmas (MAIS) pilnveidošana, uzturēšana un garantijas nodrošināšana"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-30+02:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776470-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "lav": [
+          "Valsts ieņēmumu dienests"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.eis.gov.lv/EKEIS/Supplier/Procurement/158833"
+      ]
+    },
+    {
+      "title-proc": {
+        "ron": "FURNIZAREA DE INSULE ECOLOGICE DIGITALIZATE ÎN ORAȘUL CISNĂDIE"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776477-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "ron": [
+          "Orasul Cisnadie"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "deu": "Erbringung von Informatikdienstleistungen «Betrieb Datacenter Services»"
+      },
+      "notice-type": "can-standard",
+      "publication-number": "776509-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "deu": [
+          "Kanton Zürich Finanzdirektion Amt für Informatik"
+        ]
+      }
+    },
+    {
+      "title-proc": {
+        "nld": "Uitbreiding BIZGIS fase 3"
+      },
+      "deadline-receipt-tender-date-lot": [
+        "2026-11-12+01:00"
+      ],
+      "notice-type": "cn-standard",
+      "publication-number": "776515-2026",
+      "publication-date": "2026-11-09+01:00",
+      "buyer-name": {
+        "nld": [
+          "Vlaamse Overheid"
+        ]
+      },
+      "submission-url-lot": [
+        "https://www.publicprocurement.be/supplier/enterprises/0/tendering-workspaces/publication-workspace-detail/dfdf8ed6-f60e-4be6-9024-e608d8bc079a/general"
+      ]
+    }
+  ],
+  "totalNoticeCount": 1263,
+  "data_mode": "live_minimized"
+}

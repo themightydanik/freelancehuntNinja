@@ -1,0 +1,17 @@
+{
+  "records": 601,
+  "live_records": 600,
+  "synthetic_records": 1,
+  "within_snapshot_duplicates": 0,
+  "conflicting_duplicates": 0,
+  "cross_source_duplicates": "not measured; no entity resolution",
+  "source_link_present": 600,
+  "fresh_within_14_days": 600,
+  "specific_service_candidates": 20,
+  "confirmed_procurement_candidates": 3,
+  "verified_lawful_contact_routes": 0,
+  "outreach_ready": 0,
+  "false_positive_rate": "not measured; requires independently reviewed ground truth",
+  "manual_review_minutes": "not measured",
+  "event_detection_latency": "not measured; one snapshot"
+}
