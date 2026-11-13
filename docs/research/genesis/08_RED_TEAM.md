@@ -1,0 +1,23 @@
+# Adversarial review — 15 попыток опровержения
+
+Анализ проведён отдельным проходом после shortlist; это self-red-team одного исследователя, **не независимый внешний аудит и не второй агент**. Источники — [реестр](data/evidence_registry.csv), gates и оценки — [scorecard](data/finalist_scorecard.csv). Общие проверки для всех: адрес/KYC/вывод UNKNOWN; личные данные и доступ только с согласием; support и liability входят в трудозатраты. Один критический gate блокирует build независимо от score.
+
+| ID | Почему покупатель не заплатит / что уже решено | Канал и automation failure | Право / support / UA | Условие отказа |
+|---|---|---|---|---|
+| C01 | QA включён у migration provider; $139 all-in-one против $400 audit; CSV compare можно руками | Cold start, нет доверия; неодинаковые IDs/currency/bundles; AI hallucination | PII exports, NDA; disputes о полноте/SEO/налогах; payout неизвестен | После 5 qualified discussions не принято предложение; manual equivalent ≤30min; delivery >10h |
+| C02 | Backup vendor уже умеет restore; rehearsal не приоритет | Нет agency intake; плагины/large backups/разные PHP ломают fixtures | Привилегии, ransomware/secret exposure; аварийная поддержка без SLA limits съест прибыль; UA KYC | Нет второго оплаченного цикла; >4h/agency/month; ожидают 24/7 |
+| C03 | Free dashboards и MSP vendor stack достаточно | Нет MSP access; reports неполны, неизвестные senders; DNS ошибка блокирует mail | Privacy/logs, SPF/DKIM expertise; не обещать inbox; UA vendor payouts separate | Нет paid change-control scope; >3h/MSP/month; buyer требует spam evasion |
+| C04 | A2X onboarding/бухгалтер уже оплачены | Bookkeeper доверяет incumbent; rounding/tax/timezone/refunds неуниверсальны | Accounting liability, bank data; sign-off вне навыков; UA contract и bank UNKNOWN | Нет бухгалтерского partner и funded bounded exceptions |
+| C05 | Native Rules/templates достаточны; deadline прошёл | Tenant access тяжело; edge cases/attachments/permissions | Microsoft licensing/PII; maintenance flows; bank/KYC unknown | Нет workflow сверх official template |
+| C06 | Runbook уже часть deliverable, AI пишет бесплатно | Agency не платит второму исполнителю; nonportable credentials | n8n commercial license для external configuring; secrets/support; UA admission unknown | Нет отдельной оплаты handover / restore |
+| C07 | Matrixify/native scheduled import достаточно | Marketplace rank zero; feed schema churn | Shopify review/Billing/API/data access; payout/KYC; small ARPU support | Бесплатный workaround полностью достаточен |
+| C08 | Lighthouse/axe/manual agency checks достаточно | Нужны доверие/expertise; scans пропускают semantic issues | W3C technical limits, FTC misleading compliance claims, EAA scope/exemptions; UA payouts | Требуют certificate или невозможную гарантию |
+| C09 | Free KSeF tools и Polish accounting incumbents | Local partner отсутствует; invoice schemas/errors/credentials | Закон, язык, e-signatures и representation; UA founder не Polish tax expert | Нет проверенного legally allowed niche и domain partner |
+| C10 | Бесплатные закупочные alerts/платные incumbents | Public awards не intent купить наш продукт; stale/noisy data | Data license/PII, no cold outreach; low ARPU manual relevance; UA payout | Нет конкретного buyer и оплачиваемого next action |
+| C11 | Hookdeck/Svix/free queues уже решают | Huge trust/SLA barrier; duplicates/retry storms/observability | Secrets/webhook payload PII; 24/7 ops для одного; country/payment risk | Уже REJECT: нет differentiated buyer advantage |
+| C12 | Native booking/reminders/мессенджер | Buyer недоопределён, no niche spending; SMS costs/timezones | Медицинские PII, consent; support high; bank unknown | Уже REJECT как build: нет identifiable validated buyer |
+| C13 | Sponsor не создаёт оплачиваемую bounty / claim contested | Нужно каждый раз искать новую; maintainer acceptance unpredictable | Eligibility/license/escrow/payout; work before reward | Нет конкретной funded unclaimed bounty; нельзя recurring forecast |
+| C14 | Visualping/free scripts/manual check | Нет определённого buyer; source blocking, false positives | Robots/ToS/copyright; review alerts съедает $49; payout unknown | Уже REJECT: buyer/use case не идентифицирован |
+| C15 | Workspace admin/native checklist/AI | Marketplace review/zero impressions; OAuth/admin friction | Sensitive scopes/security assessment могут стоить денег; policy не проверена | Нет Workspace demand и разрешённого publication/payment path |
+
+Сильнейшее опровержение C01 — не отсутствие технологии, а отсутствие доказанного отдельного оплачиваемого результата сверх зрелого migration workflow. Сильнейшее опровержение C02/C03 — подмена emergency one-off работ recurring revenue. Поэтому финалистов для build нет.

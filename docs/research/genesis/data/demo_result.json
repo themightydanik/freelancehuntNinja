@@ -1,0 +1,29 @@
+{
+  "status": "FAIL",
+  "source_duplicates": [],
+  "target_duplicates": [
+    "synthetic-1"
+  ],
+  "missing": [
+    "synthetic-2"
+  ],
+  "extra": [],
+  "changed": [
+    {
+      "id": "synthetic-1",
+      "field": "amount",
+      "source": "19.90",
+      "target": "19.99"
+    }
+  ],
+  "source_raw_totals": {
+    "quantity": "3",
+    "amount": "24.90"
+  },
+  "target_raw_totals": {
+    "quantity": "4",
+    "amount": "39.98"
+  },
+  "limitations": "Synthetic IDs and one currency/unit; no production mapping, taxes, PII, URLs or API writes",
+  "equal_pair_control": "PASS"
+}

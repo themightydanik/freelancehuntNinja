@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "evidence": 55,
+  "discovery": 45,
+  "categories": 15,
+  "red_team_candidates": 15,
+  "deep_candidates": 6,
+  "alternatives": 22,
+  "budget_time_rows": 216,
+  "own_payments_observed": 0,
+  "build_ready_finalists": 0,
+  "experiment_only_finalists": 1,
+  "limitations": "Integrity and arithmetic checks; not validation of demand, source truth, account KYC or payout"
+}

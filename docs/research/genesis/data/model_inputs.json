@@ -1,0 +1,72 @@
+{
+  "checked_date": "2026-11-13",
+  "labor_rate": 25,
+  "refund": 0.05,
+  "fee": 0.15,
+  "fixed_monthly": 20,
+  "withdrawal": 0.99,
+  "sales_hours": 16,
+  "target_gross": 2000,
+  "candidates": [
+    {
+      "id": "C01",
+      "price": 400,
+      "direct_per_customer": 8,
+      "delivery_h": 8,
+      "support_h": 2,
+      "initial_h": 16,
+      "initial_cash": 0,
+      "recurring": false
+    },
+    {
+      "id": "C02",
+      "price": 250,
+      "direct_per_customer": 10,
+      "delivery_h": 3,
+      "support_h": 1,
+      "initial_h": 20,
+      "initial_cash": 0,
+      "recurring": true
+    },
+    {
+      "id": "C03",
+      "price": 200,
+      "direct_per_customer": 14,
+      "delivery_h": 2,
+      "support_h": 1,
+      "initial_h": 24,
+      "initial_cash": 0,
+      "recurring": true
+    },
+    {
+      "id": "C04",
+      "price": 500,
+      "direct_per_customer": 10,
+      "delivery_h": 10,
+      "support_h": 2,
+      "initial_h": 24,
+      "initial_cash": 0,
+      "recurring": false
+    },
+    {
+      "id": "C05",
+      "price": 500,
+      "direct_per_customer": 10,
+      "delivery_h": 12,
+      "support_h": 2,
+      "initial_h": 32,
+      "initial_cash": 0,
+      "recurring": false
+    },
+    {
+      "id": "C06",
+      "price": 350,
+      "direct_per_customer": 8,
+      "delivery_h": 7,
+      "support_h": 2,
+      "initial_h": 16,
+      "initial_cash": 0,
+      "recurring": false
+    }
+  ]
+}
