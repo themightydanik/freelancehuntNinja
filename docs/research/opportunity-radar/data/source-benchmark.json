@@ -1,0 +1,28 @@
+[
+  {
+    "source": "fts",
+    "records": 500,
+    "source_links": 500,
+    "fresh_14d": 500,
+    "service_candidates": 17,
+    "confirmed_procurement_candidates": 3,
+    "verified_contact_routes": 0,
+    "outreach_ready": 0,
+    "within_source_duplicate_ids": 0,
+    "min_publication": "2026-11-12T16:34:52Z",
+    "max_publication": "2026-11-13T21:36:36Z"
+  },
+  {
+    "source": "ted",
+    "records": 100,
+    "source_links": 100,
+    "fresh_14d": 100,
+    "service_candidates": 3,
+    "confirmed_procurement_candidates": 0,
+    "verified_contact_routes": 0,
+    "outreach_ready": 0,
+    "within_source_duplicate_ids": 0,
+    "min_publication": "2026-11-09+01:00",
+    "max_publication": "2026-11-09+01:00"
+  }
+]

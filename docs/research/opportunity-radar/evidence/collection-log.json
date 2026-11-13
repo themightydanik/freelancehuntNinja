@@ -1,0 +1,64 @@
+[
+  {
+    "url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=100",
+    "request": null,
+    "retrieved_at": "2026-11-13T23:21:04.358035+00:00",
+    "status": 200,
+    "raw_sha256": "389d6882e16b8370542e60a6bc0c010a9a5c53c254f51d62c4da5652bba32f14",
+    "bytes": 1239591
+  },
+  {
+    "url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=100&updatedTo=2026-11-13T23:21:05&cursor=dXBkYXRlZFRvPTIwMjYtMTEtMTNUMjM6MjE6MDV8bmV4dEN1cnNvcj03NjAxMzg=",
+    "request": null,
+    "retrieved_at": "2026-11-13T23:21:06.017038+00:00",
+    "status": 200,
+    "raw_sha256": "f76c45b9879f3e13c5d15ee15f67e639666687e84e8503236c4203cd15a39954",
+    "bytes": 1314375
+  },
+  {
+    "url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=100&updatedTo=2026-11-13T23:21:05&cursor=dXBkYXRlZFRvPTIwMjYtMTEtMTNUMjM6MjE6MDV8bmV4dEN1cnNvcj03NjAwMzg=",
+    "request": null,
+    "retrieved_at": "2026-11-13T23:21:09.270785+00:00",
+    "status": 200,
+    "raw_sha256": "a23c8513c81fe3286c12089bd6b9cab7493dfa2cb37d2a8ec1c8e03bde15d460",
+    "bytes": 1098806
+  },
+  {
+    "url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=100&updatedTo=2026-11-13T23:21:05&cursor=dXBkYXRlZFRvPTIwMjYtMTEtMTNUMjM6MjE6MDV8bmV4dEN1cnNvcj03NTk5Mzg=",
+    "request": null,
+    "retrieved_at": "2026-11-13T23:21:13.082974+00:00",
+    "status": 200,
+    "raw_sha256": "14d610701fa4d61af2571716987eebda975069e9719e7f3eee93f2634bcf83f6",
+    "bytes": 1198684
+  },
+  {
+    "url": "https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?limit=100&updatedTo=2026-11-13T23:21:05&cursor=dXBkYXRlZFRvPTIwMjYtMTEtMTNUMjM6MjE6MDV8bmV4dEN1cnNvcj03NTk4Mzg=",
+    "request": null,
+    "retrieved_at": "2026-11-13T23:21:17.493321+00:00",
+    "status": 200,
+    "raw_sha256": "8bd79e6721409592a3fe7905faf5ab269b55363bb17a0383a3d76f52d2b72009",
+    "bytes": 1165846
+  },
+  {
+    "url": "https://api.ted.europa.eu/v3/notices/search",
+    "request": {
+      "query": "publication-date >= 20261109 AND (classification-cpv = 72* OR classification-cpv = 7934* OR classification-cpv = 7953*)",
+      "fields": [
+        "publication-number",
+        "publication-date",
+        "title-proc",
+        "buyer-name",
+        "notice-type",
+        "deadline-receipt-tender-date-lot",
+        "submission-url-lot"
+      ],
+      "page": 1,
+      "limit": 100,
+      "scope": "ALL"
+    },
+    "retrieved_at": "2026-11-13T23:21:21.369208+00:00",
+    "status": 200,
+    "raw_sha256": "fb2034d08de97a619db0cc4125f0ffc93011e8640f205a452bd4b29cbddda109",
+    "bytes": 474172
+  }
+]
