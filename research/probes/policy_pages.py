@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 import requests
+from urllib.parse import urlparse
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -26,6 +27,8 @@ class Text(HTMLParser):
 
 def fetch(row):
     result=dict(row,checked_at=datetime.now(timezone.utc).isoformat())
+    if (urlparse(row['url']).hostname or '').endswith('freelancer.com'):
+        return dict(result,status='not_requested',reason='Section33 requires express written permission; manual review only')
     try:
         with requests.get(row['url'],stream=True,timeout=(10,20),headers={'User-Agent':'NinjaResearch/0.1 bounded official-page review'}) as r:
             body=bytearray()

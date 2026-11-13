@@ -1,0 +1,93 @@
+{
+  "checked_at": "2026-11-13",
+  "source": "Freelancer",
+  "policy_url": "https://www.freelancer.com/about/terms",
+  "section": "33. Access and Interference",
+  "policy_observation": "Express written permission required for automated access, explicitly including API",
+  "method_error": "Terms gate checked after initial public API requests; public accessibility was incorrectly treated as sufficient permission",
+  "action": "Stopped all further automated access to Freelancer; excluded and removed all collected job records and derived statistics from evidence sample",
+  "excluded_unique_job_records": 135,
+  "retained_listing_content": false,
+  "retained_employer_contacts": false,
+  "request_metadata_only": [
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=telegram&limit=20&offset=0&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.448,
+      "bytes": 111735,
+      "sha256": "58cc220702b19051b5f3def19b99e8b1c0887bf1d51a9394043eeb00a1f95f30"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=telegram&limit=20&offset=20&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.509,
+      "bytes": 10125,
+      "sha256": "7cd6a3ea079bdedc276b1a17d4911d32d2f3c56edcb47fafd18d68466e222a7e"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=webhook&limit=20&offset=0&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.396,
+      "bytes": 95886,
+      "sha256": "fde48791baea90e56b6a7bd744c3e945969c131270679be34e7efcc684a5691a"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=bot+fix&limit=20&offset=0&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.541,
+      "bytes": 102098,
+      "sha256": "d5651b1a99d5c3c8e9070a3d8e83987f25db897ce95124786af5a1b8e98ce4c8"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=bot+fix&limit=20&offset=20&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.362,
+      "bytes": 104168,
+      "sha256": "9c59fd390e9be9a8a4a6aaef6a21602ff0a4f85745a4df46c8b6202beb648f5a"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=bot+deployment&limit=20&offset=0&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.419,
+      "bytes": 137159,
+      "sha256": "34b2e1a6d47294ac5f5f0043ff9fc3e9e09060419b7b152c46ef642f510d1f89"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=bot+deployment&limit=20&offset=20&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.281,
+      "bytes": 118155,
+      "sha256": "fdf87a2765bc0c18b6d4cd1cddbcd3bdd5d6992b9d9cb42c2a8a24d07c905c0a"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=api+migration&limit=20&offset=0&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.287,
+      "bytes": 129935,
+      "sha256": "42d2918da929b2c4b0c233febd7900a0be6ef406840ab52f0441ce571eb2e246"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=api+migration&limit=20&offset=20&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.289,
+      "bytes": 110829,
+      "sha256": "6299c0ffa6bf68abc0c81e1d07844548b41602d6438f83fc5240181fe8070bdf"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=python+deployment&limit=20&offset=0&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.271,
+      "bytes": 125564,
+      "sha256": "c530adbdbd43c6f25a0869a0c6f196c2526c8c9985e3fccc704a9a6901a4ee11"
+    },
+    {
+      "url": "https://www.freelancer.com/api/projects/0.1/projects/active/?query=python+deployment&limit=20&offset=20&full_description=true",
+      "status": 200,
+      "elapsed_seconds": 0.289,
+      "bytes": 112314,
+      "sha256": "98e70c3445a2dc1349f1619226fc474b12479a50ea8950497c891b625a14d228"
+    }
+  ],
+  "future_gate": "Platform written permission or owner manual review; no registration or support message sent",
+  "request_metadata_scope": "Last discarded listing collection run only; not an exhaustive log of interactive discovery requests"
+}

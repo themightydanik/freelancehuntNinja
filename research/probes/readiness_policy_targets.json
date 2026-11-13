@@ -1,0 +1,155 @@
+[
+  {
+    "id": "FH_FEES",
+    "url": "https://help-ua.freelancehunt.com/uk/sieif/komisiia-za-vikoristannia-sieifa"
+  },
+  {
+    "id": "FH_PAYOUT",
+    "url": "https://help-ua.freelancehunt.com/uk/finansovi-pitannia/viviediennia-koshtiv-platizhni-instrumienti-ta-komisiia"
+  },
+  {
+    "id": "FH_KYC",
+    "url": "https://help-ua.freelancehunt.com/uk/vierifikatsiia/pierievirka-profiliu"
+  },
+  {
+    "id": "FH_START",
+    "url": "https://help-ua.freelancehunt.com/uk/pitannia-vikonavtsiv"
+  },
+  {
+    "id": "FR_FEES",
+    "url": "https://www.freelancer.com/feesandcharges",
+    "automation_gate": "manual_owner_review_only"
+  },
+  {
+    "id": "FR_PAYOUT",
+    "url": "https://www.freelancer.com/support/freelancer/payments/available-withdrawal-methods",
+    "automation_gate": "manual_owner_review_only"
+  },
+  {
+    "id": "FR_KYC",
+    "url": "https://www.freelancer.com/support/freelancer/profile/know-your-customer-program-kyc",
+    "automation_gate": "manual_owner_review_only"
+  },
+  {
+    "id": "FR_TERMS",
+    "url": "https://www.freelancer.com/about/terms",
+    "automation_gate": "manual_owner_review_only"
+  },
+  {
+    "id": "UW_ELIG",
+    "url": "https://support.upwork.com/hc/en-us/articles/211067778-Eligibility-to-join-and-use-Upwork"
+  },
+  {
+    "id": "UW_FEES",
+    "url": "https://support.upwork.com/api/v2/help_center/en-us/articles/211062538.json"
+  },
+  {
+    "id": "UW_PAYOUT",
+    "url": "https://support.upwork.com/api/v2/help_center/en-us/articles/211063888.json"
+  },
+  {
+    "id": "UW_BANK",
+    "url": "https://support.upwork.com/api/v2/help_center/en-us/articles/211060578.json"
+  },
+  {
+    "id": "UW_CATALOG",
+    "url": "https://support.upwork.com/api/v2/help_center/en-us/articles/360058234233.json"
+  },
+  {
+    "id": "UW_CONNECTS",
+    "url": "https://support.upwork.com/api/v2/help_center/en-us/articles/211062898.json"
+  },
+  {
+    "id": "UW_UKRAINE",
+    "url": "https://support.upwork.com/api/v2/help_center/en-us/articles/4723031364115.json"
+  },
+  {
+    "id": "FV_EARN",
+    "url": "https://help.fiverr.com/api/v2/help_center/en-us/articles/9234443621137.json"
+  },
+  {
+    "id": "FV_PAYOUT",
+    "url": "https://help.fiverr.com/api/v2/help_center/en-us/articles/360010530058.json"
+  },
+  {
+    "id": "FV_NEW",
+    "url": "https://help.fiverr.com/api/v2/help_center/en-us/articles/6348992414097.json"
+  },
+  {
+    "id": "FV_GIG",
+    "url": "https://help.fiverr.com/api/v2/help_center/en-us/articles/360010452317.json"
+  },
+  {
+    "id": "FV_TERMS",
+    "url": "https://www.fiverr.com/legal-portal/legal-terms/terms-of-service"
+  },
+  {
+    "id": "CO_FEES",
+    "url": "https://help.contra.com/en/articles/9322934-fees-overview"
+  },
+  {
+    "id": "CO_PAYOUT",
+    "url": "https://help.contra.com/en/articles/10008642-payouts"
+  },
+  {
+    "id": "CO_KYC",
+    "url": "https://help.contra.com/en/articles/9322955-how-to-verify-your-identity-on-contra"
+  },
+  {
+    "id": "CO_FIRST",
+    "url": "https://help.contra.com/en/articles/11853356-how-to-get-your-first-client-on-contra"
+  },
+  {
+    "id": "CO_DISCOVERY",
+    "url": "https://help.contra.com/en/articles/11899394-how-contra-s-discovery-score-works"
+  },
+  {
+    "id": "CO_PROFILE",
+    "url": "https://help.contra.com/en/articles/9322381-onboarding-and-completing-your-profile"
+  },
+  {
+    "id": "FH_API_DOC",
+    "url": "https://apidocs.freelancehunt.com/"
+  },
+  {
+    "id": "FR_API_SDK",
+    "url": "https://raw.githubusercontent.com/freelancer/freelancer-sdk-python/master/freelancer/resources/projects/projects.py",
+    "automation_gate": "manual_owner_review_only"
+  },
+  {
+    "id": "NBU_FX",
+    "url": "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&date=20261113&json"
+  },
+  {
+    "id": "FH_RULES",
+    "url": "https://freelancehunt.com/legal-center/rules"
+  },
+  {
+    "id": "TG_TRIGGER_FIX",
+    "url": "https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.telegramtrigger/common-issues/"
+  },
+  {
+    "id": "TG_API",
+    "url": "https://core.telegram.org/bots/api"
+  },
+  {
+    "id": "WC_WEBHOOKS",
+    "url": "https://woocommerce.com/document/webhooks/"
+  },
+  {
+    "id": "POSTGIS_GUIDE",
+    "url": "https://supabase.com/docs/guides/database/extensions/postgis"
+  },
+  {
+    "id": "STRIPE_RAW",
+    "url": "https://docs.stripe.com/webhooks/signature"
+  },
+  {
+    "id": "EXPENSIFY_RULES",
+    "url": "https://raw.githubusercontent.com/Expensify/App/main/contributingGuides/CONTRIBUTING.md"
+  },
+  {
+    "id": "CO_COUNTRIES",
+    "url": "https://www.notion.so/9b8855f93eca48c39dca4b6bacbb1e70?pvs=21"
+  }
+]

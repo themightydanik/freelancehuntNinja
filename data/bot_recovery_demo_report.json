@@ -1,0 +1,113 @@
+{
+  "scope": "offline synthetic state machine; no HTTP server, Telegram, deployment or real credentials",
+  "fixture_update_id": 2002,
+  "network_calls": 0,
+  "real_messages": 0,
+  "paid_actions": 0,
+  "fault_reproduced": true,
+  "diagnosis_verified": true,
+  "repair_verified": true,
+  "duplicate_skipped": true,
+  "rollback_exact": true,
+  "rollback_restores_broken_state": true,
+  "final_recovered": true,
+  "snapshot_digest": "543956a02e537d80929ee926114c7c665d61f17de6424b3cd5cfcb27b959953c",
+  "steps": [
+    {
+      "stage": "failure",
+      "expected": "callback filtered; zero effects",
+      "observed": "filtered_before_handler",
+      "state": {
+        "allowed_updates": [
+          "message"
+        ],
+        "processed_update_ids": [],
+        "synthetic_effects": [],
+        "dropped_types": [
+          "callback_query"
+        ]
+      }
+    },
+    {
+      "stage": "diagnosis",
+      "expected": "missing update type identified",
+      "observed": {
+        "root_cause": "callback_query excluded by synthetic allowed_updates filter",
+        "supported": true,
+        "required_change": "Include callback_query; verify unique update processing",
+        "production_caveat": "A similar symptom can have other causes; no real Telegram incident diagnosed"
+      },
+      "state": {
+        "allowed_updates": [
+          "message"
+        ],
+        "processed_update_ids": [],
+        "synthetic_effects": [],
+        "dropped_types": [
+          "callback_query"
+        ]
+      }
+    },
+    {
+      "stage": "repair_and_replay",
+      "expected": "exactly one LOCAL mock effect",
+      "observed": "accepted once; duplicate skipped",
+      "state": {
+        "allowed_updates": [
+          "callback_query",
+          "message"
+        ],
+        "processed_update_ids": [
+          2002
+        ],
+        "synthetic_effects": [
+          {
+            "action": "record_mock_approval",
+            "fixture": "demo-order-1"
+          }
+        ],
+        "dropped_types": [
+          "callback_query"
+        ]
+      }
+    },
+    {
+      "stage": "rollback",
+      "expected": "exact pre-fix snapshot, including broken filter",
+      "observed": "digest matches; this is NOT a healthy state",
+      "state": {
+        "allowed_updates": [
+          "message"
+        ],
+        "processed_update_ids": [],
+        "synthetic_effects": [],
+        "dropped_types": [
+          "callback_query"
+        ]
+      }
+    },
+    {
+      "stage": "final_recovery",
+      "expected": "repair reapplied and acceptance restored",
+      "observed": "one local mock approval",
+      "state": {
+        "allowed_updates": [
+          "callback_query",
+          "message"
+        ],
+        "processed_update_ids": [
+          2002
+        ],
+        "synthetic_effects": [
+          {
+            "action": "record_mock_approval",
+            "fixture": "demo-order-1"
+          }
+        ],
+        "dropped_types": [
+          "callback_query"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "checked_at": "2026-11-13T02:52:38.488715+00:00",
+  "ted_query": {
+    "query": "classification-cpv=72200000 AND publication-date >= 20261001 AND notice-type=can-standard",
+    "limit": 5,
+    "fields": [
+      "publication-number",
+      "publication-date",
+      "notice-title",
+      "notice-type",
+      "classification-cpv",
+      "winner-name",
+      "winner-identifier",
+      "buyer-name",
+      "total-value",
+      "total-value-cur"
+    ],
+    "onlyLatestVersions": true
+  },
+  "ted_reported_total": 1646,
+  "requests": [
+    {
+      "method": "POST",
+      "url": "https://api.ted.europa.eu/v3/notices/search",
+      "status": 200,
+      "elapsed_seconds": 1.007,
+      "bytes": 47773
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/n8n-io/n8n/issues/18754",
+      "status": 200,
+      "elapsed_seconds": 0.547,
+      "bytes": 4440
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/n8n-io/n8n/issues/18895",
+      "status": 200,
+      "elapsed_seconds": 0.608,
+      "bytes": 7111
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/n8n-io/n8n/issues/13385",
+      "status": 200,
+      "elapsed_seconds": 0.413,
+      "bytes": 5252
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/codingteam/emulsion/issues/181",
+      "status": 200,
+      "elapsed_seconds": 0.41,
+      "bytes": 5983
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/irazasyed/telegram-bot-sdk/issues/1129",
+      "status": 200,
+      "elapsed_seconds": 0.602,
+      "bytes": 11303
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/chatwoot/chatwoot/issues/16110",
+      "status": 200,
+      "elapsed_seconds": 0.559,
+      "bytes": 6189
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/woocommerce/woocommerce/issues/69438",
+      "status": 200,
+      "elapsed_seconds": 0.568,
+      "bytes": 9338
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/woocommerce/woocommerce/issues/41544",
+      "status": 200,
+      "elapsed_seconds": 0.353,
+      "bytes": 6938
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/supabase/supabase/issues/47206",
+      "status": 200,
+      "elapsed_seconds": 0.556,
+      "bytes": 4873
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/supabase/supabase/issues/29122",
+      "status": 200,
+      "elapsed_seconds": 0.581,
+      "bytes": 5853
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/vercel/next.js/issues/60002",
+      "status": 200,
+      "elapsed_seconds": 0.456,
+      "bytes": 7574
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/vercel/next.js/issues/61365",
+      "status": 200,
+      "elapsed_seconds": 0.398,
+      "bytes": 6461
+    },
+    {
+      "method": "GET",
+      "url": "https://api.github.com/repos/vercel/next.js/issues/49739",
+      "status": 200,
+      "elapsed_seconds": 0.617,
+      "bytes": 5903
+    }
+  ],
+  "errors": [],
+  "gap_reporter_counts": {
+    "G01_telegram_webhook_lifecycle": {
+      "distinct_reporter_accounts_in_memory": 3,
+      "independent_organizations": "UNKNOWN; different accounts are not proof of different buyers"
+    },
+    "G02_telegram_large_files": {
+      "distinct_reporter_accounts_in_memory": 3,
+      "independent_organizations": "UNKNOWN; different accounts are not proof of different buyers"
+    },
+    "G03_wc_event_semantics": {
+      "distinct_reporter_accounts_in_memory": 2,
+      "independent_organizations": "UNKNOWN; different accounts are not proof of different buyers"
+    },
+    "G04_postgis_advisory": {
+      "distinct_reporter_accounts_in_memory": 2,
+      "independent_organizations": "UNKNOWN; different accounts are not proof of different buyers"
+    },
+    "G05_stripe_raw_body": {
+      "distinct_reporter_accounts_in_memory": 3,
+      "independent_organizations": "UNKNOWN; different accounts are not proof of different buyers"
+    }
+  },
+  "discovery_correction": "form-type=can was rejected HTTP400; documented notice-type=can-standard accepted",
+  "contacts_retained": false,
+  "outreach_actions": 0
+}

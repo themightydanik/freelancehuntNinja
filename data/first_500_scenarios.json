@@ -1,0 +1,96 @@
+{
+  "A_FH_USD": {
+    "no_refund": {
+      "paid_orders": 4,
+      "one_time_price": 150,
+      "invoiced": 600,
+      "full_refunds": 0,
+      "received_after_refunds": 600,
+      "conditional_cash_after_fees_direct_reserve": 532.0,
+      "cash_reserve": 5,
+      "cost_inputs": {
+        "fee_rate": 0.09,
+        "payout_flat": 5,
+        "direct_per_job": 1
+      }
+    },
+    "one_full_refund_conservative_fee_retained": {
+      "paid_orders": 5,
+      "one_time_price": 150,
+      "invoiced": 750,
+      "full_refunds": 1,
+      "received_after_refunds": 600,
+      "conditional_cash_after_fees_direct_reserve": 517.5,
+      "cash_reserve": 5,
+      "cost_inputs": {
+        "fee_rate": 0.09,
+        "payout_flat": 5,
+        "direct_per_job": 1
+      }
+    }
+  },
+  "B_Upwork_catalog": {
+    "no_refund": {
+      "paid_orders": 3,
+      "one_time_price": 220,
+      "invoiced": 660,
+      "full_refunds": 0,
+      "received_after_refunds": 660,
+      "conditional_cash_after_fees_direct_reserve": 549.01,
+      "cash_reserve": 5,
+      "cost_inputs": {
+        "fee_rate": 0.15,
+        "payout_flat": 0.99,
+        "direct_per_job": 2
+      }
+    },
+    "one_full_refund_conservative_fee_retained": {
+      "paid_orders": 4,
+      "one_time_price": 220,
+      "invoiced": 880,
+      "full_refunds": 1,
+      "received_after_refunds": 660,
+      "conditional_cash_after_fees_direct_reserve": 514.01,
+      "cash_reserve": 5,
+      "cost_inputs": {
+        "fee_rate": 0.15,
+        "payout_flat": 0.99,
+        "direct_per_job": 2
+      }
+    }
+  },
+  "C_partner_Contra_route": {
+    "no_refund": {
+      "paid_orders": 2,
+      "one_time_price": 300,
+      "invoiced": 600,
+      "full_refunds": 0,
+      "received_after_refunds": 600,
+      "conditional_cash_after_fees_direct_reserve": 546.6,
+      "cash_reserve": 5,
+      "cost_inputs": {
+        "platform_flat": 15,
+        "payout_rate": 0.02,
+        "payout_flat": 3,
+        "direct_per_job": 2
+      }
+    },
+    "one_full_refund_conservative_fee_retained": {
+      "paid_orders": 3,
+      "one_time_price": 300,
+      "invoiced": 900,
+      "full_refunds": 1,
+      "received_after_refunds": 600,
+      "conditional_cash_after_fees_direct_reserve": 529.9,
+      "cash_reserve": 5,
+      "cost_inputs": {
+        "platform_flat": 15,
+        "payout_rate": 0.02,
+        "payout_flat": 3,
+        "direct_per_job": 2
+      }
+    }
+  },
+  "status": "Conditional batch cash after chosen fees/direct reserve, BEFORE tax/FX/unknown onboarding fees; prices unvalidated; zero actual sales",
+  "launch": "Not launched; no messages, accounts, proposals, paid actions or public demo deployment"
+}

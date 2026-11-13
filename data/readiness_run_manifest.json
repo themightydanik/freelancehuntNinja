@@ -1,0 +1,64 @@
+{
+  "checked_at": "2026-11-13T09:22:45.938685+00:00",
+  "client_timezone": "Europe/Kyiv",
+  "base_commit": "b8d003f5887925bb0b21612477c618cb14feb148",
+  "python": "3.13.4",
+  "packages": {
+    "numpy": "2.2.6",
+    "requests": "2.31.0",
+    "matplotlib": "3.10.3"
+  },
+  "protected_application_baseline": "c6acf4ecbb5ef6cee238ef206a6923b4e9a6288e",
+  "original_five_files_unchanged": true,
+  "tests": {
+    "executed": 34,
+    "passed": 34,
+    "failed": 0,
+    "skipped": 0,
+    "command": "PYTHONDONTWRITEBYTECODE=1 /workspace/.venvs/ninja-research/bin/python -m unittest discover -s research/tests -v"
+  },
+  "retained_sources": {
+    "FH_unique": 306,
+    "FH_in_window": 304,
+    "FH_keyword_candidates_manually_reviewed": 59,
+    "international_bounty_context": 30,
+    "bounty_sponsors": 1,
+    "IT_award_candidates": 10,
+    "national_registry_company_matches": 5,
+    "integration_issue_reports": 13,
+    "pain_families": 5
+  },
+  "source_exclusion": "Freelancer listing records removed; express written permission gate now prevents collection; source statistics not used in model or reports",
+  "financial_model": {
+    "runs_per_planning_scenario": 5000,
+    "seed": 20261113,
+    "explicit_planning_FX_UAH_per_USD": 45,
+    "FX_verified": false,
+    "commercial_coefficients_calibrated": false
+  },
+  "activity": {
+    "real_messages": 0,
+    "commercial_proposals": 0,
+    "accounts_created": 0,
+    "payments": 0,
+    "token_rotations": 0,
+    "production_changes": 0,
+    "hosted_demo_deployments": 0,
+    "environment_publications": 0
+  },
+  "artifact_sha256": {
+    "research/models/channel_revenue_model.py": "1873f8509ea2e9f33384a34c01dcab3eee652d0efe11bab8e22d222ee25bd934",
+    "research/models/first_500.py": "1a35538e1cd30ecbf01036db97de2dfa4c30bcd307cc179963c49ff8d7f63291",
+    "research/demos/bot_recovery_demo.py": "9b27828466b4bfeb51caee019c9ddf87fd8fe0d5a2f88822e0fab36988fada74",
+    "data/channel_model_assumptions.json": "d98331dc428822a3f66cfd9241be6f600d18d1ecedef2e9b43da47c4580936ee",
+    "data/commercial_job_review.csv": "ed2f630d5abfba190a620f481867a4db8dd7ec3caa44009516b196708f4f9438"
+  },
+  "limits": [
+    "No validated Bot Recovery accepted-price range",
+    "No live KYC or actual payouts",
+    "No independent buyer geography classification",
+    "No reproduced upstream issue fixes",
+    "No real sales/calibration",
+    "Research plan does not remediate original credential exposure"
+  ]
+}
